@@ -1,1 +1,1 @@
-{"version":3,"file":"UserProvider.d.ts","sourceRoot":"","sources":["../../../../src/api/user/UserProvider.js"],"names":[],"mappings":"AAOA;IACI;;OAEG;IACH,kBAFa,aAAa,CAEP;IACnB;;OAEG;IACH,sBAAe;IACf;;;MAGE;IACF,uBAFY,gBAAgB,CAEZ;CACnB"}
+{"version":3,"file":"UserProvider.d.ts","sourceRoot":"","sources":["../../../../src/api/user/UserProvider.js"],"names":[],"mappings":"AAKA;IACI;;OAEG;IACH,kBAFa,aAAa,CAEP;IACnB;;OAEG;IACH,sBAAe;IACf;;;MAGE;IACF,uBAFY,gBAAgB,CAEZ;CACnB"}

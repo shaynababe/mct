@@ -1,1 +1,1 @@
-{"version":3,"file":"Editor.d.ts","sourceRoot":"","sources":["../../../src/api/Editor.js"],"names":[],"mappings":"AAWA;IACI,0BAIC;IAFG,iBAAoB;IACpB,aAAsB;IAG1B;;;;OAIG;IACH,aAQC;IAED;;OAEG;IACH,aAFa,OAAO,CAInB;IAED;;;OAGG;IACH,sBAMC;IAED;;OAEG;IACH,cAiBC;CACJ"}
+{"version":3,"file":"Editor.d.ts","sourceRoot":"","sources":["../../../src/api/Editor.js"],"names":[],"mappings":"AASA;IACI,0BAIC;IAFG,iBAAoB;IACpB,aAAsB;IAG1B;;;;OAIG;IACH,aAQC;IAED;;OAEG;IACH,aAFa,OAAO,CAInB;IAED;;;OAGG;IACH,sBAMC;IAED;;OAEG;IACH,cAiBC;CACJ"}

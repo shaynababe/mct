@@ -1,1 +1,1 @@
-{"version":3,"file":"IndicatorAPI.d.ts","sourceRoot":"","sources":["../../../../src/api/indicators/IndicatorAPI.js"],"names":[],"mappings":";AAWA;IACI,0BAKC;IAFG,aAAsB;IACtB,wBAA0B;IAG9B,uCAIC;IAED,mCAEC;IAED;;;;;;;;;;;;;;;;;;;;OAoBG;IACH,0BAQC;CAEJ"}
+{"version":3,"file":"IndicatorAPI.d.ts","sourceRoot":"","sources":["../../../../src/api/indicators/IndicatorAPI.js"],"names":[],"mappings":";AASA;IACI,0BAKC;IAFG,aAAsB;IACtB,wBAA0B;IAG9B,uCAIC;IAED,mCAEC;IAED;;;;;;;;;;;;;;;;;;;;OAoBG;IACH,0BAQC;CAEJ"}
