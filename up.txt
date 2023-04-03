@@ -1,0 +1,1623 @@
+Packages are hard linked from the content-addressable store to the virtual store.
+  Content-addressable store is at: /home/z/.local/share/pnpm/store/v3
+  Virtual store is at:             node_modules/.pnpm
+
+> openmct@3.0-dev prepare /home/z/code/z/z1/mct
+> npm run build:prod && npx tsc
+
+
+> openmct@3.0-dev build:prod
+> webpack --config ./.webpack/webpack.prod.js
+
+webpack compiled successfully
+
+devDependencies:
++ @babel/eslint-parser 7.21.3
++ @braintree/sanitize-url 6.0.2
++ @percy/cli 1.21.0
++ @percy/playwright 1.0.4
++ @playwright/test 1.32.1
++ @types/eventemitter3 1.2.0 (2.0.2 is available)
++ @types/jasmine 4.3.1
++ @types/lodash 4.14.192
++ babel-loader 9.1.2
++ babel-plugin-istanbul 6.1.1
++ comma-separated-values 3.6.4
++ copy-webpack-plugin 11.0.0
++ css-loader 6.7.3
++ d3-axis 3.0.0
++ d3-color 3.1.0
++ d3-scale 3.3.0 (4.0.2 is available)
++ d3-selection 3.0.0
++ eslint 8.37.0
++ eslint-plugin-compat 4.1.2
++ eslint-plugin-playwright 0.12.0
++ eslint-plugin-vue 9.10.0
++ eslint-plugin-you-dont-need-lodash-underscore 6.12.0
++ eventemitter3 1.2.0 (5.0.0 is available)
++ file-saver 2.0.5
++ git-rev-sync 3.0.2
++ html2canvas 1.4.1
++ imports-loader 4.0.1
++ jasmine-core 4.6.0
++ karma 6.4.1
++ karma-chrome-launcher 3.1.1
++ karma-cli 2.0.0
++ karma-coverage 2.2.0
++ karma-coverage-istanbul-reporter 3.0.3
++ karma-jasmine 5.1.0
++ karma-junit-reporter 2.0.1
++ karma-sourcemap-loader 0.4.0
++ karma-spec-reporter 0.0.36
++ karma-webpack 5.0.0
++ kdbush 3.0.0
++ location-bar 3.0.1
++ lodash 4.17.21
++ mini-css-extract-plugin 2.7.5
++ moment 2.29.4
++ moment-duration-format 2.3.2
++ moment-timezone 0.5.41 (0.5.43 is available)
++ nyc 15.1.0
++ painterro 1.2.78
++ playwright-core 1.32.1
++ plotly.js-basic-dist 2.20.0
++ plotly.js-gl2d-dist 2.20.0
++ printj 1.3.1
++ resolve-url-loader 5.0.0
++ sanitize-html 2.10.0
++ sass 1.60.0
++ sass-loader 13.2.2
++ sinon 15.0.3
++ style-loader 3.3.2
++ tap 16.3.4
++ typescript 4.9.5 (5.0.3 is available)
++ uuid 9.0.0
++ vue 2.6.14 (3.2.47 is available)
++ vue-eslint-parser 9.1.1
++ vue-loader 15.9.8 (17.0.1 is available)
++ vue-template-compiler 2.6.14 (2.7.14 is available)
++ webpack 5.77.0
++ webpack-cli 5.0.1
++ webpack-dev-server 4.13.2
++ webpack-merge 5.8.0
++ yargs 17.7.1
+
+Done in 57.2s
+[4.0K Apr  2 23:06]  .
+├── [2.3K Apr  2 22:00]  build-docs.sh
+├── [4.0K Apr  2 22:00]  docs
+│   └── [4.0K Apr  2 22:00]  src
+│       ├── [4.0K Apr  2 22:00]  guide
+│       │   └── [4.7K Apr  2 22:00]  security.md
+│       ├── [1.1K Apr  2 22:00]  index.md
+│       └── [4.0K Apr  2 22:00]  process
+│           ├── [8.4K Apr  2 22:00]  cycle.md
+│           ├── [ 413 Apr  2 22:00]  index.md
+│           ├── [4.0K Apr  2 22:00]  testing
+│           │   └── [6.7K Apr  2 22:00]  plan.md
+│           └── [7.2K Apr  2 22:00]  version.md
+├── [4.0K Apr  2 22:00]  e2e
+│   ├── [ 15K Apr  2 22:00]  appActions.js
+│   ├── [6.9K Apr  2 22:00]  baseFixtures.js
+│   ├── [4.0K Apr  2 22:00]  helper
+│   │   ├── [1.5K Apr  2 22:00]  addInitExampleFaultProvider.js
+│   │   ├── [1.5K Apr  2 22:00]  addInitExampleFaultProviderStatic.js
+│   │   ├── [1.4K Apr  2 22:00]  addInitExampleUser.js
+│   │   ├── [1.5K Apr  2 22:00]  addInitFaultManagementPlugin.js
+│   │   ├── [2.1K Apr  2 22:00]  addInitFileInputObject.js
+│   │   ├── [1.6K Apr  2 22:00]  addInitNotebookWithUrls.js
+│   │   ├── [1.4K Apr  2 22:00]  addInitOperatorStatus.js
+│   │   ├── [1.5K Apr  2 22:00]  addInitRestrictedNotebook.js
+│   │   ├── [ 831 Apr  2 22:00]  addNoneditableObject.js
+│   │   ├── [8.0K Apr  2 22:00]  faultUtils.js
+│   │   ├── [2.5K Apr  2 22:00]  notebookUtils.js
+│   │   ├── [4.5K Apr  2 22:00]  planningUtils.js
+│   │   └── [1.5K Apr  2 22:00]  useSnowTheme.js
+│   ├── [2.5K Apr  2 22:00]  playwright-ci.config.js
+│   ├── [3.0K Apr  2 22:00]  playwright-local.config.js
+│   ├── [1.1K Apr  2 22:00]  playwright-performance.config.js
+│   ├── [1.7K Apr  2 22:00]  playwright-visual.config.js
+│   ├── [5.9K Apr  2 22:00]  pluginFixtures.js
+│   ├── [ 25K Apr  2 22:00]  README.md
+│   ├── [4.0K Apr  2 22:00]  test-data
+│   │   ├── [ 67K Apr  2 22:00]  ExampleLayouts.json
+│   │   ├── [4.0K Apr  2 22:00]  examplePlans
+│   │   │   ├── [ 31K Apr  2 22:00]  ExamplePlan_Large.json
+│   │   │   ├── [1.0K Apr  2 22:00]  ExamplePlan_Small1.json
+│   │   │   └── [ 873 Apr  2 22:00]  ExamplePlan_Small2.json
+│   │   ├── [1.9K Apr  2 22:00]  PerformanceDisplayLayout.json
+│   │   ├── [1.6K Apr  2 22:00]  PerformanceNotebook.json
+│   │   ├── [4.6K Apr  2 22:00]  recycled_local_storage.json
+│   │   ├── [ 10K Apr  2 22:00]  rick.jpg
+│   │   └── [1.6K Apr  2 22:00]  VisualTestData_storage.json
+│   └── [4.0K Apr  2 22:00]  tests
+│       ├── [4.0K Apr  2 22:00]  framework
+│       │   ├── [7.1K Apr  2 22:00]  appActions.e2e.spec.js
+│       │   ├── [2.4K Apr  2 22:00]  baseFixtures.e2e.spec.js
+│       │   ├── [6.3K Apr  2 22:00]  exampleTemplate.e2e.spec.js
+│       │   ├── [2.8K Apr  2 22:00]  generateVisualTestData.e2e.spec.js
+│       │   ├── [2.0K Apr  2 22:00]  pluginFixtures.e2e.spec.js
+│       │   └── [1.7K Apr  2 22:00]  testData.e2e.spec.js
+│       ├── [4.0K Apr  2 22:00]  functional
+│       │   ├── [3.0K Apr  2 22:00]  branding.e2e.spec.js
+│       │   ├── [4.5K Apr  2 22:00]  couchdb.e2e.spec.js
+│       │   ├── [4.0K Apr  2 22:00]  example
+│       │   │   ├── [2.6K Apr  2 22:00]  eventGenerator.e2e.spec.js
+│       │   │   └── [4.0K Apr  2 22:00]  generator
+│       │   │       └── [5.9K Apr  2 22:00]  sineWaveLimitProvider.e2e.spec.js
+│       │   ├── [ 12K Apr  2 22:00]  forms.e2e.spec.js
+│       │   ├── [2.2K Apr  2 22:00]  menu.e2e.spec.js
+│       │   ├── [ 12K Apr  2 22:00]  moveAndLinkObjects.e2e.spec.js
+│       │   ├── [4.9K Apr  2 22:00]  notification.e2e.spec.js
+│       │   ├── [4.0K Apr  2 22:00]  planning
+│       │   │   ├── [4.3K Apr  2 22:00]  ganttChart.e2e.spec.js
+│       │   │   ├── [1.8K Apr  2 22:00]  plan.e2e.spec.js
+│       │   │   └── [8.0K Apr  2 22:00]  timestrip.e2e.spec.js
+│       │   ├── [4.0K Apr  2 22:00]  plugins
+│       │   │   ├── [4.0K Apr  2 22:00]  clocks
+│       │   │   │   ├── [2.9K Apr  2 22:00]  clock.e2e.spec.js
+│       │   │   │   └── [2.0K Apr  2 22:00]  remoteClock.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  conditionSet
+│       │   │   │   └── [ 16K Apr  2 22:00]  conditionSet.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  displayLayout
+│       │   │   │   └── [ 10K Apr  2 22:00]  displayLayout.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  faultManagement
+│       │   │   │   └── [ 11K Apr  2 22:00]  faultManagement.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  flexibleLayout
+│       │   │   │   └── [7.3K Apr  2 22:00]  flexibleLayout.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  gauge
+│       │   │   │   └── [5.8K Apr  2 22:00]  gauge.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  imagery
+│       │   │   │   └── [ 34K Apr  2 22:00]  exampleImagery.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  importAndExportAsJSON
+│       │   │   │   ├── [2.4K Apr  2 22:00]  exportAsJson.e2e.spec.js
+│       │   │   │   └── [2.4K Apr  2 22:00]  importAsJson.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  lad
+│       │   │   │   └── [ 11K Apr  2 22:00]  lad.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  notebook
+│       │   │   │   ├── [ 18K Apr  2 22:00]  notebook.e2e.spec.js
+│       │   │   │   ├── [7.2K Apr  2 22:00]  notebookSnapshots.e2e.spec.js
+│       │   │   │   ├── [ 15K Apr  2 22:00]  notebookWithCouchDB.e2e.spec.js
+│       │   │   │   ├── [8.9K Apr  2 22:00]  restrictedNotebook.e2e.spec.js
+│       │   │   │   └── [ 14K Apr  2 22:00]  tags.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  operatorStatus
+│       │   │   │   └── [7.0K Apr  2 22:00]  operatorStatus.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  plot
+│       │   │   │   ├── [7.4K Apr  2 22:00]  autoscale.e2e.spec.js
+│       │   │   │   ├── [4.0K Apr  2 22:00]  autoscale.e2e.spec.js-snapshots
+│       │   │   │   │   ├── [ 19K Apr  2 22:00]  autoscale-canvas-panned-chrome-darwin
+│       │   │   │   │   ├── [ 19K Apr  2 22:00]  autoscale-canvas-panned-chrome-darwin.png
+│       │   │   │   │   ├── [ 17K Apr  2 22:00]  autoscale-canvas-panned-chrome-linux.png
+│       │   │   │   │   ├── [ 21K Apr  2 22:00]  autoscale-canvas-prepan-chrome-darwin
+│       │   │   │   │   ├── [ 19K Apr  2 22:00]  autoscale-canvas-prepan-chrome-darwin.png
+│       │   │   │   │   └── [ 19K Apr  2 22:00]  autoscale-canvas-prepan-chrome-linux.png
+│       │   │   │   ├── [ 11K Apr  2 22:00]  logPlot.e2e.spec.js
+│       │   │   │   ├── [5.9K Apr  2 22:00]  missingPlotObj.e2e.spec.js
+│       │   │   │   ├── [ 12K Apr  2 22:00]  overlayPlot.e2e.spec.js
+│       │   │   │   ├── [4.6K Apr  2 22:00]  plotLegendSwatch.e2e.spec.js
+│       │   │   │   ├── [5.8K Apr  2 22:00]  plotRendering.e2e.spec.js
+│       │   │   │   ├── [4.4K Apr  2 22:00]  scatterPlot.e2e.spec.js
+│       │   │   │   ├── [10.0K Apr  2 22:00]  stackedPlot.e2e.spec.js
+│       │   │   │   └── [9.5K Apr  2 22:00]  tagging.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  telemetryTable
+│       │   │   │   └── [3.3K Apr  2 22:00]  telemetryTable.e2e.spec.js
+│       │   │   ├── [4.0K Apr  2 22:00]  timeConductor
+│       │   │   │   └── [7.7K Apr  2 22:00]  timeConductor.e2e.spec.js
+│       │   │   └── [4.0K Apr  2 22:00]  timer
+│       │   │       └── [5.5K Apr  2 22:00]  timer.e2e.spec.js
+│       │   ├── [ 12K Apr  2 22:00]  recentObjects.e2e.spec.js
+│       │   ├── [ 11K Apr  2 22:00]  search.e2e.spec.js
+│       │   ├── [2.7K Apr  2 22:00]  smoke.e2e.spec.js
+│       │   └── [8.0K Apr  2 22:00]  tree.e2e.spec.js
+│       ├── [4.0K Apr  2 22:00]  performance
+│       │   ├── [8.3K Apr  2 22:00]  imagery.perf.spec.js
+│       │   ├── [5.2K Apr  2 22:00]  memleak-imagery.perf.spec.js
+│       │   └── [7.6K Apr  2 22:00]  notebook.perf.spec.js
+│       └── [4.0K Apr  2 22:00]  visual
+│           ├── [2.8K Apr  2 22:00]  addInit.visual.spec.js
+│           ├── [4.0K Apr  2 22:00]  components
+│           │   └── [4.0K Apr  2 22:00]  tree.visual.spec.js
+│           ├── [2.5K Apr  2 22:00]  controlledClock.visual.spec.js
+│           ├── [7.4K Apr  2 22:00]  default.visual.spec.js
+│           ├── [3.4K Apr  2 22:00]  faultManagement.visual.spec.js
+│           ├── [2.3K Apr  2 22:00]  notebook.visual.spec.js
+│           ├── [3.2K Apr  2 22:00]  notification.visual.spec.js
+│           ├── [2.4K Apr  2 22:00]  plan.visual.spec.js
+│           └── [4.0K Apr  2 22:00]  search.visual.spec.js
+├── [4.0K Apr  2 22:00]  example
+│   ├── [4.0K Apr  2 22:00]  eventGenerator
+│   │   ├── [2.3K Apr  2 22:00]  EventMetadataProvider.js
+│   │   ├── [3.3K Apr  2 22:00]  EventTelemetryProvider.js
+│   │   ├── [2.0K Apr  2 22:00]  plugin.js
+│   │   ├── [2.9K Apr  2 22:00]  pluginSpec.js
+│   │   └── [2.1K Apr  2 22:00]  transcript.json
+│   ├── [4.0K Apr  2 22:00]  exampleTags
+│   │   ├── [1.8K Apr  2 22:00]  plugin.js
+│   │   └── [ 552 Apr  2 22:00]  tags.json
+│   ├── [4.0K Apr  2 22:00]  exampleUser
+│   │   ├── [1.5K Apr  2 22:00]  exampleUserCreator.js
+│   │   ├── [6.2K Apr  2 22:00]  ExampleUserProvider.js
+│   │   ├── [1.7K Apr  2 22:00]  plugin.js
+│   │   └── [1.9K Apr  2 22:00]  pluginSpec.js
+│   ├── [4.0K Apr  2 22:00]  faultManagement
+│   │   ├── [2.4K Apr  2 22:00]  exampleFaultSource.js
+│   │   ├── [1.7K Apr  2 22:00]  pluginSpec.js
+│   │   └── [1.9K Apr  2 22:00]  utils.js
+│   ├── [4.0K Apr  2 22:00]  generator
+│   │   ├── [4.1K Apr  2 22:00]  GeneratorMetadataProvider.js
+│   │   ├── [3.6K Apr  2 22:00]  GeneratorProvider.js
+│   │   ├── [7.3K Apr  2 22:00]  generatorWorker.js
+│   │   ├── [6.2K Apr  2 22:00]  plugin.js
+│   │   ├── [5.3K Apr  2 22:00]  SinewaveLimitProvider.js
+│   │   ├── [4.8K Apr  2 22:00]  SinewaveStalenessProvider.js
+│   │   ├── [2.9K Apr  2 22:00]  StateGeneratorProvider.js
+│   │   └── [3.6K Apr  2 22:00]  WorkerInterface.js
+│   ├── [4.0K Apr  2 22:00]  imagery
+│   │   └── [ 11K Apr  2 22:00]  plugin.js
+│   ├── [ 127 Apr  2 22:00]  README.md
+│   └── [4.0K Apr  2 22:00]  simpleVuePlugin
+│       ├── [ 224 Apr  2 22:00]  HelloWorld.vue
+│       └── [1.0K Apr  2 22:00]  plugin.js
+├── [8.5K Apr  2 22:00]  index.html
+├── [ 126 Apr  2 22:00]  indexTest.js
+├── [3.9K Apr  2 22:00]  karma.conf.js
+├── [ 34K Apr  2 22:00]  license.md
+├── [4.0K Apr  2 22:00]  new
+│   └── [4.0K Apr  2 22:00]  new
+│       └── [4.0K Apr  2 22:00]  node_modules
+│           └── [4.0K Apr  2 22:00]  iconv-lite
+├── [4.0K Apr  2 22:00]  old
+│   ├── [ 51K Apr  2 22:00]  API.md
+│   ├── [ 531 Apr  2 22:00]  codecov.yml
+│   ├── [ 17K Apr  2 22:00]  CONTRIBUTING.md
+│   ├── [1005 Apr  2 22:00]  copyright-notice.html
+│   ├── [1.2K Apr  2 22:00]  copyright-notice.js
+│   ├── [ 725 Apr  2 22:00]  LICENSE.md
+│   ├── [9.9K Apr  2 22:00]  README.md
+│   └── [1.5K Apr  2 22:00]  SECURITY.md
+├── [3.5K Apr  2 22:00]  openmct.js
+├── [5.2K Apr  2 22:00]  package.json
+├── [114K Apr  2 22:00]  Readme.md
+├── [4.0K Apr  2 22:00]  src
+│   ├── [4.0K Apr  2 22:00]  api
+│   │   ├── [4.0K Apr  2 22:00]  actions
+│   │   │   ├── [5.4K Apr  2 22:00]  ActionCollection.js
+│   │   │   ├── [8.0K Apr  2 22:00]  ActionCollectionSpec.js
+│   │   │   ├── [4.9K Apr  2 22:00]  ActionsAPI.js
+│   │   │   └── [5.5K Apr  2 22:00]  ActionsAPISpec.js
+│   │   ├── [4.0K Apr  2 22:00]  annotation
+│   │   │   ├── [ 16K Apr  2 22:00]  AnnotationAPI.js
+│   │   │   └── [ 12K Apr  2 22:00]  AnnotationAPISpec.js
+│   │   ├── [2.5K Apr  2 22:00]  api.js
+│   │   ├── [2.0K Apr  2 22:00]  Branding.js
+│   │   ├── [4.0K Apr  2 22:00]  composition
+│   │   │   ├── [4.9K Apr  2 22:00]  CompositionAPI.js
+│   │   │   ├── [ 11K Apr  2 22:00]  CompositionAPISpec.js
+│   │   │   ├── [ 11K Apr  2 22:00]  CompositionCollection.js
+│   │   │   ├── [8.7K Apr  2 22:00]  CompositionProvider.js
+│   │   │   └── [8.4K Apr  2 22:00]  DefaultCompositionProvider.js
+│   │   ├── [2.9K Apr  2 22:00]  Editor.js
+│   │   ├── [2.6K Apr  2 22:00]  EditorSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  faultmanagement
+│   │   │   ├── [3.5K Apr  2 22:00]  FaultManagementAPI.js
+│   │   │   └── [4.8K Apr  2 22:00]  FaultManagementAPISpec.js
+│   │   ├── [4.0K Apr  2 22:00]  forms
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [4.0K Apr  2 22:00]  controls
+│   │   │   │   │   ├── [8.8K Apr  2 22:00]  AutoCompleteField.vue
+│   │   │   │   │   ├── [1.7K Apr  2 22:00]  CheckBoxField.vue
+│   │   │   │   │   ├── [2.0K Apr  2 22:00]  ClockDisplayFormatField.vue
+│   │   │   │   │   ├── [2.2K Apr  2 22:00]  CompositeItem.vue
+│   │   │   │   │   ├── [1.9K Apr  2 22:00]  Composite.vue
+│   │   │   │   │   ├── [4.9K Apr  2 22:00]  Datetime.vue
+│   │   │   │   │   ├── [4.3K Apr  2 22:00]  FileInput.vue
+│   │   │   │   │   ├── [1.8K Apr  2 22:00]  Locator.vue
+│   │   │   │   │   ├── [2.1K Apr  2 22:00]  NumberField.vue
+│   │   │   │   │   ├── [2.0K Apr  2 22:00]  SelectField.vue
+│   │   │   │   │   ├── [2.0K Apr  2 22:00]  TextAreaField.vue
+│   │   │   │   │   ├── [2.0K Apr  2 22:00]  TextField.vue
+│   │   │   │   │   └── [1.9K Apr  2 22:00]  ToggleSwitchField.vue
+│   │   │   │   ├── [5.0K Apr  2 22:00]  FormProperties.vue
+│   │   │   │   └── [4.0K Apr  2 22:00]  FormRow.vue
+│   │   │   ├── [3.1K Apr  2 22:00]  FormController.js
+│   │   │   ├── [7.2K Apr  2 22:00]  FormsAPI.js
+│   │   │   ├── [5.4K Apr  2 22:00]  FormsAPISpec.js
+│   │   │   └── [ 365 Apr  2 22:00]  toggle-check-box-mixin.js
+│   │   ├── [4.0K Apr  2 22:00]  indicators
+│   │   │   ├── [2.8K Apr  2 22:00]  IndicatorAPI.js
+│   │   │   ├── [3.5K Apr  2 22:00]  IndicatorAPISpec.js
+│   │   │   ├── [4.0K Apr  2 22:00]  res
+│   │   │   │   └── [ 154 Apr  2 22:00]  indicator-template.html
+│   │   │   └── [3.8K Apr  2 22:00]  SimpleIndicator.js
+│   │   ├── [4.0K Apr  2 22:00]  menu
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [1.9K Apr  2 22:00]  Menu.vue
+│   │   │   │   └── [2.9K Apr  2 22:00]  SuperMenu.vue
+│   │   │   ├── [4.7K Apr  2 22:00]  MenuAPI.js
+│   │   │   ├── [7.7K Apr  2 22:00]  MenuAPISpec.js
+│   │   │   └── [5.7K Apr  2 22:00]  menu.js
+│   │   ├── [4.0K Apr  2 22:00]  notifications
+│   │   │   ├── [ 15K Apr  2 22:00]  NotificationAPI.js
+│   │   │   └── [6.2K Apr  2 22:00]  NotificationAPISpec.js
+│   │   ├── [4.0K Apr  2 22:00]  objects
+│   │   │   ├── [  53 Apr  2 22:00]  ConflictError.js
+│   │   │   ├── [ 20K Apr  2 22:00]  InMemorySearchProvider.js
+│   │   │   ├── [7.1K Apr  2 22:00]  InMemorySearchWorker.js
+│   │   │   ├── [3.1K Apr  2 22:00]  InterceptorRegistry.js
+│   │   │   ├── [   0 Apr  2 22:00]  InterceptorRegistrySpec.js
+│   │   │   ├── [6.0K Apr  2 22:00]  MutableDomainObject.js
+│   │   │   ├── [ 29K Apr  2 22:00]  ObjectAPI.js
+│   │   │   ├── [9.1K Apr  2 22:00]  ObjectAPISearchSpec.js
+│   │   │   ├── [ 22K Apr  2 22:00]  ObjectAPISpec.js
+│   │   │   ├── [5.5K Apr  2 22:00]  object-utils.js
+│   │   │   ├── [2.2K Apr  2 22:00]  RootObjectProvider.js
+│   │   │   ├── [2.2K Apr  2 22:00]  RootRegistry.js
+│   │   │   ├── [4.0K Apr  2 22:00]  test
+│   │   │   │   ├── [5.3K Apr  2 22:00]  object-utilsSpec.js
+│   │   │   │   ├── [1.9K Apr  2 22:00]  RootObjectProviderSpec.js
+│   │   │   │   └── [4.5K Apr  2 22:00]  RootRegistrySpec.js
+│   │   │   ├── [2.8K Apr  2 22:00]  Transaction.js
+│   │   │   └── [3.6K Apr  2 22:00]  TransactionSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  overlays
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [1.6K Apr  2 22:00]  dialog-component.scss
+│   │   │   │   ├── [ 832 Apr  2 22:00]  DialogComponent.vue
+│   │   │   │   ├── [3.8K Apr  2 22:00]  overlay-component.scss
+│   │   │   │   ├── [2.4K Apr  2 22:00]  OverlayComponent.vue
+│   │   │   │   └── [ 549 Apr  2 22:00]  ProgressDialogComponent.vue
+│   │   │   ├── [ 858 Apr  2 22:00]  Dialog.js
+│   │   │   ├── [4.7K Apr  2 22:00]  OverlayAPI.js
+│   │   │   ├── [1.8K Apr  2 22:00]  Overlay.js
+│   │   │   └── [1.3K Apr  2 22:00]  ProgressDialog.js
+│   │   ├── [4.0K Apr  2 22:00]  priority
+│   │   │   └── [1.3K Apr  2 22:00]  PriorityAPI.js
+│   │   ├── [4.0K Apr  2 22:00]  status
+│   │   │   ├── [2.3K Apr  2 22:00]  StatusAPI.js
+│   │   │   └── [2.4K Apr  2 22:00]  StatusAPISpec.js
+│   │   ├── [4.0K Apr  2 22:00]  telemetry
+│   │   │   ├── [1.5K Apr  2 22:00]  constants.js
+│   │   │   ├── [4.4K Apr  2 22:00]  DefaultMetadataProvider.js
+│   │   │   ├── [ 29K Apr  2 22:00]  TelemetryAPI.js
+│   │   │   ├── [ 23K Apr  2 22:00]  TelemetryAPISpec.js
+│   │   │   ├── [ 16K Apr  2 22:00]  TelemetryCollection.js
+│   │   │   ├── [3.2K Apr  2 22:00]  TelemetryCollectionSpec.js
+│   │   │   ├── [5.4K Apr  2 22:00]  TelemetryMetadataManager.js
+│   │   │   ├── [3.0K Apr  2 22:00]  TelemetryRequestInterceptor.js
+│   │   │   └── [5.4K Apr  2 22:00]  TelemetryValueFormatter.js
+│   │   ├── [4.0K Apr  2 22:00]  time
+│   │   │   ├── [3.9K Apr  2 22:00]  GlobalTimeContext.js
+│   │   │   ├── [9.4K Apr  2 22:00]  independentTimeAPISpec.js
+│   │   │   ├── [ 10K Apr  2 22:00]  IndependentTimeContext.js
+│   │   │   ├── [8.5K Apr  2 22:00]  TimeAPI.js
+│   │   │   ├── [9.1K Apr  2 22:00]  TimeAPISpec.js
+│   │   │   └── [ 13K Apr  2 22:00]  TimeContext.js
+│   │   ├── [4.0K Apr  2 22:00]  types
+│   │   │   ├── [4.2K Apr  2 22:00]  Type.js
+│   │   │   ├── [3.6K Apr  2 22:00]  TypeRegistry.js
+│   │   │   └── [2.4K Apr  2 22:00]  TypeRegistrySpec.js
+│   │   └── [4.0K Apr  2 22:00]  user
+│   │       ├── [1.3K Apr  2 22:00]  constants.js
+│   │       ├── [ 10K Apr  2 22:00]  StatusAPI.js
+│   │       ├── [3.4K Apr  2 22:00]  StatusUserProvider.js
+│   │       ├── [5.3K Apr  2 22:00]  UserAPI.js
+│   │       ├── [4.1K Apr  2 22:00]  UserAPISpec.js
+│   │       ├── [1.5K Apr  2 22:00]  User.js
+│   │       ├── [1.6K Apr  2 22:00]  UserProvider.js
+│   │       └── [4.4K Apr  2 22:00]  UserStatusAPISpec.js
+│   ├── [4.0K Apr  2 22:00]  exporters
+│   │   ├── [1.6K Apr  2 22:00]  CSVExporter.js
+│   │   ├── [6.3K Apr  2 22:00]  ImageExporter.js
+│   │   ├── [2.4K Apr  2 22:00]  ImageExporterSpec.js
+│   │   └── [1.5K Apr  2 22:00]  JSONExporter.js
+│   ├── [4.0K Apr  2 22:00]  images
+│   │   └── [4.0K Apr  2 22:00]  favicons
+│   │       ├── [ 348 Apr  2 22:00]  favicon-16x16.png
+│   │       ├── [ 628 Apr  2 22:00]  favicon-32x32.png
+│   │       └── [1.6K Apr  2 22:00]  favicon-96x96.png
+│   ├── [ 14K Apr  2 22:00]  MCT.js
+│   ├── [4.3K Apr  2 22:00]  MCTSpec.js
+│   ├── [4.0K Apr  2 22:00]  plugins
+│   │   ├── [4.0K Apr  2 22:00]  autoflow
+│   │   │   ├── [1.4K Apr  2 22:00]  AutoflowTabularConstants.js
+│   │   │   ├── [4.3K Apr  2 22:00]  AutoflowTabularController.js
+│   │   │   ├── [2.1K Apr  2 22:00]  autoflow-tabular.html
+│   │   │   ├── [2.0K Apr  2 22:00]  AutoflowTabularPlugin.js
+│   │   │   ├── [ 14K Apr  2 22:00]  AutoflowTabularPluginSpec.js
+│   │   │   ├── [3.6K Apr  2 22:00]  AutoflowTabularRowController.js
+│   │   │   ├── [4.5K Apr  2 22:00]  AutoflowTabularView.js
+│   │   │   ├── [2.3K Apr  2 22:00]  dom-observer.js
+│   │   │   ├── [ 533 Apr  2 22:00]  README.md
+│   │   │   └── [1.4K Apr  2 22:00]  VueView.js
+│   │   ├── [4.0K Apr  2 22:00]  charts
+│   │   │   ├── [4.0K Apr  2 22:00]  bar
+│   │   │   │   ├── [2.0K Apr  2 22:00]  BarGraphCompositionPolicy.js
+│   │   │   │   ├── [ 182 Apr  2 22:00]  BarGraphConstants.js
+│   │   │   │   ├── [8.7K Apr  2 22:00]  BarGraphPlot.vue
+│   │   │   │   ├── [3.2K Apr  2 22:00]  BarGraphViewProvider.js
+│   │   │   │   ├── [ 16K Apr  2 22:00]  BarGraphView.vue
+│   │   │   │   ├── [4.0K Apr  2 22:00]  inspector
+│   │   │   │   │   ├── [1.5K Apr  2 22:00]  BarGraphInspectorViewProvider.js
+│   │   │   │   │   ├── [ 15K Apr  2 22:00]  BarGraphOptions.vue
+│   │   │   │   │   └── [5.2K Apr  2 22:00]  SeriesOptions.vue
+│   │   │   │   ├── [2.4K Apr  2 22:00]  plugin.js
+│   │   │   │   └── [ 21K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [4.0K Apr  2 22:00]  scatter
+│   │   │       ├── [4.0K Apr  2 22:00]  inspector
+│   │   │       │   ├── [5.8K Apr  2 22:00]  PlotOptionsBrowse.vue
+│   │   │       │   ├── [9.7K Apr  2 22:00]  PlotOptionsEdit.vue
+│   │   │       │   ├── [1.9K Apr  2 22:00]  PlotOptions.vue
+│   │   │       │   └── [1.5K Apr  2 22:00]  ScatterPlotInspectorViewProvider.js
+│   │   │       ├── [4.9K Apr  2 22:00]  plugin.js
+│   │   │       ├── [ 14K Apr  2 22:00]  pluginSpec.js
+│   │   │       ├── [2.2K Apr  2 22:00]  ScatterPlotCompositionPolicy.js
+│   │   │       ├── [ 244 Apr  2 22:00]  scatterPlotConstants.js
+│   │   │       ├── [4.5K Apr  2 22:00]  ScatterPlotForm.vue
+│   │   │       ├── [3.1K Apr  2 22:00]  ScatterPlotViewProvider.js
+│   │   │       ├── [ 13K Apr  2 22:00]  ScatterPlotView.vue
+│   │   │       └── [ 12K Apr  2 22:00]  ScatterPlotWithUnderlay.vue
+│   │   ├── [4.0K Apr  2 22:00]  clearData
+│   │   │   ├── [3.1K Apr  2 22:00]  ClearDataAction.js
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   └── [ 409 Apr  2 22:00]  globalClearIndicator.vue
+│   │   │   ├── [2.3K Apr  2 22:00]  plugin.js
+│   │   │   └── [8.4K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  clock
+│   │   │   ├── [2.2K Apr  2 22:00]  ClockViewProvider.js
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [1.8K Apr  2 22:00]  ClockIndicator.vue
+│   │   │   │   └── [3.0K Apr  2 22:00]  Clock.vue
+│   │   │   ├── [5.7K Apr  2 22:00]  plugin.js
+│   │   │   └── [8.2K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  condition
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [7.0K Apr  2 22:00]  conditionals.scss
+│   │   │   │   ├── [ 10K Apr  2 22:00]  ConditionCollection.vue
+│   │   │   │   ├── [2.1K Apr  2 22:00]  ConditionDescription.vue
+│   │   │   │   ├── [2.7K Apr  2 22:00]  ConditionError.vue
+│   │   │   │   ├── [4.1K Apr  2 22:00]  ConditionSet.vue
+│   │   │   │   ├── [ 15K Apr  2 22:00]  Condition.vue
+│   │   │   │   ├── [ 12K Apr  2 22:00]  Criterion.vue
+│   │   │   │   ├── [   0 Apr  2 22:00]  CurrentOutput.vue
+│   │   │   │   ├── [4.0K Apr  2 22:00]  inspector
+│   │   │   │   │   ├── [3.9K Apr  2 22:00]  conditional-styles.scss
+│   │   │   │   │   ├── [   0 Apr  2 22:00]  ConditionalStylesView.vue
+│   │   │   │   │   ├── [8.8K Apr  2 22:00]  StyleEditor.vue
+│   │   │   │   │   └── [ 37K Apr  2 22:00]  StylesView.vue
+│   │   │   │   └── [8.7K Apr  2 22:00]  TestData.vue
+│   │   │   ├── [ 11K Apr  2 22:00]  Condition.js
+│   │   │   ├── [ 17K Apr  2 22:00]  ConditionManager.js
+│   │   │   ├── [7.1K Apr  2 22:00]  ConditionManagerSpec.js
+│   │   │   ├── [1.5K Apr  2 22:00]  ConditionSetCompositionPolicy.js
+│   │   │   ├── [3.7K Apr  2 22:00]  ConditionSetCompositionPolicySpec.js
+│   │   │   ├── [2.6K Apr  2 22:00]  ConditionSetMetadataProvider.js
+│   │   │   ├── [3.2K Apr  2 22:00]  ConditionSetTelemetryProvider.js
+│   │   │   ├── [3.1K Apr  2 22:00]  ConditionSetViewProvider.js
+│   │   │   ├── [7.0K Apr  2 22:00]  ConditionSpec.js
+│   │   │   ├── [4.0K Apr  2 22:00]  criterion
+│   │   │   │   ├── [ 11K Apr  2 22:00]  AllTelemetryCriterion.js
+│   │   │   │   ├── [ 11K Apr  2 22:00]  TelemetryCriterion.js
+│   │   │   │   └── [5.4K Apr  2 22:00]  TelemetryCriterionSpec.js
+│   │   │   ├── [3.0K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 38K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [8.0K Apr  2 22:00]  StyleRuleManager.js
+│   │   │   └── [4.0K Apr  2 22:00]  utils
+│   │   │       ├── [2.1K Apr  2 22:00]  constants.js
+│   │   │       ├── [2.1K Apr  2 22:00]  evaluator.js
+│   │   │       ├── [6.7K Apr  2 22:00]  evaluatorSpec.js
+│   │   │       ├── [9.9K Apr  2 22:00]  operations.js
+│   │   │       ├── [5.9K Apr  2 22:00]  operationsSpec.js
+│   │   │       ├── [6.9K Apr  2 22:00]  styleUtils.js
+│   │   │       ├── [2.4K Apr  2 22:00]  time.js
+│   │   │       └── [2.3K Apr  2 22:00]  timeSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  conditionWidget
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [2.5K Apr  2 22:00]  condition-widget.scss
+│   │   │   │   └── [5.3K Apr  2 22:00]  ConditionWidget.vue
+│   │   │   ├── [2.5K Apr  2 22:00]  ConditionWidgetViewProvider.js
+│   │   │   ├── [2.5K Apr  2 22:00]  plugin.js
+│   │   │   └── [6.5K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  CouchDBSearchFolder
+│   │   │   ├── [1.2K Apr  2 22:00]  plugin.js
+│   │   │   └── [3.2K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  defaultRootName
+│   │   │   ├── [1.4K Apr  2 22:00]  plugin.js
+│   │   │   └── [2.5K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  DeviceClassifier
+│   │   │   ├── [1.5K Apr  2 22:00]  plugin.js
+│   │   │   └── [4.0K Apr  2 22:00]  src
+│   │   │       ├── [2.7K Apr  2 22:00]  DeviceClassifier.js
+│   │   │       ├── [3.7K Apr  2 22:00]  DeviceClassifierSpec.js
+│   │   │       ├── [2.0K Apr  2 22:00]  DeviceMatchers.js
+│   │   │       └── [2.5K Apr  2 22:00]  DeviceMatchersSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  displayLayout
+│   │   │   ├── [4.0K Apr  2 22:00]  actions
+│   │   │   │   └── [1.2K Apr  2 22:00]  CopyToClipboardAction.js
+│   │   │   ├── [3.3K Apr  2 22:00]  AlphanumericFormatViewProvider.js
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [3.6K Apr  2 22:00]  AlphanumericFormat.vue
+│   │   │   │   ├── [1.2K Apr  2 22:00]  box-and-line-views.scss
+│   │   │   │   ├── [3.4K Apr  2 22:00]  BoxView.vue
+│   │   │   │   ├── [1.1K Apr  2 22:00]  DisplayLayoutGrid.vue
+│   │   │   │   ├── [2.3K Apr  2 22:00]  display-layout.scss
+│   │   │   │   ├── [ 34K Apr  2 22:00]  DisplayLayout.vue
+│   │   │   │   ├── [1.2K Apr  2 22:00]  edit-marquee.scss
+│   │   │   │   ├── [7.2K Apr  2 22:00]  EditMarquee.vue
+│   │   │   │   ├── [3.4K Apr  2 22:00]  EllipseView.vue
+│   │   │   │   ├── [ 200 Apr  2 22:00]  image-view.scss
+│   │   │   │   ├── [3.6K Apr  2 22:00]  ImageView.vue
+│   │   │   │   ├── [4.2K Apr  2 22:00]  layout-frame.scss
+│   │   │   │   ├── [4.6K Apr  2 22:00]  LayoutFrame.vue
+│   │   │   │   ├── [ 11K Apr  2 22:00]  LineView.vue
+│   │   │   │   ├── [5.6K Apr  2 22:00]  SubobjectView.vue
+│   │   │   │   ├── [ 840 Apr  2 22:00]  telemetry-view.scss
+│   │   │   │   ├── [ 13K Apr  2 22:00]  TelemetryView.vue
+│   │   │   │   ├── [ 226 Apr  2 22:00]  text-view.scss
+│   │   │   │   └── [3.6K Apr  2 22:00]  TextView.vue
+│   │   │   ├── [1000 Apr  2 22:00]  CustomStringFormatter.js
+│   │   │   ├── [2.1K Apr  2 22:00]  CustomStringFormatterSpec.js
+│   │   │   ├── [ 38K Apr  2 22:00]  DisplayLayoutToolbar.js
+│   │   │   ├── [3.4K Apr  2 22:00]  DisplayLayoutType.js
+│   │   │   ├── [ 836 Apr  2 22:00]  DrawingObjectTypes.js
+│   │   │   ├── [5.1K Apr  2 22:00]  LayoutDrag.js
+│   │   │   ├── [4.0K Apr  2 22:00]  mixins
+│   │   │   │   └── [3.4K Apr  2 22:00]  objectStyles-mixin.js
+│   │   │   ├── [5.2K Apr  2 22:00]  plugin.js
+│   │   │   └── [ 15K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  duplicate
+│   │   │   ├── [5.8K Apr  2 22:00]  DuplicateAction.js
+│   │   │   ├── [9.5K Apr  2 22:00]  DuplicateTask.js
+│   │   │   ├── [1.3K Apr  2 22:00]  plugin.js
+│   │   │   └── [5.5K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  exportAsJSONAction
+│   │   │   ├── [8.6K Apr  2 22:00]  ExportAsJSONAction.js
+│   │   │   ├── [ 12K Apr  2 22:00]  ExportAsJSONActionSpec.js
+│   │   │   └── [1.4K Apr  2 22:00]  plugin.js
+│   │   ├── [4.0K Apr  2 22:00]  faultManagement
+│   │   │   ├── [3.4K Apr  2 22:00]  constants.js
+│   │   │   ├── [2.7K Apr  2 22:00]  FaultManagementInspectorViewProvider.js
+│   │   │   ├── [3.9K Apr  2 22:00]  FaultManagementInspector.vue
+│   │   │   ├── [3.5K Apr  2 22:00]  FaultManagementListHeader.vue
+│   │   │   ├── [7.4K Apr  2 22:00]  FaultManagementListItem.vue
+│   │   │   ├── [ 11K Apr  2 22:00]  FaultManagementListView.vue
+│   │   │   ├── [2.1K Apr  2 22:00]  FaultManagementObjectProvider.js
+│   │   │   ├── [2.1K Apr  2 22:00]  FaultManagementPlugin.js
+│   │   │   ├── [2.6K Apr  2 22:00]  FaultManagementSearch.vue
+│   │   │   ├── [3.0K Apr  2 22:00]  FaultManagementToolbar.vue
+│   │   │   ├── [2.4K Apr  2 22:00]  FaultManagementViewProvider.js
+│   │   │   ├── [2.7K Apr  2 22:00]  FaultManagementView.vue
+│   │   │   ├── [6.4K Apr  2 22:00]  fault-manager.scss
+│   │   │   └── [3.8K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  filters
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [4.2K Apr  2 22:00]  FilterField.vue
+│   │   │   │   ├── [5.5K Apr  2 22:00]  FilterObject.vue
+│   │   │   │   ├── [ 410 Apr  2 22:00]  filters-view.scss
+│   │   │   │   ├── [8.8K Apr  2 22:00]  FiltersView.vue
+│   │   │   │   ├── [ 766 Apr  2 22:00]  global-filters.scss
+│   │   │   │   └── [3.5K Apr  2 22:00]  GlobalFilters.vue
+│   │   │   ├── [3.1K Apr  2 22:00]  FiltersInspectorViewProvider.js
+│   │   │   └── [1.5K Apr  2 22:00]  plugin.js
+│   │   ├── [4.0K Apr  2 22:00]  flexibleLayout
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [7.1K Apr  2 22:00]  container.vue
+│   │   │   │   ├── [2.7K Apr  2 22:00]  dropHint.vue
+│   │   │   │   ├── [7.2K Apr  2 22:00]  flexible-layout.scss
+│   │   │   │   ├── [ 14K Apr  2 22:00]  flexibleLayout.vue
+│   │   │   │   ├── [5.4K Apr  2 22:00]  frame.vue
+│   │   │   │   └── [3.4K Apr  2 22:00]  resizeHandle.vue
+│   │   │   ├── [3.7K Apr  2 22:00]  flexibleLayoutViewProvider.js
+│   │   │   ├── [2.3K Apr  2 22:00]  plugin.js
+│   │   │   ├── [7.2K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [8.9K Apr  2 22:00]  toolbarProvider.js
+│   │   │   └── [4.0K Apr  2 22:00]  utils
+│   │   │       ├── [ 191 Apr  2 22:00]  container.js
+│   │   │       └── [ 274 Apr  2 22:00]  frame.js
+│   │   ├── [4.0K Apr  2 22:00]  folderView
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [1.6K Apr  2 22:00]  composition-loader.js
+│   │   │   │   ├── [1.8K Apr  2 22:00]  GridItem.vue
+│   │   │   │   ├── [4.1K Apr  2 22:00]  grid-view.scss
+│   │   │   │   ├── [ 418 Apr  2 22:00]  GridView.vue
+│   │   │   │   ├── [ 593 Apr  2 22:00]  list-item.scss
+│   │   │   │   ├── [1.7K Apr  2 22:00]  ListItem.vue
+│   │   │   │   ├── [3.5K Apr  2 22:00]  ListView.vue
+│   │   │   │   └── [ 725 Apr  2 22:00]  status-listener.js
+│   │   │   ├── [1.2K Apr  2 22:00]  constants.js
+│   │   │   ├── [2.6K Apr  2 22:00]  FolderGridView.js
+│   │   │   ├── [2.7K Apr  2 22:00]  FolderListView.js
+│   │   │   ├── [2.0K Apr  2 22:00]  plugin.js
+│   │   │   └── [5.5K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  formActions
+│   │   │   ├── [6.2K Apr  2 22:00]  CreateAction.js
+│   │   │   ├── [4.0K Apr  2 22:00]  CreateActionSpec.js
+│   │   │   ├── [4.6K Apr  2 22:00]  CreateWizard.js
+│   │   │   ├── [3.5K Apr  2 22:00]  EditPropertiesAction.js
+│   │   │   ├── [1.4K Apr  2 22:00]  plugin.js
+│   │   │   ├── [6.9K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [1.4K Apr  2 22:00]  PropertiesAction.js
+│   │   ├── [4.0K Apr  2 22:00]  gauge
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [5.5K Apr  2 22:00]  GaugeFormController.vue
+│   │   │   │   └── [ 28K Apr  2 22:00]  Gauge.vue
+│   │   │   ├── [ 841 Apr  2 22:00]  gauge-limit-util.js
+│   │   │   ├── [7.7K Apr  2 22:00]  GaugePlugin.js
+│   │   │   ├── [ 29K Apr  2 22:00]  GaugePluginSpec.js
+│   │   │   ├── [5.5K Apr  2 22:00]  gauge.scss
+│   │   │   └── [2.5K Apr  2 22:00]  GaugeViewProvider.js
+│   │   ├── [4.0K Apr  2 22:00]  goToOriginalAction
+│   │   │   ├── [2.3K Apr  2 22:00]  goToOriginalAction.js
+│   │   │   ├── [1.4K Apr  2 22:00]  plugin.js
+│   │   │   └── [6.2K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  hyperlink
+│   │   │   ├── [1.8K Apr  2 22:00]  HyperlinkLayout.vue
+│   │   │   ├── [2.2K Apr  2 22:00]  HyperlinkProvider.js
+│   │   │   ├── [3.4K Apr  2 22:00]  plugin.js
+│   │   │   └── [4.4K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  imagery
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [4.0K Apr  2 22:00]  Compass
+│   │   │   │   │   ├── [4.1K Apr  2 22:00]  CompassHUD.vue
+│   │   │   │   │   ├── [ 14K Apr  2 22:00]  CompassRose.vue
+│   │   │   │   │   ├── [3.7K Apr  2 22:00]  compass.scss
+│   │   │   │   │   ├── [3.4K Apr  2 22:00]  Compass.vue
+│   │   │   │   │   ├── [2.9K Apr  2 22:00]  pluginSpec.js
+│   │   │   │   │   └── [1.1K Apr  2 22:00]  utils.js
+│   │   │   │   ├── [2.2K Apr  2 22:00]  FilterSettings.vue
+│   │   │   │   ├── [9.0K Apr  2 22:00]  ImageControls.vue
+│   │   │   │   ├── [ 15K Apr  2 22:00]  ImageryTimeView.vue
+│   │   │   │   ├── [1.3K Apr  2 22:00]  ImageryViewMenuSwitcher.vue
+│   │   │   │   ├── [ 11K Apr  2 22:00]  imagery-view.scss
+│   │   │   │   ├── [ 46K Apr  2 22:00]  ImageryView.vue
+│   │   │   │   ├── [4.2K Apr  2 22:00]  ImageThumbnail.vue
+│   │   │   │   ├── [1.6K Apr  2 22:00]  LayerSettings.vue
+│   │   │   │   ├── [4.0K Apr  2 22:00]  RelatedTelemetry
+│   │   │   │   │   └── [7.0K Apr  2 22:00]  RelatedTelemetry.js
+│   │   │   │   └── [2.3K Apr  2 22:00]  ZoomSettings.vue
+│   │   │   ├── [2.9K Apr  2 22:00]  ImageryTimestripViewProvider.js
+│   │   │   ├── [2.4K Apr  2 22:00]  ImageryView.js
+│   │   │   ├── [2.1K Apr  2 22:00]  ImageryViewProvider.js
+│   │   │   ├── [4.0K Apr  2 22:00]  layers
+│   │   │   │   ├── [8.4K Apr  2 22:00]  example-imagery-layer-16x9.png
+│   │   │   │   ├── [9.0K Apr  2 22:00]  example-imagery-layer-safe.png
+│   │   │   │   └── [ 11K Apr  2 22:00]  example-imagery-layer-scale.png
+│   │   │   ├── [4.0K Apr  2 22:00]  lib
+│   │   │   │   └── [3.7K Apr  2 22:00]  eventHelpers.js
+│   │   │   ├── [4.0K Apr  2 22:00]  mixins
+│   │   │   │   └── [7.6K Apr  2 22:00]  imageryData.js
+│   │   │   ├── [1.5K Apr  2 22:00]  plugin.js
+│   │   │   └── [ 26K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  importFromJSONAction
+│   │   │   ├── [8.9K Apr  2 22:00]  ImportFromJSONAction.js
+│   │   │   ├── [4.3K Apr  2 22:00]  ImportFromJSONActionSpec.js
+│   │   │   └── [1.4K Apr  2 22:00]  plugin.js
+│   │   ├── [4.0K Apr  2 22:00]  inspectorViews
+│   │   │   ├── [4.0K Apr  2 22:00]  annotations
+│   │   │   │   ├── [8.1K Apr  2 22:00]  AnnotationsInspectorView.vue
+│   │   │   │   ├── [2.5K Apr  2 22:00]  AnnotationsViewProvider.js
+│   │   │   │   └── [4.0K Apr  2 22:00]  tags
+│   │   │   │       ├── [7.5K Apr  2 22:00]  TagEditor.vue
+│   │   │   │       ├── [5.1K Apr  2 22:00]  TagSelection.vue
+│   │   │   │       └── [3.4K Apr  2 22:00]  tags.scss
+│   │   │   ├── [4.0K Apr  2 22:00]  elements
+│   │   │   │   ├── [2.8K Apr  2 22:00]  ElementItemGroup.vue
+│   │   │   │   ├── [3.4K Apr  2 22:00]  ElementItem.vue
+│   │   │   │   ├── [5.8K Apr  2 22:00]  ElementsPool.vue
+│   │   │   │   ├── [1.4K Apr  2 22:00]  elements.scss
+│   │   │   │   ├── [2.7K Apr  2 22:00]  ElementsViewProvider.js
+│   │   │   │   ├── [ 13K Apr  2 22:00]  PlotElementsPool.vue
+│   │   │   │   └── [2.6K Apr  2 22:00]  PlotElementsViewProvider.js
+│   │   │   ├── [2.0K Apr  2 22:00]  plugin.js
+│   │   │   ├── [4.0K Apr  2 22:00]  properties
+│   │   │   │   ├── [1.5K Apr  2 22:00]  DetailText.vue
+│   │   │   │   ├── [1.0K Apr  2 22:00]  location.scss
+│   │   │   │   ├── [3.7K Apr  2 22:00]  Location.vue
+│   │   │   │   ├── [2.2K Apr  2 22:00]  PropertiesViewProvider.js
+│   │   │   │   └── [7.9K Apr  2 22:00]  Properties.vue
+│   │   │   └── [4.0K Apr  2 22:00]  styles
+│   │   │       ├── [1.5K Apr  2 22:00]  constants.js
+│   │   │       ├── [3.0K Apr  2 22:00]  FontStyleEditor.vue
+│   │   │       ├── [6.4K Apr  2 22:00]  SavedStyleSelector.vue
+│   │   │       ├── [2.6K Apr  2 22:00]  SavedStylesInspectorView.vue
+│   │   │       ├── [4.4K Apr  2 22:00]  SavedStylesView.vue
+│   │   │       ├── [3.3K Apr  2 22:00]  StylesInspectorViewProvider.js
+│   │   │       ├── [2.3K Apr  2 22:00]  StylesInspectorView.vue
+│   │   │       └── [2.6K Apr  2 22:00]  StylesManager.js
+│   │   ├── [4.0K Apr  2 22:00]  interceptors
+│   │   │   ├── [1.8K Apr  2 22:00]  missingObjectInterceptor.js
+│   │   │   ├── [ 194 Apr  2 22:00]  plugin.js
+│   │   │   └── [2.8K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  ISOTimeFormat
+│   │   │   ├── [1.6K Apr  2 22:00]  ISOTimeFormat.js
+│   │   │   ├── [1.3K Apr  2 22:00]  plugin.js
+│   │   │   └── [2.2K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  LADTable
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [8.7K Apr  2 22:00]  LADRow.vue
+│   │   │   │   ├── [9.4K Apr  2 22:00]  LADTableConfiguration.vue
+│   │   │   │   ├── [ 10K Apr  2 22:00]  LadTableSet.vue
+│   │   │   │   └── [8.7K Apr  2 22:00]  LADTable.vue
+│   │   │   ├── [1.5K Apr  2 22:00]  LADTableCompositionPolicy.js
+│   │   │   ├── [2.2K Apr  2 22:00]  LADTableConfiguration.js
+│   │   │   ├── [2.5K Apr  2 22:00]  LADTableConfigurationViewProvider.js
+│   │   │   ├── [2.5K Apr  2 22:00]  LadTableSetView.js
+│   │   │   ├── [1.8K Apr  2 22:00]  LADTableSetViewProvider.js
+│   │   │   ├── [2.5K Apr  2 22:00]  LADTableView.js
+│   │   │   ├── [2.2K Apr  2 22:00]  LADTableViewProvider.js
+│   │   │   ├── [2.7K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 15K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [2.2K Apr  2 22:00]  ViewActions.js
+│   │   ├── [4.0K Apr  2 22:00]  latestDataClock
+│   │   │   ├── [1.9K Apr  2 22:00]  LADClock.js
+│   │   │   └── [1.4K Apr  2 22:00]  plugin.js
+│   │   ├── [4.0K Apr  2 22:00]  licenses
+│   │   │   ├── [2.2K Apr  2 22:00]  Licenses.vue
+│   │   │   ├── [1.6K Apr  2 22:00]  plugin.js
+│   │   │   └── [ 41K Apr  2 22:00]  third-party-licenses.json
+│   │   ├── [4.0K Apr  2 22:00]  linkAction
+│   │   │   ├── [5.2K Apr  2 22:00]  LinkAction.js
+│   │   │   ├── [1.3K Apr  2 22:00]  plugin.js
+│   │   │   └── [4.5K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  localStorage
+│   │   │   ├── [2.8K Apr  2 22:00]  LocalStorageObjectProvider.js
+│   │   │   ├── [1.4K Apr  2 22:00]  plugin.js
+│   │   │   └── [3.1K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  localTimeSystem
+│   │   │   ├── [2.4K Apr  2 22:00]  LocalTimeFormat.js
+│   │   │   ├── [1.8K Apr  2 22:00]  LocalTimeSystem.js
+│   │   │   ├── [1.5K Apr  2 22:00]  plugin.js
+│   │   │   └── [3.8K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  move
+│   │   │   ├── [7.4K Apr  2 22:00]  MoveAction.js
+│   │   │   ├── [1.3K Apr  2 22:00]  plugin.js
+│   │   │   └── [5.3K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  myItems
+│   │   │   ├── [ 162 Apr  2 22:00]  createMyItemsIdentifier.js
+│   │   │   ├── [1.9K Apr  2 22:00]  myItemsInterceptor.js
+│   │   │   ├── [1.8K Apr  2 22:00]  plugin.js
+│   │   │   ├── [4.2K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [ 258 Apr  2 22:00]  README.md
+│   │   ├── [4.0K Apr  2 22:00]  newFolderAction
+│   │   │   ├── [2.0K Apr  2 22:00]  newFolderAction.js
+│   │   │   ├── [1.3K Apr  2 22:00]  plugin.js
+│   │   │   └── [3.7K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  notebook
+│   │   │   ├── [4.0K Apr  2 22:00]  actions
+│   │   │   │   ├── [1.7K Apr  2 22:00]  CopyToNotebookAction.js
+│   │   │   │   └── [5.9K Apr  2 22:00]  ExportNotebookAsTextAction.js
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [ 383 Apr  2 22:00]  MenuItems.vue
+│   │   │   │   ├── [ 13K Apr  2 22:00]  NotebookEmbed.vue
+│   │   │   │   ├── [ 17K Apr  2 22:00]  NotebookEntry.vue
+│   │   │   │   ├── [4.0K Apr  2 22:00]  NotebookMenuSwitcher.vue
+│   │   │   │   ├── [4.1K Apr  2 22:00]  NotebookSnapshotContainer.vue
+│   │   │   │   ├── [3.2K Apr  2 22:00]  NotebookSnapshotIndicator.vue
+│   │   │   │   ├── [ 36K Apr  2 22:00]  Notebook.vue
+│   │   │   │   ├── [3.8K Apr  2 22:00]  PageCollection.vue
+│   │   │   │   ├── [3.9K Apr  2 22:00]  PageComponent.vue
+│   │   │   │   ├── [2.4K Apr  2 22:00]  PopupMenu.vue
+│   │   │   │   ├── [2.7K Apr  2 22:00]  SearchResults.vue
+│   │   │   │   ├── [3.5K Apr  2 22:00]  SectionCollection.vue
+│   │   │   │   ├── [3.7K Apr  2 22:00]  SectionComponent.vue
+│   │   │   │   ├── [1.9K Apr  2 22:00]  sidebar.scss
+│   │   │   │   ├── [7.1K Apr  2 22:00]  Sidebar.vue
+│   │   │   │   └── [1.8K Apr  2 22:00]  snapshot-template.html
+│   │   │   ├── [4.7K Apr  2 22:00]  monkeyPatchObjectAPIForNotebooks.js
+│   │   │   ├── [1.1K Apr  2 22:00]  notebook-constants.js
+│   │   │   ├── [3.0K Apr  2 22:00]  NotebookType.js
+│   │   │   ├── [2.7K Apr  2 22:00]  NotebookViewProvider.js
+│   │   │   ├── [5.5K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 16K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [2.3K Apr  2 22:00]  snapshot-container.js
+│   │   │   ├── [4.3K Apr  2 22:00]  snapshot.js
+│   │   │   └── [4.0K Apr  2 22:00]  utils
+│   │   │       ├── [5.6K Apr  2 22:00]  notebook-entries.js
+│   │   │       ├── [6.5K Apr  2 22:00]  notebook-entriesSpec.js
+│   │   │       ├── [2.4K Apr  2 22:00]  notebook-image.js
+│   │   │       ├── [ 101 Apr  2 22:00]  notebook-key-code.js
+│   │   │       ├── [2.2K Apr  2 22:00]  notebook-migration.js
+│   │   │       ├── [1.2K Apr  2 22:00]  notebook-snapshot-menu.js
+│   │   │       ├── [3.5K Apr  2 22:00]  notebook-storage.js
+│   │   │       ├── [5.7K Apr  2 22:00]  notebook-storageSpec.js
+│   │   │       ├── [2.4K Apr  2 22:00]  painterroInstance.js
+│   │   │       └── [1.1K Apr  2 22:00]  removeDialog.js
+│   │   ├── [4.0K Apr  2 22:00]  notificationIndicator
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [2.2K Apr  2 22:00]  NotificationIndicator.vue
+│   │   │   │   ├── [3.0K Apr  2 22:00]  NotificationMessage.vue
+│   │   │   │   └── [2.1K Apr  2 22:00]  NotificationsList.vue
+│   │   │   ├── [1.8K Apr  2 22:00]  plugin.js
+│   │   │   └── [2.5K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  objectMigration
+│   │   │   ├── [ 12K Apr  2 22:00]  Migrations.js
+│   │   │   └── [2.2K Apr  2 22:00]  plugin.js
+│   │   ├── [4.0K Apr  2 22:00]  openInNewTabAction
+│   │   │   ├── [1.7K Apr  2 22:00]  openInNewTabAction.js
+│   │   │   ├── [1.4K Apr  2 22:00]  plugin.js
+│   │   │   └── [2.5K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  operatorStatus
+│   │   │   ├── [3.7K Apr  2 22:00]  AbstractStatusIndicator.js
+│   │   │   ├── [4.0K Apr  2 22:00]  operatorStatus
+│   │   │   │   ├── [2.6K Apr  2 22:00]  OperatorStatusIndicator.js
+│   │   │   │   └── [6.4K Apr  2 22:00]  OperatorStatus.vue
+│   │   │   ├── [3.8K Apr  2 22:00]  operator-status.scss
+│   │   │   ├── [2.2K Apr  2 22:00]  plugin.js
+│   │   │   └── [4.0K Apr  2 22:00]  pollQuestion
+│   │   │       ├── [2.6K Apr  2 22:00]  PollQuestionIndicator.js
+│   │   │       └── [ 11K Apr  2 22:00]  PollQuestion.vue
+│   │   ├── [4.0K Apr  2 22:00]  performanceIndicator
+│   │   │   ├── [2.4K Apr  2 22:00]  plugin.js
+│   │   │   ├── [2.6K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [ 483 Apr  2 22:00]  README.md
+│   │   ├── [4.0K Apr  2 22:00]  persistence
+│   │   │   └── [4.0K Apr  2 22:00]  couch
+│   │   │       ├── [3.7K Apr  2 22:00]  CouchChangesFeed.js
+│   │   │       ├── [ 269 Apr  2 22:00]  couchdb-compose.yaml
+│   │   │       ├── [2.2K Apr  2 22:00]  CouchDocument.js
+│   │   │       ├── [ 24K Apr  2 22:00]  CouchObjectProvider.js
+│   │   │       ├── [1.6K Apr  2 22:00]  CouchObjectQueue.js
+│   │   │       ├── [4.5K Apr  2 22:00]  CouchSearchProvider.js
+│   │   │       ├── [3.2K Apr  2 22:00]  CouchStatusIndicator.js
+│   │   │       ├── [2.3K Apr  2 22:00]  plugin.js
+│   │   │       ├── [ 15K Apr  2 22:00]  pluginSpec.js
+│   │   │       ├── [4.7K Apr  2 22:00]  README.md
+│   │   │       ├── [ 108 Apr  2 22:00]  replace-localstorage-with-couchdb-indexhtml.sh
+│   │   │       └── [4.7K Apr  2 22:00]  setup-couchdb.sh
+│   │   ├── [4.0K Apr  2 22:00]  plan
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [5.8K Apr  2 22:00]  ActivityTimeline.vue
+│   │   │   │   └── [ 21K Apr  2 22:00]  Plan.vue
+│   │   │   ├── [1.4K Apr  2 22:00]  GanttChartCompositionPolicy.js
+│   │   │   ├── [4.0K Apr  2 22:00]  inspector
+│   │   │   │   ├── [2.7K Apr  2 22:00]  ActivityInspectorViewProvider.js
+│   │   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   │   ├── [1.5K Apr  2 22:00]  ActivityProperty.vue
+│   │   │   │   │   ├── [7.0K Apr  2 22:00]  PlanActivitiesView.vue
+│   │   │   │   │   ├── [2.4K Apr  2 22:00]  PlanActivityView.vue
+│   │   │   │   │   └── [4.9K Apr  2 22:00]  PlanViewConfiguration.vue
+│   │   │   │   └── [2.6K Apr  2 22:00]  GanttChartInspectorViewProvider.js
+│   │   │   ├── [1.7K Apr  2 22:00]  plan.scss
+│   │   │   ├── [3.8K Apr  2 22:00]  PlanViewConfiguration.js
+│   │   │   ├── [3.0K Apr  2 22:00]  PlanViewProvider.js
+│   │   │   ├── [3.4K Apr  2 22:00]  plugin.js
+│   │   │   ├── [9.8K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [3.5K Apr  2 22:00]  README.md
+│   │   │   └── [3.1K Apr  2 22:00]  util.js
+│   │   ├── [4.0K Apr  2 22:00]  plot
+│   │   │   ├── [4.0K Apr  2 22:00]  actions
+│   │   │   │   ├── [ 138 Apr  2 22:00]  utils.js
+│   │   │   │   └── [1.9K Apr  2 22:00]  ViewActions.js
+│   │   │   ├── [4.0K Apr  2 22:00]  axis
+│   │   │   │   ├── [5.2K Apr  2 22:00]  XAxis.vue
+│   │   │   │   └── [9.2K Apr  2 22:00]  YAxis.vue
+│   │   │   ├── [4.0K Apr  2 22:00]  chart
+│   │   │   │   ├── [1.2K Apr  2 22:00]  LimitLabel.vue
+│   │   │   │   ├── [ 764 Apr  2 22:00]  LimitLine.vue
+│   │   │   │   ├── [ 919 Apr  2 22:00]  limitUtil.js
+│   │   │   │   ├── [3.9K Apr  2 22:00]  MCTChartAlarmLineSet.js
+│   │   │   │   ├── [2.3K Apr  2 22:00]  MCTChartAlarmPointSet.js
+│   │   │   │   ├── [1.4K Apr  2 22:00]  MCTChartLineLinear.js
+│   │   │   │   ├── [2.7K Apr  2 22:00]  MCTChartLineStepAfter.js
+│   │   │   │   ├── [1.5K Apr  2 22:00]  MCTChartPointSet.js
+│   │   │   │   ├── [5.1K Apr  2 22:00]  MCTChartSeriesElement.js
+│   │   │   │   └── [ 34K Apr  2 22:00]  MctChart.vue
+│   │   │   ├── [4.0K Apr  2 22:00]  configuration
+│   │   │   │   ├── [3.2K Apr  2 22:00]  Collection.js
+│   │   │   │   ├── [1.9K Apr  2 22:00]  ConfigStore.js
+│   │   │   │   ├── [2.4K Apr  2 22:00]  LegendModel.js
+│   │   │   │   ├── [4.3K Apr  2 22:00]  Model.js
+│   │   │   │   ├── [7.6K Apr  2 22:00]  PlotConfigurationModel.js
+│   │   │   │   ├── [ 19K Apr  2 22:00]  PlotSeries.js
+│   │   │   │   ├── [7.4K Apr  2 22:00]  SeriesCollection.js
+│   │   │   │   ├── [4.5K Apr  2 22:00]  XAxisModel.js
+│   │   │   │   └── [ 12K Apr  2 22:00]  YAxisModel.js
+│   │   │   ├── [4.0K Apr  2 22:00]  draw
+│   │   │   │   ├── [5.0K Apr  2 22:00]  Draw2D.js
+│   │   │   │   ├── [3.1K Apr  2 22:00]  DrawLoader.js
+│   │   │   │   ├── [ 10K Apr  2 22:00]  DrawWebGL.js
+│   │   │   │   └── [3.0K Apr  2 22:00]  MarkerShapes.js
+│   │   │   ├── [4.0K Apr  2 22:00]  inspector
+│   │   │   │   ├── [4.0K Apr  2 22:00]  forms
+│   │   │   │   │   ├── [ 381 Apr  2 22:00]  formUtil.js
+│   │   │   │   │   ├── [7.9K Apr  2 22:00]  LegendForm.vue
+│   │   │   │   │   ├── [ 13K Apr  2 22:00]  SeriesForm.vue
+│   │   │   │   │   └── [ 12K Apr  2 22:00]  YAxisForm.vue
+│   │   │   │   ├── [ 12K Apr  2 22:00]  PlotOptionsBrowse.vue
+│   │   │   │   ├── [7.8K Apr  2 22:00]  PlotOptionsEdit.vue
+│   │   │   │   ├── [5.4K Apr  2 22:00]  PlotOptionsItem.vue
+│   │   │   │   ├── [1.9K Apr  2 22:00]  PlotOptions.vue
+│   │   │   │   ├── [1.9K Apr  2 22:00]  PlotsInspectorViewProvider.js
+│   │   │   │   └── [1.8K Apr  2 22:00]  StackedPlotsInspectorViewProvider.js
+│   │   │   ├── [4.0K Apr  2 22:00]  legend
+│   │   │   │   ├── [6.0K Apr  2 22:00]  PlotLegendItemCollapsed.vue
+│   │   │   │   ├── [6.8K Apr  2 22:00]  PlotLegendItemExpanded.vue
+│   │   │   │   └── [8.8K Apr  2 22:00]  PlotLegend.vue
+│   │   │   ├── [4.0K Apr  2 22:00]  lib
+│   │   │   │   └── [3.4K Apr  2 22:00]  eventHelpers.js
+│   │   │   ├── [2.7K Apr  2 22:00]  LinearScale.js
+│   │   │   ├── [1.2K Apr  2 22:00]  mathUtils.js
+│   │   │   ├── [ 69K Apr  2 22:00]  MctPlot.vue
+│   │   │   ├── [8.8K Apr  2 22:00]  MctTicks.vue
+│   │   │   ├── [4.0K Apr  2 22:00]  overlayPlot
+│   │   │   │   ├── [ 850 Apr  2 22:00]  OverlayPlotCompositionPolicy.js
+│   │   │   │   ├── [3.2K Apr  2 22:00]  OverlayPlotViewProvider.js
+│   │   │   │   └── [ 16K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [3.7K Apr  2 22:00]  PlotViewProvider.js
+│   │   │   ├── [8.2K Apr  2 22:00]  Plot.vue
+│   │   │   ├── [4.0K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 33K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [ 396 Apr  2 22:00]  README.md
+│   │   │   ├── [4.0K Apr  2 22:00]  stackedPlot
+│   │   │   │   ├── [4.0K Apr  2 22:00]  mixins
+│   │   │   │   │   └── [5.3K Apr  2 22:00]  objectStyles-mixin.js
+│   │   │   │   ├── [ 28K Apr  2 22:00]  pluginSpec.js
+│   │   │   │   ├── [ 912 Apr  2 22:00]  StackedPlotCompositionPolicy.js
+│   │   │   │   ├── [1.7K Apr  2 22:00]  stackedPlotConfigurationInterceptor.js
+│   │   │   │   ├── [ 15K Apr  2 22:00]  StackedPlotItem.vue
+│   │   │   │   ├── [3.2K Apr  2 22:00]  StackedPlotViewProvider.js
+│   │   │   │   └── [ 11K Apr  2 22:00]  StackedPlot.vue
+│   │   │   └── [3.8K Apr  2 22:00]  tickUtils.js
+│   │   ├── [7.8K Apr  2 22:00]  plugins.js
+│   │   ├── [4.0K Apr  2 22:00]  remoteClock
+│   │   │   ├── [1.4K Apr  2 22:00]  plugin.js
+│   │   │   ├── [5.2K Apr  2 22:00]  RemoteClock.js
+│   │   │   ├── [5.9K Apr  2 22:00]  RemoteClockSpec.js
+│   │   │   └── [1.8K Apr  2 22:00]  requestInterceptor.js
+│   │   ├── [4.0K Apr  2 22:00]  remove
+│   │   │   ├── [1.3K Apr  2 22:00]  plugin.js
+│   │   │   ├── [4.9K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [5.5K Apr  2 22:00]  RemoveAction.js
+│   │   ├── [4.0K Apr  2 22:00]  staticRootPlugin
+│   │   │   ├── [2.3K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 898 Apr  2 22:00]  README.md
+│   │   │   ├── [5.9K Apr  2 22:00]  StaticModelProvider.js
+│   │   │   ├── [5.1K Apr  2 22:00]  StaticModelProviderSpec.js
+│   │   │   └── [1.9K Apr  2 22:00]  static-provider-test.json
+│   │   ├── [4.0K Apr  2 22:00]  summaryWidget
+│   │   │   ├── [3.6K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 501 Apr  2 22:00]  README.md
+│   │   │   ├── [4.0K Apr  2 22:00]  res
+│   │   │   │   ├── [ 529 Apr  2 22:00]  conditionTemplate.html
+│   │   │   │   ├── [4.0K Apr  2 22:00]  input
+│   │   │   │   │   ├── [ 734 Apr  2 22:00]  paletteTemplate.html
+│   │   │   │   │   └── [  43 Apr  2 22:00]  selectTemplate.html
+│   │   │   │   ├── [ 119 Apr  2 22:00]  ruleImageTemplate.html
+│   │   │   │   ├── [3.1K Apr  2 22:00]  ruleTemplate.html
+│   │   │   │   ├── [ 765 Apr  2 22:00]  testDataItemTemplate.html
+│   │   │   │   ├── [ 738 Apr  2 22:00]  testDataTemplate.html
+│   │   │   │   └── [1.8K Apr  2 22:00]  widgetTemplate.html
+│   │   │   ├── [4.0K Apr  2 22:00]  src
+│   │   │   │   ├── [ 18K Apr  2 22:00]  ConditionEvaluator.js
+│   │   │   │   ├── [8.2K Apr  2 22:00]  Condition.js
+│   │   │   │   ├── [ 14K Apr  2 22:00]  ConditionManager.js
+│   │   │   │   ├── [3.7K Apr  2 22:00]  eventHelpers.js
+│   │   │   │   ├── [4.0K Apr  2 22:00]  input
+│   │   │   │   │   ├── [2.7K Apr  2 22:00]  ColorPalette.js
+│   │   │   │   │   ├── [2.5K Apr  2 22:00]  IconPalette.js
+│   │   │   │   │   ├── [3.4K Apr  2 22:00]  KeySelect.js
+│   │   │   │   │   ├── [3.0K Apr  2 22:00]  ObjectSelect.js
+│   │   │   │   │   ├── [4.2K Apr  2 22:00]  OperationSelect.js
+│   │   │   │   │   ├── [6.7K Apr  2 22:00]  Palette.js
+│   │   │   │   │   └── [5.0K Apr  2 22:00]  Select.js
+│   │   │   │   ├── [ 20K Apr  2 22:00]  Rule.js
+│   │   │   │   ├── [ 15K Apr  2 22:00]  SummaryWidget.js
+│   │   │   │   ├── [4.0K Apr  2 22:00]  telemetry
+│   │   │   │   │   ├── [2.4K Apr  2 22:00]  EvaluatorPool.js
+│   │   │   │   │   ├── [3.8K Apr  2 22:00]  EvaluatorPoolSpec.js
+│   │   │   │   │   ├── [7.1K Apr  2 22:00]  operations.js
+│   │   │   │   │   ├── [2.9K Apr  2 22:00]  SummaryWidgetCondition.js
+│   │   │   │   │   ├── [5.5K Apr  2 22:00]  SummaryWidgetConditionSpec.js
+│   │   │   │   │   ├── [9.7K Apr  2 22:00]  SummaryWidgetEvaluator.js
+│   │   │   │   │   ├── [4.0K Apr  2 22:00]  SummaryWidgetMetadataProvider.js
+│   │   │   │   │   ├── [2.7K Apr  2 22:00]  SummaryWidgetRule.js
+│   │   │   │   │   ├── [5.9K Apr  2 22:00]  SummaryWidgetRuleSpec.js
+│   │   │   │   │   ├── [2.5K Apr  2 22:00]  SummaryWidgetTelemetryProvider.js
+│   │   │   │   │   └── [ 17K Apr  2 22:00]  SummaryWidgetTelemetryProviderSpec.js
+│   │   │   │   ├── [6.8K Apr  2 22:00]  TestDataItem.js
+│   │   │   │   ├── [6.6K Apr  2 22:00]  TestDataManager.js
+│   │   │   │   ├── [4.0K Apr  2 22:00]  views
+│   │   │   │   │   ├── [ 221 Apr  2 22:00]  summary-widget.html
+│   │   │   │   │   ├── [3.2K Apr  2 22:00]  SummaryWidgetView.js
+│   │   │   │   │   └── [1.2K Apr  2 22:00]  SummaryWidgetViewProvider.js
+│   │   │   │   └── [6.3K Apr  2 22:00]  WidgetDnD.js
+│   │   │   ├── [1.7K Apr  2 22:00]  SummaryWidgetsCompositionPolicy.js
+│   │   │   ├── [1.7K Apr  2 22:00]  SummaryWidgetViewPolicy.js
+│   │   │   └── [4.0K Apr  2 22:00]  test
+│   │   │       ├── [ 14K Apr  2 22:00]  ConditionEvaluatorSpec.js
+│   │   │       ├── [ 17K Apr  2 22:00]  ConditionManagerSpec.js
+│   │   │       ├── [8.2K Apr  2 22:00]  ConditionSpec.js
+│   │   │       ├── [4.0K Apr  2 22:00]  input
+│   │   │       │   ├── [1007 Apr  2 22:00]  ColorPaletteSpec.js
+│   │   │       │   ├── [ 976 Apr  2 22:00]  IconPaletteSpec.js
+│   │   │       │   ├── [4.8K Apr  2 22:00]  KeySelectSpec.js
+│   │   │       │   ├── [4.2K Apr  2 22:00]  ObjectSelectSpec.js
+│   │   │       │   ├── [5.8K Apr  2 22:00]  OperationSelectSpec.js
+│   │   │       │   ├── [1.7K Apr  2 22:00]  PaletteSpec.js
+│   │   │       │   └── [2.1K Apr  2 22:00]  SelectSpec.js
+│   │   │       ├── [ 10K Apr  2 22:00]  RuleSpec.js
+│   │   │       ├── [8.7K Apr  2 22:00]  SummaryWidgetSpec.js
+│   │   │       ├── [2.5K Apr  2 22:00]  SummaryWidgetViewPolicySpec.js
+│   │   │       ├── [6.3K Apr  2 22:00]  TestDataItemSpec.js
+│   │   │       ├── [7.6K Apr  2 22:00]  TestDataManagerSpec.js
+│   │   │       └── [   0 Apr  2 22:00]  WidgetDnDSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  tabs
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [1.2K Apr  2 22:00]  tabs.scss
+│   │   │   │   └── [ 12K Apr  2 22:00]  tabs.vue
+│   │   │   ├── [2.5K Apr  2 22:00]  plugin.js
+│   │   │   ├── [6.9K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [3.1K Apr  2 22:00]  tabs.js
+│   │   ├── [4.0K Apr  2 22:00]  telemetryMean
+│   │   │   ├── [3.3K Apr  2 22:00]  plugin.js
+│   │   │   └── [4.0K Apr  2 22:00]  src
+│   │   │       ├── [4.5K Apr  2 22:00]  MeanTelemetryProvider.js
+│   │   │       ├── [ 22K Apr  2 22:00]  MeanTelemetryProviderSpec.js
+│   │   │       ├── [3.4K Apr  2 22:00]  MockTelemetryApi.js
+│   │   │       └── [4.2K Apr  2 22:00]  TelemetryAverager.js
+│   │   ├── [4.0K Apr  2 22:00]  telemetryTable
+│   │   │   ├── [4.0K Apr  2 22:00]  collections
+│   │   │   │   └── [ 12K Apr  2 22:00]  TableRowCollection.js
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [1.3K Apr  2 22:00]  sizing-row.vue
+│   │   │   │   ├── [2.5K Apr  2 22:00]  table-cell.vue
+│   │   │   │   ├── [5.6K Apr  2 22:00]  table-column-header.vue
+│   │   │   │   ├── [5.9K Apr  2 22:00]  table-configuration.vue
+│   │   │   │   ├── [ 542 Apr  2 22:00]  table-footer-indicator.scss
+│   │   │   │   ├── [5.6K Apr  2 22:00]  table-footer-indicator.vue
+│   │   │   │   ├── [ 388 Apr  2 22:00]  table-row.scss
+│   │   │   │   ├── [6.6K Apr  2 22:00]  table-row.vue
+│   │   │   │   ├── [5.7K Apr  2 22:00]  table.scss
+│   │   │   │   └── [ 39K Apr  2 22:00]  table.vue
+│   │   │   ├── [2.1K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 17K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [3.1K Apr  2 22:00]  TableConfigurationViewProvider.js
+│   │   │   ├── [2.4K Apr  2 22:00]  TelemetryTableColumn.js
+│   │   │   ├── [6.2K Apr  2 22:00]  TelemetryTableConfiguration.js
+│   │   │   ├── [ 16K Apr  2 22:00]  TelemetryTable.js
+│   │   │   ├── [1.7K Apr  2 22:00]  TelemetryTableNameColumn.js
+│   │   │   ├── [3.9K Apr  2 22:00]  TelemetryTableRow.js
+│   │   │   ├── [1.6K Apr  2 22:00]  TelemetryTableType.js
+│   │   │   ├── [2.1K Apr  2 22:00]  TelemetryTableUnitColumn.js
+│   │   │   ├── [1.9K Apr  2 22:00]  TelemetryTableView.js
+│   │   │   ├── [2.1K Apr  2 22:00]  TelemetryTableViewProvider.js
+│   │   │   └── [3.7K Apr  2 22:00]  ViewActions.js
+│   │   ├── [4.0K Apr  2 22:00]  themes
+│   │   │   ├── [ 174 Apr  2 22:00]  espresso.js
+│   │   │   ├── [ 663 Apr  2 22:00]  espresso-theme.scss
+│   │   │   ├── [ 597 Apr  2 22:00]  installTheme.js
+│   │   │   ├── [ 170 Apr  2 22:00]  snow.js
+│   │   │   └── [ 659 Apr  2 22:00]  snow-theme.scss
+│   │   ├── [4.0K Apr  2 22:00]  timeConductor
+│   │   │   ├── [1.5K Apr  2 22:00]  conductor-axis.scss
+│   │   │   ├── [9.5K Apr  2 22:00]  ConductorAxis.vue
+│   │   │   ├── [ 11K Apr  2 22:00]  ConductorHistory.vue
+│   │   │   ├── [9.5K Apr  2 22:00]  ConductorInputsFixed.vue
+│   │   │   ├── [ 10K Apr  2 22:00]  ConductorInputsRealtime.vue
+│   │   │   ├── [3.3K Apr  2 22:00]  conductor-mode-icon.scss
+│   │   │   ├── [1.3K Apr  2 22:00]  ConductorModeIcon.vue
+│   │   │   ├── [ 245 Apr  2 22:00]  conductor-mode.scss
+│   │   │   ├── [6.4K Apr  2 22:00]  ConductorMode.vue
+│   │   │   ├── [7.0K Apr  2 22:00]  conductor.scss
+│   │   │   ├── [5.0K Apr  2 22:00]  ConductorTimeSystem.vue
+│   │   │   ├── [7.8K Apr  2 22:00]  Conductor.vue
+│   │   │   ├── [2.0K Apr  2 22:00]  date-picker.scss
+│   │   │   ├── [8.0K Apr  2 22:00]  DatePicker.vue
+│   │   │   ├── [4.0K Apr  2 22:00]  independent
+│   │   │   │   ├── [8.9K Apr  2 22:00]  IndependentTimeConductor.vue
+│   │   │   │   └── [7.8K Apr  2 22:00]  Mode.vue
+│   │   │   ├── [4.4K Apr  2 22:00]  plugin.js
+│   │   │   ├── [6.3K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [5.0K Apr  2 22:00]  timePopup.vue
+│   │   │   └── [2.3K Apr  2 22:00]  utcMultiTimeFormat.js
+│   │   ├── [4.0K Apr  2 22:00]  timeline
+│   │   │   ├── [2.1K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 12K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [2.6K Apr  2 22:00]  TimelineCompositionPolicy.js
+│   │   │   ├── [1.7K Apr  2 22:00]  timelineInterceptor.js
+│   │   │   ├── [4.6K Apr  2 22:00]  TimelineObjectView.vue
+│   │   │   ├── [ 171 Apr  2 22:00]  timeline.scss
+│   │   │   ├── [7.0K Apr  2 22:00]  TimelineViewLayout.vue
+│   │   │   └── [2.5K Apr  2 22:00]  TimelineViewProvider.js
+│   │   ├── [4.0K Apr  2 22:00]  timelist
+│   │   │   ├── [ 472 Apr  2 22:00]  constants.js
+│   │   │   ├── [4.0K Apr  2 22:00]  inspector
+│   │   │   │   ├── [3.5K Apr  2 22:00]  EventProperties.vue
+│   │   │   │   ├── [2.3K Apr  2 22:00]  Filtering.vue
+│   │   │   │   ├── [2.7K Apr  2 22:00]  TimeListInspectorViewProvider.js
+│   │   │   │   └── [4.7K Apr  2 22:00]  TimelistPropertiesView.vue
+│   │   │   ├── [2.7K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 14K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [1.5K Apr  2 22:00]  TimelistCompositionPolicy.js
+│   │   │   ├── [1.8K Apr  2 22:00]  timelist.scss
+│   │   │   ├── [2.5K Apr  2 22:00]  TimelistViewProvider.js
+│   │   │   └── [ 18K Apr  2 22:00]  Timelist.vue
+│   │   ├── [4.0K Apr  2 22:00]  timer
+│   │   │   ├── [4.0K Apr  2 22:00]  actions
+│   │   │   │   ├── [2.5K Apr  2 22:00]  PauseTimerAction.js
+│   │   │   │   ├── [2.6K Apr  2 22:00]  RestartTimerAction.js
+│   │   │   │   ├── [3.1K Apr  2 22:00]  StartTimerAction.js
+│   │   │   │   └── [2.6K Apr  2 22:00]  StopTimerAction.js
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   └── [8.3K Apr  2 22:00]  Timer.vue
+│   │   │   ├── [4.6K Apr  2 22:00]  plugin.js
+│   │   │   ├── [ 15K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [2.4K Apr  2 22:00]  TimerViewProvider.js
+│   │   ├── [4.0K Apr  2 22:00]  URLIndicatorPlugin
+│   │   │   ├── [ 788 Apr  2 22:00]  README.md
+│   │   │   ├── [4.4K Apr  2 22:00]  URLIndicator.js
+│   │   │   ├── [1.6K Apr  2 22:00]  URLIndicatorPlugin.js
+│   │   │   └── [6.0K Apr  2 22:00]  URLIndicatorSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  URLTimeSettingsSynchronizer
+│   │   │   ├── [1.4K Apr  2 22:00]  plugin.js
+│   │   │   ├── [5.0K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [8.0K Apr  2 22:00]  URLTimeSettingsSynchronizer.js
+│   │   ├── [4.0K Apr  2 22:00]  userIndicator
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   └── [1.6K Apr  2 22:00]  UserIndicator.vue
+│   │   │   ├── [2.1K Apr  2 22:00]  plugin.js
+│   │   │   └── [3.4K Apr  2 22:00]  pluginSpec.js
+│   │   ├── [4.0K Apr  2 22:00]  utcTimeSystem
+│   │   │   ├── [ 879 Apr  2 22:00]  DurationFormat.js
+│   │   │   ├── [2.3K Apr  2 22:00]  LocalClock.js
+│   │   │   ├── [1.8K Apr  2 22:00]  plugin.js
+│   │   │   ├── [6.8K Apr  2 22:00]  pluginSpec.js
+│   │   │   ├── [3.2K Apr  2 22:00]  UTCTimeFormat.js
+│   │   │   └── [1.7K Apr  2 22:00]  UTCTimeSystem.js
+│   │   ├── [4.0K Apr  2 22:00]  viewDatumAction
+│   │   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   │   ├── [ 504 Apr  2 22:00]  metadata-list.scss
+│   │   │   │   └── [ 725 Apr  2 22:00]  MetadataList.vue
+│   │   │   ├── [1.4K Apr  2 22:00]  plugin.js
+│   │   │   ├── [2.8K Apr  2 22:00]  pluginSpec.js
+│   │   │   └── [2.6K Apr  2 22:00]  ViewDatumAction.js
+│   │   ├── [4.0K Apr  2 22:00]  viewLargeAction
+│   │   │   ├── [1.4K Apr  2 22:00]  plugin.js
+│   │   │   └── [3.2K Apr  2 22:00]  viewLargeAction.js
+│   │   └── [4.0K Apr  2 22:00]  webPage
+│   │       ├── [4.0K Apr  2 22:00]  components
+│   │       │   └── [ 460 Apr  2 22:00]  WebPage.vue
+│   │       ├── [1.9K Apr  2 22:00]  plugin.js
+│   │       ├── [3.4K Apr  2 22:00]  pluginSpec.js
+│   │       └── [2.3K Apr  2 22:00]  WebPageViewProvider.js
+│   ├── [4.0K Apr  2 22:00]  selection
+│   │   └── [7.5K Apr  2 22:00]  Selection.js
+│   ├── [4.0K Apr  2 22:00]  styles
+│   │   ├── [3.2K Apr  2 22:00]  _about.scss
+│   │   ├── [2.1K Apr  2 22:00]  _animations.scss
+│   │   ├── [ 18K Apr  2 22:00]  _constants-espresso.scss
+│   │   ├── [ 18K Apr  2 22:00]  _constants-maelstrom.scss
+│   │   ├── [4.4K Apr  2 22:00]  _constants-mobile.scss
+│   │   ├── [ 37K Apr  2 22:00]  _constants.scss
+│   │   ├── [ 18K Apr  2 22:00]  _constants-snow.scss
+│   │   ├── [ 26K Apr  2 22:00]  _controls.scss
+│   │   ├── [4.0K Apr  2 22:00]  fonts
+│   │   │   ├── [6.6K Apr  2 22:00]  Open MCT Symbols 12px.json
+│   │   │   ├── [2.1K Apr  2 22:00]  Open-MCT-Symbols-12px.ttf
+│   │   │   ├── [2.2K Apr  2 22:00]  Open-MCT-Symbols-12px.woff
+│   │   │   ├── [147K Apr  2 22:00]  Open MCT Symbols 16px.json
+│   │   │   ├── [ 70K Apr  2 22:00]  Open-MCT-Symbols-16px.svg
+│   │   │   ├── [ 26K Apr  2 22:00]  Open-MCT-Symbols-16px.ttf
+│   │   │   └── [ 26K Apr  2 22:00]  Open-MCT-Symbols-16px.woff
+│   │   ├── [ 10K Apr  2 22:00]  _forms.scss
+│   │   ├── [9.0K Apr  2 22:00]  _global.scss
+│   │   ├── [ 17K Apr  2 22:00]  _glyphs.scss
+│   │   ├── [3.7K Apr  2 22:00]  _legacy-messages.scss
+│   │   ├── [ 20K Apr  2 22:00]  _legacy-plots.scss
+│   │   ├── [ 29K Apr  2 22:00]  _legacy.scss
+│   │   ├── [6.4K Apr  2 22:00]  _limits.scss
+│   │   ├── [ 20K Apr  2 22:00]  _mixins.scss
+│   │   ├── [ 17K Apr  2 22:00]  notebook.scss
+│   │   ├── [2.1K Apr  2 22:00]  plotly.scss
+│   │   ├── [6.2K Apr  2 22:00]  _status.scss
+│   │   ├── [6.3K Apr  2 22:00]  _table.scss
+│   │   ├── [4.0K Apr  2 22:00]  vendor
+│   │   │   └── [2.4K Apr  2 22:00]  normalize-min.scss
+│   │   └── [3.2K Apr  2 22:00]  vue-styles.scss
+│   ├── [4.0K Apr  2 22:00]  tools
+│   │   ├── [2.8K Apr  2 22:00]  url.js
+│   │   └── [2.6K Apr  2 22:00]  urlSpec.js
+│   ├── [4.0K Apr  2 22:00]  ui
+│   │   ├── [4.0K Apr  2 22:00]  color
+│   │   │   ├── [2.1K Apr  2 22:00]  ColorHelper.js
+│   │   │   ├── [3.0K Apr  2 22:00]  Color.js
+│   │   │   ├── [2.8K Apr  2 22:00]  ColorPalette.js
+│   │   │   └── [4.8K Apr  2 22:00]  ColorSwatch.vue
+│   │   ├── [4.0K Apr  2 22:00]  components
+│   │   │   ├── [1.4K Apr  2 22:00]  components.js
+│   │   │   ├── [ 224 Apr  2 22:00]  COMPONENTS.md
+│   │   │   ├── [1.7K Apr  2 22:00]  componentsSpec.js
+│   │   │   ├── [ 354 Apr  2 22:00]  contextMenuDropDown.vue
+│   │   │   ├── [4.0K Apr  2 22:00]  List
+│   │   │   │   ├── [1011 Apr  2 22:00]  ListHeader.vue
+│   │   │   │   ├── [1.2K Apr  2 22:00]  ListItem.vue
+│   │   │   │   ├── [ 762 Apr  2 22:00]  list-view.scss
+│   │   │   │   └── [3.8K Apr  2 22:00]  ListView.vue
+│   │   │   ├── [3.8K Apr  2 22:00]  object-frame.scss
+│   │   │   ├── [7.9K Apr  2 22:00]  ObjectFrame.vue
+│   │   │   ├── [2.0K Apr  2 22:00]  object-label.scss
+│   │   │   ├── [3.6K Apr  2 22:00]  ObjectLabel.vue
+│   │   │   ├── [4.1K Apr  2 22:00]  ObjectPath.vue
+│   │   │   ├── [ 16K Apr  2 22:00]  ObjectView.vue
+│   │   │   ├── [ 599 Apr  2 22:00]  progress-bar.scss
+│   │   │   ├── [ 754 Apr  2 22:00]  ProgressBar.vue
+│   │   │   ├── [1.7K Apr  2 22:00]  search.scss
+│   │   │   ├── [1.4K Apr  2 22:00]  search.vue
+│   │   │   ├── [4.0K Apr  2 22:00]  swim-lane
+│   │   │   │   ├── [1.9K Apr  2 22:00]  swimlane.scss
+│   │   │   │   └── [3.6K Apr  2 22:00]  SwimLane.vue
+│   │   │   ├── [ 856 Apr  2 22:00]  timesystem-axis.scss
+│   │   │   ├── [5.0K Apr  2 22:00]  TimeSystemAxis.vue
+│   │   │   ├── [1.5K Apr  2 22:00]  toggle-switch.scss
+│   │   │   ├── [1.0K Apr  2 22:00]  ToggleSwitch.vue
+│   │   │   └── [ 875 Apr  2 22:00]  viewControl.vue
+│   │   ├── [4.0K Apr  2 22:00]  inspector
+│   │   │   ├── [5.6K Apr  2 22:00]  InspectorDetailsSpec.js
+│   │   │   ├── [6.0K Apr  2 22:00]  inspector.scss
+│   │   │   ├── [9.2K Apr  2 22:00]  InspectorStylesSpec.js
+│   │   │   ├── [6.7K Apr  2 22:00]  InspectorStylesSpecMocks.js
+│   │   │   ├── [3.3K Apr  2 22:00]  InspectorTabs.vue
+│   │   │   ├── [2.7K Apr  2 22:00]  InspectorViews.vue
+│   │   │   ├── [2.3K Apr  2 22:00]  Inspector.vue
+│   │   │   └── [5.3K Apr  2 22:00]  ObjectName.vue
+│   │   ├── [4.0K Apr  2 22:00]  layout
+│   │   │   ├── [2.5K Apr  2 22:00]  AboutDialog.vue
+│   │   │   ├── [ 150 Apr  2 22:00]  app-logo.scss
+│   │   │   ├── [2.0K Apr  2 22:00]  AppLogo.vue
+│   │   │   ├── [4.0K Apr  2 22:00]  assets
+│   │   │   │   └── [4.0K Apr  2 22:00]  images
+│   │   │   │       ├── [119K Apr  2 22:00]  bg-splash.jpg
+│   │   │   │       ├── [ 12K Apr  2 22:00]  logo-nasa.svg
+│   │   │   │       ├── [2.4K Apr  2 22:00]  logo-openmct-shdw.svg
+│   │   │   │       └── [1.9K Apr  2 22:00]  logo-openmct.svg
+│   │   │   ├── [ 13K Apr  2 22:00]  BrowseBar.vue
+│   │   │   ├── [ 452 Apr  2 22:00]  create-button.scss
+│   │   │   ├── [2.2K Apr  2 22:00]  CreateButton.vue
+│   │   │   ├── [ 13K Apr  2 22:00]  layout.scss
+│   │   │   ├── [5.4K Apr  2 22:00]  LayoutSpec.js
+│   │   │   ├── [9.6K Apr  2 22:00]  Layout.vue
+│   │   │   ├── [6.2K Apr  2 22:00]  mct-tree.scss
+│   │   │   ├── [ 37K Apr  2 22:00]  mct-tree.vue
+│   │   │   ├── [ 479 Apr  2 22:00]  multipane.vue
+│   │   │   ├── [8.8K Apr  2 22:00]  pane.scss
+│   │   │   ├── [6.9K Apr  2 22:00]  pane.vue
+│   │   │   ├── [4.6K Apr  2 22:00]  RecentObjectsListItem.vue
+│   │   │   ├── [8.7K Apr  2 22:00]  RecentObjectsList.vue
+│   │   │   ├── [2.8K Apr  2 22:00]  recent-objects.scss
+│   │   │   ├── [4.0K Apr  2 22:00]  search
+│   │   │   │   ├── [7.5K Apr  2 22:00]  AnnotationSearchResult.vue
+│   │   │   │   ├── [ 12K Apr  2 22:00]  GrandSearchSpec.js
+│   │   │   │   ├── [7.8K Apr  2 22:00]  GrandSearch.vue
+│   │   │   │   ├── [4.6K Apr  2 22:00]  ObjectSearchResult.vue
+│   │   │   │   ├── [5.0K Apr  2 22:00]  SearchResultsDropDown.vue
+│   │   │   │   └── [3.4K Apr  2 22:00]  search.scss
+│   │   │   ├── [4.0K Apr  2 22:00]  status-bar
+│   │   │   │   ├── [3.6K Apr  2 22:00]  indicators.scss
+│   │   │   │   ├── [1.5K Apr  2 22:00]  Indicators.vue
+│   │   │   │   ├── [1.6K Apr  2 22:00]  notification-banner.scss
+│   │   │   │   └── [6.5K Apr  2 22:00]  NotificationBanner.vue
+│   │   │   ├── [5.8K Apr  2 22:00]  tree-item.vue
+│   │   │   └── [1.1K Apr  2 22:00]  ViewSwitcher.vue
+│   │   ├── [4.0K Apr  2 22:00]  mixins
+│   │   │   ├── [1.8K Apr  2 22:00]  context-menu-gesture.js
+│   │   │   ├── [ 573 Apr  2 22:00]  object-link.js
+│   │   │   ├── [2.8K Apr  2 22:00]  staleness-mixin.js
+│   │   │   └── [ 894 Apr  2 22:00]  toggle-mixin.js
+│   │   ├── [4.0K Apr  2 22:00]  preview
+│   │   │   ├── [1.5K Apr  2 22:00]  plugin.js
+│   │   │   ├── [3.3K Apr  2 22:00]  PreviewAction.js
+│   │   │   ├── [4.9K Apr  2 22:00]  preview-header.vue
+│   │   │   ├── [ 518 Apr  2 22:00]  preview.scss
+│   │   │   ├── [7.8K Apr  2 22:00]  Preview.vue
+│   │   │   └── [1.8K Apr  2 22:00]  ViewHistoricalDataAction.js
+│   │   ├── [4.0K Apr  2 22:00]  registries
+│   │   │   ├── [5.1K Apr  2 22:00]  InspectorViewRegistry.js
+│   │   │   ├── [4.1K Apr  2 22:00]  ToolbarRegistry.js
+│   │   │   └── [ 10K Apr  2 22:00]  ViewRegistry.js
+│   │   ├── [4.0K Apr  2 22:00]  router
+│   │   │   ├── [ 12K Apr  2 22:00]  ApplicationRouter.js
+│   │   │   ├── [3.4K Apr  2 22:00]  ApplicationRouterSpec.js
+│   │   │   └── [5.3K Apr  2 22:00]  Browse.js
+│   │   └── [4.0K Apr  2 22:00]  toolbar
+│   │       ├── [4.0K Apr  2 22:00]  components
+│   │       │   ├── [1.8K Apr  2 22:00]  toolbar-button.vue
+│   │       │   ├── [ 929 Apr  2 22:00]  toolbar-checkbox.scss
+│   │       │   ├── [ 844 Apr  2 22:00]  toolbar-checkbox.vue
+│   │       │   ├── [4.8K Apr  2 22:00]  toolbar-color-picker.vue
+│   │       │   ├── [1.4K Apr  2 22:00]  toolbar-input.vue
+│   │       │   ├── [1.2K Apr  2 22:00]  toolbar-menu.vue
+│   │       │   ├── [1.7K Apr  2 22:00]  toolbar-select-menu.vue
+│   │       │   ├── [ 205 Apr  2 22:00]  toolbar-separator.vue
+│   │       │   └── [1.2K Apr  2 22:00]  toolbar-toggle-button.vue
+│   │       └── [ 10K Apr  2 22:00]  Toolbar.vue
+│   └── [4.0K Apr  2 22:00]  utils
+│       ├── [4.0K Apr  2 22:00]  agent
+│       │   ├── [4.8K Apr  2 22:00]  Agent.js
+│       │   └── [4.8K Apr  2 22:00]  AgentSpec.js
+│       ├── [ 273 Apr  2 22:00]  clipboard.js
+│       ├── [4.0K Apr  2 22:00]  clock
+│       │   ├── [2.8K Apr  2 22:00]  DefaultClock.js
+│       │   └── [2.9K Apr  2 22:00]  Ticker.js
+│       ├── [2.8K Apr  2 22:00]  duration.js
+│       ├── [ 284 Apr  2 22:00]  raf.js
+│       ├── [2.0K Apr  2 22:00]  rafSpec.js
+│       ├── [2.7K Apr  2 22:00]  staleness.js
+│       ├── [4.0K Apr  2 22:00]  template
+│       │   ├── [ 419 Apr  2 22:00]  templateHelpers.js
+│       │   └── [5.8K Apr  2 22:00]  templateHelpersSpec.js
+│       ├── [4.0K Apr  2 22:00]  testing
+│       │   └── [ 818 Apr  2 22:00]  mockLocalStorage.js
+│       ├── [9.8K Apr  2 22:00]  testing.js
+│       └── [4.0K Apr  2 22:00]  textHighlight
+│           └── [2.2K Apr  2 22:00]  TextHighlight.vue
+├── [114K Apr  2 22:00]  tree.txt
+├── [ 984 Apr  2 22:00]  tsconfig.json
+├── [4.0K Apr  2 23:06]  node_modules
+│   ├── [  50 Apr  2 23:06]  eslint-scope -> .pnpm/eslint-scope@7.1.1/node_modules/eslint-scope
+│   ├── [  64 Apr  2 23:06]  eslint-visitor-keys -> .pnpm/eslint-visitor-keys@2.1.0/node_modules/eslint-visitor-keys
+│   ├── [  42 Apr  2 23:06]  prettier -> .pnpm/prettier@2.8.7/node_modules/prettier
+│   ├── [4.0K Apr  2 23:06]  @babel
+│   │   └── [ 103 Apr  2 23:06]  eslint-parser -> ../.pnpm/@babel+eslint-parser@7.21.3_@babel+core@7.21.4_eslint@8.37.0/node_modules/@babel/eslint-parser
+│   ├── [  84 Apr  2 23:06]  babel-loader -> .pnpm/babel-loader@9.1.2_@babel+core@7.21.4_webpack@5.77.0/node_modules/babel-loader
+│   ├── [  68 Apr  2 23:06]  babel-plugin-istanbul -> .pnpm/babel-plugin-istanbul@6.1.1/node_modules/babel-plugin-istanbul
+│   ├── [4.0K Apr  2 23:06]  @braintree
+│   │   └── [  75 Apr  2 23:06]  sanitize-url -> ../.pnpm/@braintree+sanitize-url@6.0.2/node_modules/@braintree/sanitize-url
+│   ├── [  70 Apr  2 23:06]  comma-separated-values -> .pnpm/comma-separated-values@3.6.4/node_modules/comma-separated-values
+│   ├── [  80 Apr  2 23:06]  copy-webpack-plugin -> .pnpm/copy-webpack-plugin@11.0.0_webpack@5.77.0/node_modules/copy-webpack-plugin
+│   ├── [  61 Apr  2 23:06]  css-loader -> .pnpm/css-loader@6.7.3_webpack@5.77.0/node_modules/css-loader
+│   ├── [  40 Apr  2 23:06]  d3-axis -> .pnpm/d3-axis@3.0.0/node_modules/d3-axis
+│   ├── [  42 Apr  2 23:06]  d3-color -> .pnpm/d3-color@3.1.0/node_modules/d3-color
+│   ├── [  42 Apr  2 23:06]  d3-scale -> .pnpm/d3-scale@3.3.0/node_modules/d3-scale
+│   ├── [  50 Apr  2 23:06]  d3-selection -> .pnpm/d3-selection@3.0.0/node_modules/d3-selection
+│   ├── [4.0K Apr  2 23:06]  @eslint
+│   │   ├── [  61 Apr  2 23:06]  eslintrc -> ../.pnpm/@eslint+eslintrc@2.0.2/node_modules/@eslint/eslintrc
+│   │   └── [  50 Apr  2 23:06]  js -> ../.pnpm/@eslint+js@8.37.0/node_modules/@eslint/js
+│   ├── [  39 Apr  2 23:06]  eslint -> .pnpm/eslint@8.37.0/node_modules/eslint
+│   ├── [4.0K Apr  2 23:06]  @eslint-community
+│   │   ├── [ 103 Apr  2 23:06]  eslint-utils -> ../.pnpm/@eslint-community+eslint-utils@4.4.0_eslint@8.37.0/node_modules/@eslint-community/eslint-utils
+│   │   └── [  79 Apr  2 23:06]  regexpp -> ../.pnpm/@eslint-community+regexpp@4.5.0/node_modules/@eslint-community/regexpp
+│   ├── [  80 Apr  2 23:06]  eslint-plugin-compat -> .pnpm/eslint-plugin-compat@4.1.2_eslint@8.37.0/node_modules/eslint-plugin-compat
+│   ├── [  89 Apr  2 23:06]  eslint-plugin-playwright -> .pnpm/eslint-plugin-playwright@0.12.0_eslint@8.37.0/node_modules/eslint-plugin-playwright
+│   ├── [  75 Apr  2 23:06]  eslint-plugin-vue -> .pnpm/eslint-plugin-vue@9.10.0_eslint@8.37.0/node_modules/eslint-plugin-vue
+│   ├── [ 117 Apr  2 23:06]  eslint-plugin-you-dont-need-lodash-underscore -> .pnpm/eslint-plugin-you-dont-need-lodash-underscore@6.12.0/node_modules/eslint-plugin-you-dont-need-lodash-underscore
+│   ├── [  52 Apr  2 23:06]  eventemitter3 -> .pnpm/eventemitter3@1.2.0/node_modules/eventemitter3
+│   ├── [  46 Apr  2 23:06]  file-saver -> .pnpm/file-saver@2.0.5/node_modules/file-saver
+│   ├── [  50 Apr  2 23:06]  git-rev-sync -> .pnpm/git-rev-sync@3.0.2/node_modules/git-rev-sync
+│   ├── [  48 Apr  2 23:06]  html2canvas -> .pnpm/html2canvas@1.4.1/node_modules/html2canvas
+│   ├── [  69 Apr  2 23:06]  imports-loader -> .pnpm/imports-loader@4.0.1_webpack@5.77.0/node_modules/imports-loader
+│   ├── [  50 Apr  2 23:06]  jasmine-core -> .pnpm/jasmine-core@4.6.0/node_modules/jasmine-core
+│   ├── [  36 Apr  2 23:06]  karma -> .pnpm/karma@6.4.1/node_modules/karma
+│   ├── [  68 Apr  2 23:06]  karma-chrome-launcher -> .pnpm/karma-chrome-launcher@3.1.1/node_modules/karma-chrome-launcher
+│   ├── [  44 Apr  2 23:06]  karma-cli -> .pnpm/karma-cli@2.0.0/node_modules/karma-cli
+│   ├── [  54 Apr  2 23:06]  karma-coverage -> .pnpm/karma-coverage@2.2.0/node_modules/karma-coverage
+│   ├── [  90 Apr  2 23:06]  karma-coverage-istanbul-reporter -> .pnpm/karma-coverage-istanbul-reporter@3.0.3/node_modules/karma-coverage-istanbul-reporter
+│   ├── [  64 Apr  2 23:06]  karma-jasmine -> .pnpm/karma-jasmine@5.1.0_karma@6.4.1/node_modules/karma-jasmine
+│   ├── [  78 Apr  2 23:06]  karma-junit-reporter -> .pnpm/karma-junit-reporter@2.0.1_karma@6.4.1/node_modules/karma-junit-reporter
+│   ├── [  70 Apr  2 23:06]  karma-sourcemap-loader -> .pnpm/karma-sourcemap-loader@0.4.0/node_modules/karma-sourcemap-loader
+│   ├── [  77 Apr  2 23:06]  karma-spec-reporter -> .pnpm/karma-spec-reporter@0.0.36_karma@6.4.1/node_modules/karma-spec-reporter
+│   ├── [  67 Apr  2 23:06]  karma-webpack -> .pnpm/karma-webpack@5.0.0_webpack@5.77.0/node_modules/karma-webpack
+│   ├── [  38 Apr  2 23:06]  kdbush -> .pnpm/kdbush@3.0.0/node_modules/kdbush
+│   ├── [  50 Apr  2 23:06]  location-bar -> .pnpm/location-bar@3.0.1/node_modules/location-bar
+│   ├── [  40 Apr  2 23:06]  lodash -> .pnpm/lodash@4.17.21/node_modules/lodash
+│   ├── [  87 Apr  2 23:06]  mini-css-extract-plugin -> .pnpm/mini-css-extract-plugin@2.7.5_webpack@5.77.0/node_modules/mini-css-extract-plugin
+│   ├── [  39 Apr  2 23:06]  moment -> .pnpm/moment@2.29.4/node_modules/moment
+│   ├── [  70 Apr  2 23:06]  moment-duration-format -> .pnpm/moment-duration-format@2.3.2/node_modules/moment-duration-format
+│   ├── [  57 Apr  2 23:06]  moment-timezone -> .pnpm/moment-timezone@0.5.41/node_modules/moment-timezone
+│   ├── [4.0K Apr  2 23:06]  @nicolo-ribaudo
+│   │   └── [ 112 Apr  2 23:06]  eslint-scope-5-internals -> ../.pnpm/@nicolo-ribaudo+eslint-scope-5-internals@5.1.1-v1/node_modules/@nicolo-ribaudo/eslint-scope-5-internals
+│   ├── [  33 Apr  2 23:06]  nyc -> .pnpm/nyc@15.1.0/node_modules/nyc
+│   ├── [  45 Apr  2 23:06]  painterro -> .pnpm/painterro@1.2.78/node_modules/painterro
+│   ├── [4.0K Apr  2 23:06]  @percy
+│   │   ├── [  50 Apr  2 23:06]  cli -> ../.pnpm/@percy+cli@1.21.0/node_modules/@percy/cli
+│   │   └── [  86 Apr  2 23:06]  playwright -> ../.pnpm/@percy+playwright@1.0.4_playwright-core@1.32.1/node_modules/@percy/playwright
+│   ├── [4.0K Apr  2 23:06]  @playwright
+│   │   └── [  62 Apr  2 23:06]  test -> ../.pnpm/@playwright+test@1.32.1/node_modules/@playwright/test
+│   ├── [  57 Apr  2 23:06]  playwright-core -> .pnpm/playwright-core@1.32.1/node_modules/playwright-core
+│   ├── [  67 Apr  2 23:06]  plotly.js-basic-dist -> .pnpm/plotly.js-basic-dist@2.20.0/node_modules/plotly.js-basic-dist
+│   ├── [  65 Apr  2 23:06]  plotly.js-gl2d-dist -> .pnpm/plotly.js-gl2d-dist@2.20.0/node_modules/plotly.js-gl2d-dist
+│   ├── [  38 Apr  2 23:06]  printj -> .pnpm/printj@1.3.1/node_modules/printj
+│   ├── [  62 Apr  2 23:06]  resolve-url-loader -> .pnpm/resolve-url-loader@5.0.0/node_modules/resolve-url-loader
+│   ├── [  53 Apr  2 23:06]  sanitize-html -> .pnpm/sanitize-html@2.10.0/node_modules/sanitize-html
+│   ├── [  35 Apr  2 23:06]  sass -> .pnpm/sass@1.60.0/node_modules/sass
+│   ├── [  76 Apr  2 23:06]  sass-loader -> .pnpm/sass-loader@13.2.2_sass@1.60.0_webpack@5.77.0/node_modules/sass-loader
+│   ├── [  37 Apr  2 23:06]  sinon -> .pnpm/sinon@15.0.3/node_modules/sinon
+│   ├── [  65 Apr  2 23:06]  style-loader -> .pnpm/style-loader@3.3.2_webpack@5.77.0/node_modules/style-loader
+│   ├── [  50 Apr  2 23:06]  tap -> .pnpm/tap@16.3.4_typescript@4.9.5/node_modules/tap
+│   ├── [4.0K Apr  2 23:06]  @types
+│   │   ├── [  56 Apr  2 23:06]  eslint -> ../.pnpm/@types+eslint@8.37.0/node_modules/@types/eslint
+│   │   ├── [  67 Apr  2 23:06]  eslint-scope -> ../.pnpm/@types+eslint-scope@3.7.4/node_modules/@types/eslint-scope
+│   │   ├── [  69 Apr  2 23:06]  eventemitter3 -> ../.pnpm/@types+eventemitter3@1.2.0/node_modules/@types/eventemitter3
+│   │   ├── [  57 Apr  2 23:06]  jasmine -> ../.pnpm/@types+jasmine@4.3.1/node_modules/@types/jasmine
+│   │   └── [  58 Apr  2 23:06]  lodash -> ../.pnpm/@types+lodash@4.14.192/node_modules/@types/lodash
+│   ├── [  46 Apr  2 23:06]  typescript -> .pnpm/typescript@4.9.5/node_modules/typescript
+│   ├── [  34 Apr  2 23:06]  uuid -> .pnpm/uuid@9.0.0/node_modules/uuid
+│   ├── [  33 Apr  2 23:06]  vue -> .pnpm/vue@2.6.14/node_modules/vue
+│   ├── [  74 Apr  2 23:06]  vue-eslint-parser -> .pnpm/vue-eslint-parser@9.1.1_eslint@8.37.0/node_modules/vue-eslint-parser
+│   ├── [ 123 Apr  2 23:06]  vue-loader -> .pnpm/vue-loader@15.9.8_css-loader@6.7.3_lodash@4.17.21_vue-template-compiler@2.6.14_webpack@5.77.0/node_modules/vue-loader
+│   ├── [  69 Apr  2 23:06]  vue-template-compiler -> .pnpm/vue-template-compiler@2.6.14/node_modules/vue-template-compiler
+│   ├── [  59 Apr  2 23:06]  webpack -> .pnpm/webpack@5.77.0_webpack-cli@5.0.1/node_modules/webpack
+│   ├── [  89 Apr  2 23:06]  webpack-cli -> .pnpm/webpack-cli@5.0.1_webpack-dev-server@4.13.2_webpack@5.77.0/node_modules/webpack-cli
+│   ├── [  96 Apr  2 23:06]  webpack-dev-server -> .pnpm/webpack-dev-server@4.13.2_webpack-cli@5.0.1_webpack@5.77.0/node_modules/webpack-dev-server
+│   ├── [  52 Apr  2 23:06]  webpack-merge -> .pnpm/webpack-merge@5.8.0/node_modules/webpack-merge
+│   └── [  37 Apr  2 23:06]  yargs -> .pnpm/yargs@17.7.1/node_modules/yargs
+├── [186K Apr  2 23:06]  pnpm-lock.yaml
+├── [4.0K Apr  2 23:06]  dist
+│   ├── [1.9K Apr  2 23:06]  couchDBChangesFeed.js
+│   ├── [6.7K Apr  2 23:06]  couchDBChangesFeed.js.map
+│   ├── [274K Apr  2 23:06]  espressoTheme.css
+│   ├── [762K Apr  2 23:06]  espressoTheme.css.map
+│   ├── [ 457 Apr  2 23:06]  espressoTheme.js
+│   ├── [1.4K Apr  2 23:06]  espressoTheme.js.map
+│   ├── [4.0K Apr  2 23:06]  favicons
+│   │   ├── [ 348 Apr  2 23:06]  favicon-16x16.png
+│   │   ├── [ 628 Apr  2 23:06]  favicon-32x32.png
+│   │   └── [1.6K Apr  2 23:06]  favicon-96x96.png
+│   ├── [4.0K Apr  2 23:06]  fonts
+│   │   ├── [2.1K Apr  2 23:06]  Open-MCT-Symbols-12px.ttf
+│   │   ├── [2.2K Apr  2 23:06]  Open-MCT-Symbols-12px.woff
+│   │   ├── [ 26K Apr  2 23:06]  Open-MCT-Symbols-16px.ttf
+│   │   └── [ 26K Apr  2 23:06]  Open-MCT-Symbols-16px.woff
+│   ├── [2.2K Apr  2 23:06]  generatorWorker.js
+│   ├── [ 12K Apr  2 23:06]  generatorWorker.js.map
+│   ├── [4.0K Apr  2 23:06]  imagery
+│   │   ├── [8.4K Apr  2 23:06]  example-imagery-layer-16x9.png
+│   │   ├── [9.0K Apr  2 23:06]  example-imagery-layer-safe.png
+│   │   └── [ 11K Apr  2 23:06]  example-imagery-layer-scale.png
+│   ├── [4.0K Apr  2 23:06]  images
+│   │   ├── [119K Apr  2 23:06]  bg-splash.jpg
+│   │   ├── [ 12K Apr  2 23:06]  logo-nasa.svg
+│   │   ├── [2.4K Apr  2 23:06]  logo-openmct-shdw.svg
+│   │   └── [1.9K Apr  2 23:06]  logo-openmct.svg
+│   ├── [8.4K Apr  2 23:06]  index.html
+│   ├── [1.9K Apr  2 23:06]  inMemorySearchWorker.js
+│   ├── [ 11K Apr  2 23:06]  inMemorySearchWorker.js.map
+│   ├── [4.1M Apr  2 23:06]  openmct.js
+│   ├── [2.3K Apr  2 23:06]  openmct.js.LICENSE.txt
+│   ├── [ 14M Apr  2 23:06]  openmct.js.map
+│   ├── [273K Apr  2 23:06]  snowTheme.css
+│   ├── [761K Apr  2 23:06]  snowTheme.css.map
+│   ├── [ 453 Apr  2 23:06]  snowTheme.js
+│   ├── [1.4K Apr  2 23:06]  snowTheme.js.map
+│   ├── [1.8K Apr  2 23:06]  openmct.d.ts
+│   ├── [ 787 Apr  2 23:06]  openmct.d.ts.map
+│   └── [4.0K Apr  2 23:06]  src
+│       ├── [4.0K Apr  2 23:06]  api
+│       │   ├── [4.0K Apr  2 23:06]  actions
+│       │   │   ├── [ 776 Apr  2 23:06]  ActionCollection.d.ts
+│       │   │   ├── [ 383 Apr  2 23:06]  ActionCollection.d.ts.map
+│       │   │   ├── [ 850 Apr  2 23:06]  ActionsAPI.d.ts
+│       │   │   └── [ 324 Apr  2 23:06]  ActionsAPI.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  annotation
+│       │   │   ├── [7.3K Apr  2 23:06]  AnnotationAPI.d.ts
+│       │   │   └── [ 921 Apr  2 23:06]  AnnotationAPI.d.ts.map
+│       │   ├── [  33 Apr  2 23:06]  api.d.ts
+│       │   ├── [ 110 Apr  2 23:06]  api.d.ts.map
+│       │   ├── [1.2K Apr  2 23:06]  Branding.d.ts
+│       │   ├── [ 204 Apr  2 23:06]  Branding.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  composition
+│       │   │   ├── [3.5K Apr  2 23:06]  CompositionAPI.d.ts
+│       │   │   ├── [ 709 Apr  2 23:06]  CompositionAPI.d.ts.map
+│       │   │   ├── [5.7K Apr  2 23:06]  CompositionCollection.d.ts
+│       │   │   ├── [1023 Apr  2 23:06]  CompositionCollection.d.ts.map
+│       │   │   ├── [4.8K Apr  2 23:06]  CompositionProvider.d.ts
+│       │   │   ├── [ 900 Apr  2 23:06]  CompositionProvider.d.ts.map
+│       │   │   ├── [1.3K Apr  2 23:06]  DefaultCompositionProvider.d.ts
+│       │   │   └── [ 363 Apr  2 23:06]  DefaultCompositionProvider.d.ts.map
+│       │   ├── [ 732 Apr  2 23:06]  Editor.d.ts
+│       │   ├── [ 262 Apr  2 23:06]  Editor.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  faultmanagement
+│       │   │   ├── [2.9K Apr  2 23:06]  FaultManagementAPI.d.ts
+│       │   │   └── [ 753 Apr  2 23:06]  FaultManagementAPI.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  forms
+│       │   │   ├── [ 654 Apr  2 23:06]  FormController.d.ts
+│       │   │   ├── [ 273 Apr  2 23:06]  FormController.d.ts.map
+│       │   │   ├── [6.8K Apr  2 23:06]  FormsAPI.d.ts
+│       │   │   ├── [ 617 Apr  2 23:06]  FormsAPI.d.ts.map
+│       │   │   ├── [ 247 Apr  2 23:06]  toggle-check-box-mixin.d.ts
+│       │   │   └── [ 180 Apr  2 23:06]  toggle-check-box-mixin.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  indicators
+│       │   │   ├── [1.2K Apr  2 23:06]  IndicatorAPI.d.ts
+│       │   │   ├── [ 252 Apr  2 23:06]  IndicatorAPI.d.ts.map
+│       │   │   ├── [ 528 Apr  2 23:06]  SimpleIndicator.d.ts
+│       │   │   └── [ 341 Apr  2 23:06]  SimpleIndicator.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  menu
+│       │   │   ├── [3.4K Apr  2 23:06]  MenuAPI.d.ts
+│       │   │   ├── [ 483 Apr  2 23:06]  MenuAPI.d.ts.map
+│       │   │   ├── [ 826 Apr  2 23:06]  menu.d.ts
+│       │   │   └── [ 288 Apr  2 23:06]  menu.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  notifications
+│       │   │   ├── [7.2K Apr  2 23:06]  NotificationAPI.d.ts
+│       │   │   └── [ 970 Apr  2 23:06]  NotificationAPI.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  objects
+│       │   │   ├── [  96 Apr  2 23:06]  ConflictError.d.ts
+│       │   │   ├── [ 150 Apr  2 23:06]  ConflictError.d.ts.map
+│       │   │   ├── [4.1K Apr  2 23:06]  InMemorySearchProvider.d.ts
+│       │   │   ├── [ 905 Apr  2 23:06]  InMemorySearchProvider.d.ts.map
+│       │   │   ├── [  50 Apr  2 23:06]  InMemorySearchWorker.d.ts
+│       │   │   ├── [ 155 Apr  2 23:06]  InMemorySearchWorker.d.ts.map
+│       │   │   ├── [1.2K Apr  2 23:06]  InterceptorRegistry.d.ts
+│       │   │   ├── [ 242 Apr  2 23:06]  InterceptorRegistry.d.ts.map
+│       │   │   ├── [1.9K Apr  2 23:06]  MutableDomainObject.d.ts
+│       │   │   ├── [ 291 Apr  2 23:06]  MutableDomainObject.d.ts.map
+│       │   │   ├── [ 16K Apr  2 23:06]  ObjectAPI.d.ts
+│       │   │   ├── [1.6K Apr  2 23:06]  ObjectAPI.d.ts.map
+│       │   │   ├── [  42 Apr  2 23:06]  object-utils.d.ts
+│       │   │   ├── [ 139 Apr  2 23:06]  object-utils.d.ts.map
+│       │   │   ├── [1.8K Apr  2 23:06]  RootObjectProvider.d.ts
+│       │   │   ├── [ 280 Apr  2 23:06]  RootObjectProvider.d.ts.map
+│       │   │   ├── [ 261 Apr  2 23:06]  RootRegistry.d.ts
+│       │   │   ├── [ 218 Apr  2 23:06]  RootRegistry.d.ts.map
+│       │   │   ├── [1.5K Apr  2 23:06]  Transaction.d.ts
+│       │   │   └── [ 278 Apr  2 23:06]  Transaction.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  overlays
+│       │   │   ├── [ 354 Apr  2 23:06]  Dialog.d.ts
+│       │   │   ├── [ 155 Apr  2 23:06]  Dialog.d.ts.map
+│       │   │   ├── [3.3K Apr  2 23:06]  OverlayAPI.d.ts
+│       │   │   ├── [ 354 Apr  2 23:06]  OverlayAPI.d.ts.map
+│       │   │   ├── [ 695 Apr  2 23:06]  Overlay.d.ts
+│       │   │   ├── [ 252 Apr  2 23:06]  Overlay.d.ts.map
+│       │   │   ├── [ 524 Apr  2 23:06]  ProgressDialog.d.ts
+│       │   │   └── [ 184 Apr  2 23:06]  ProgressDialog.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  priority
+│       │   │   ├── [1.3K Apr  2 23:06]  PriorityAPI.d.ts
+│       │   │   └── [ 184 Apr  2 23:06]  PriorityAPI.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  status
+│       │   │   ├── [ 313 Apr  2 23:06]  StatusAPI.d.ts
+│       │   │   └── [ 223 Apr  2 23:06]  StatusAPI.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  telemetry
+│       │   │   ├── [1.5K Apr  2 23:06]  constants.d.ts
+│       │   │   ├── [ 205 Apr  2 23:06]  constants.d.ts.map
+│       │   │   ├── [  53 Apr  2 23:06]  DefaultMetadataProvider.d.ts
+│       │   │   ├── [ 163 Apr  2 23:06]  DefaultMetadataProvider.d.ts.map
+│       │   │   ├── [ 12K Apr  2 23:06]  TelemetryAPI.d.ts
+│       │   │   ├── [1.2K Apr  2 23:06]  TelemetryAPI.d.ts.map
+│       │   │   ├── [3.9K Apr  2 23:06]  TelemetryCollection.d.ts
+│       │   │   ├── [ 818 Apr  2 23:06]  TelemetryCollection.d.ts.map
+│       │   │   ├── [  54 Apr  2 23:06]  TelemetryMetadataManager.d.ts
+│       │   │   ├── [ 165 Apr  2 23:06]  TelemetryMetadataManager.d.ts.map
+│       │   │   ├── [2.5K Apr  2 23:06]  TelemetryRequestInterceptor.d.ts
+│       │   │   ├── [ 292 Apr  2 23:06]  TelemetryRequestInterceptor.d.ts.map
+│       │   │   ├── [  53 Apr  2 23:06]  TelemetryValueFormatter.d.ts
+│       │   │   └── [ 163 Apr  2 23:06]  TelemetryValueFormatter.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  time
+│       │   │   ├── [1.2K Apr  2 23:06]  GlobalTimeContext.d.ts
+│       │   │   ├── [ 249 Apr  2 23:06]  GlobalTimeContext.d.ts.map
+│       │   │   ├── [2.4K Apr  2 23:06]  IndependentTimeContext.d.ts
+│       │   │   ├── [ 473 Apr  2 23:06]  IndependentTimeContext.d.ts.map
+│       │   │   ├── [6.6K Apr  2 23:06]  TimeAPI.d.ts
+│       │   │   ├── [ 568 Apr  2 23:06]  TimeAPI.d.ts.map
+│       │   │   ├── [8.5K Apr  2 23:06]  TimeContext.d.ts
+│       │   │   └── [ 882 Apr  2 23:06]  TimeContext.d.ts.map
+│       │   ├── [4.0K Apr  2 23:06]  types
+│       │   │   ├── [2.3K Apr  2 23:06]  Type.d.ts
+│       │   │   ├── [ 310 Apr  2 23:06]  Type.d.ts.map
+│       │   │   ├── [1.7K Apr  2 23:06]  TypeRegistry.d.ts
+│       │   │   └── [ 341 Apr  2 23:06]  TypeRegistry.d.ts.map
+│       │   └── [4.0K Apr  2 23:06]  user
+│       │       ├── [1.4K Apr  2 23:06]  constants.d.ts
+│       │       ├── [ 187 Apr  2 23:06]  constants.d.ts.map
+│       │       ├── [4.8K Apr  2 23:06]  StatusAPI.d.ts
+│       │       ├── [ 939 Apr  2 23:06]  StatusAPI.d.ts.map
+│       │       ├── [2.8K Apr  2 23:06]  StatusUserProvider.d.ts
+│       │       ├── [ 910 Apr  2 23:06]  StatusUserProvider.d.ts.map
+│       │       ├── [3.4K Apr  2 23:06]  UserAPI.d.ts
+│       │       ├── [ 571 Apr  2 23:06]  UserAPI.d.ts.map
+│       │       ├── [1.3K Apr  2 23:06]  User.d.ts
+│       │       ├── [ 215 Apr  2 23:06]  User.d.ts.map
+│       │       ├── [1.7K Apr  2 23:06]  UserProvider.d.ts
+│       │       └── [ 269 Apr  2 23:06]  UserProvider.d.ts.map
+│       ├── [  33 Apr  2 23:06]  MCT.d.ts
+│       ├── [ 103 Apr  2 23:06]  MCT.d.ts.map
+│       ├── [4.0K Apr  2 23:06]  plugins
+│       │   └── [4.0K Apr  2 23:06]  displayLayout
+│       │       ├── [ 296 Apr  2 23:06]  CustomStringFormatter.d.ts
+│       │       └── [ 248 Apr  2 23:06]  CustomStringFormatter.d.ts.map
+│       ├── [4.0K Apr  2 23:06]  ui
+│       │   └── [4.0K Apr  2 23:06]  router
+│       │       ├── [6.7K Apr  2 23:06]  ApplicationRouter.d.ts
+│       │       └── [1.1K Apr  2 23:06]  ApplicationRouter.d.ts.map
+│       └── [4.0K Apr  2 23:06]  utils
+│           └── [4.0K Apr  2 23:06]  template
+│               ├── [ 175 Apr  2 23:06]  templateHelpers.d.ts
+│               └── [ 169 Apr  2 23:06]  templateHelpers.d.ts.map
+└── [2.2K Apr  2 23:06]  up.txt
+
+357 directories, 1179 files
