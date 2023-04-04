@@ -1,0 +1,1 @@
+{"name":"my-awesome-module","version":"1.2.3","devDependencies":{"tap":"^16.3.4"},"scripts":{"test":"tap"},"dependencies":{"create-index":"^2.6.0","nyc":"^15.1.0"}}
