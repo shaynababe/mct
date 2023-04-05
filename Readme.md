@@ -1,1268 +1,1077 @@
 # mct
 MCT Dev
 ```bash
-.
-├── api
-│   ├── actions
-│   │   ├── ActionCollection.js
-│   │   ├── ActionCollectionSpec.js
-│   │   ├── ActionsAPI.js
-│   │   ├── ActionsAPISpec.js
-│   │   └── index.js
-│   ├── annotation
-│   │   ├── AnnotationAPI.js
-│   │   ├── AnnotationAPISpec.js
-│   │   └── index.js
-│   ├── api.js
-│   ├── Branding.js
-│   ├── composition
-│   │   ├── CompositionAPI.js
-│   │   ├── CompositionAPISpec.js
-│   │   ├── CompositionCollection.js
-│   │   ├── CompositionProvider.js
-│   │   ├── DefaultCompositionProvider.js
-│   │   └── index.js
-│   ├── Editor.js
-│   ├── EditorSpec.js
-│   ├── faultmanagement
-│   │   ├── FaultManagementAPI.js
-│   │   ├── FaultManagementAPISpec.js
-│   │   └── index.js
-│   ├── forms
-│   │   ├── components
-│   │   │   ├── controls
-│   │   │   │   ├── AutoCompleteField.vue
-│   │   │   │   ├── CheckBoxField.vue
-│   │   │   │   ├── ClockDisplayFormatField.vue
-│   │   │   │   ├── CompositeItem.vue
-│   │   │   │   ├── Composite.vue
-│   │   │   │   ├── Datetime.vue
-│   │   │   │   ├── FileInput.vue
-│   │   │   │   ├── index.js
-│   │   │   │   ├── Locator.vue
-│   │   │   │   ├── NumberField.vue
-│   │   │   │   ├── SelectField.vue
-│   │   │   │   ├── TextAreaField.vue
-│   │   │   │   ├── TextField.vue
-│   │   │   │   └── ToggleSwitchField.vue
-│   │   │   ├── FormProperties.vue
-│   │   │   ├── FormRow.vue
-│   │   │   └── index.js
-│   │   ├── FormController.js
-│   │   ├── FormsAPI.js
-│   │   ├── FormsAPISpec.js
-│   │   ├── index.js
-│   │   └── toggle-check-box-mixin.js
-│   ├── index.js
-│   ├── indicators
-│   │   ├── index.js
-│   │   ├── IndicatorAPI.js
-│   │   ├── IndicatorAPISpec.js
-│   │   ├── res
-│   │   │   ├── index.js
-│   │   │   └── indicator-template.html
-│   │   └── SimpleIndicator.js
-│   ├── menu
-│   │   ├── components
-│   │   │   ├── index.js
-│   │   │   ├── Menu.vue
-│   │   │   └── SuperMenu.vue
-│   │   ├── index.js
-│   │   ├── MenuAPI.js
-│   │   ├── MenuAPISpec.js
-│   │   └── menu.js
-│   ├── notifications
-│   │   ├── index.js
-│   │   ├── NotificationAPI.js
-│   │   └── NotificationAPISpec.js
-│   ├── objects
-│   │   ├── ConflictError.js
-│   │   ├── index.js
-│   │   ├── InMemorySearchProvider.js
-│   │   ├── InMemorySearchWorker.js
-│   │   ├── InterceptorRegistry.js
-│   │   ├── InterceptorRegistrySpec.js
-│   │   ├── MutableDomainObject.js
-│   │   ├── ObjectAPI.js
-│   │   ├── ObjectAPISearchSpec.js
-│   │   ├── ObjectAPISpec.js
-│   │   ├── object-utils.js
-│   │   ├── RootObjectProvider.js
-│   │   ├── RootRegistry.js
-│   │   ├── test
-│   │   │   ├── index.js
-│   │   │   ├── object-utilsSpec.js
-│   │   │   ├── RootObjectProviderSpec.js
-│   │   │   └── RootRegistrySpec.js
-│   │   ├── Transaction.js
-│   │   └── TransactionSpec.js
-│   ├── overlays
-│   │   ├── components
-│   │   │   ├── dialog-component.scss
-│   │   │   ├── DialogComponent.vue
-│   │   │   ├── index.js
-│   │   │   ├── overlay-component.scss
-│   │   │   ├── OverlayComponent.vue
-│   │   │   └── ProgressDialogComponent.vue
-│   │   ├── Dialog.js
-│   │   ├── index.js
-│   │   ├── OverlayAPI.js
-│   │   ├── Overlay.js
-│   │   └── ProgressDialog.js
-│   ├── priority
-│   │   ├── index.js
-│   │   └── PriorityAPI.js
-│   ├── status
-│   │   ├── index.js
-│   │   ├── StatusAPI.js
-│   │   └── StatusAPISpec.js
-│   ├── telemetry
-│   │   ├── constants.js
-│   │   ├── DefaultMetadataProvider.js
-│   │   ├── index.js
-│   │   ├── TelemetryAPI.js
-│   │   ├── TelemetryAPISpec.js
-│   │   ├── TelemetryCollection.js
-│   │   ├── TelemetryCollectionSpec.js
-│   │   ├── TelemetryMetadataManager.js
-│   │   ├── TelemetryRequestInterceptor.js
-│   │   └── TelemetryValueFormatter.js
-│   ├── time
-│   │   ├── GlobalTimeContext.js
-│   │   ├── independentTimeAPISpec.js
-│   │   ├── IndependentTimeContext.js
-│   │   ├── index.js
-│   │   ├── TimeAPI.js
-│   │   ├── TimeAPISpec.js
-│   │   └── TimeContext.js
-│   ├── types
-│   │   ├── index.js
-│   │   ├── Type.js
-│   │   ├── TypeRegistry.js
-│   │   └── TypeRegistrySpec.js
-│   └── user
-│       ├── constants.js
-│       ├── index.js
-│       ├── StatusAPI.js
-│       ├── StatusUserProvider.js
-│       ├── UserAPI.js
-│       ├── UserAPISpec.js
-│       ├── User.js
-│       ├── UserProvider.js
-│       └── UserStatusAPISpec.js
-├── exporters
-│   ├── CSVExporter.js
-│   ├── ImageExporter.js
-│   ├── ImageExporterSpec.js
-│   ├── index.js
-│   └── JSONExporter.js
-├── images
-│   ├── favicons
-│   │   ├── favicon-16x16.png
-│   │   ├── favicon-32x32.png
-│   │   ├── favicon-96x96.png
-│   │   └── index.js
-│   └── index.js
-├── index.js
-├── MCT.js
-├── MCTSpec.js
-├── plugins
-│   ├── autoflow
-│   │   ├── AutoflowTabularConstants.js
-│   │   ├── AutoflowTabularController.js
-│   │   ├── autoflow-tabular.html
-│   │   ├── AutoflowTabularPlugin.js
-│   │   ├── AutoflowTabularPluginSpec.js
-│   │   ├── AutoflowTabularRowController.js
-│   │   ├── AutoflowTabularView.js
-│   │   ├── dom-observer.js
-│   │   ├── index.js
-│   │   ├── README.md
-│   │   └── VueView.js
-│   ├── charts
-│   │   ├── bar
-│   │   │   ├── BarGraphCompositionPolicy.js
-│   │   │   ├── BarGraphConstants.js
-│   │   │   ├── BarGraphPlot.vue
-│   │   │   ├── BarGraphViewProvider.js
-│   │   │   ├── BarGraphView.vue
-│   │   │   ├── index.js
-│   │   │   ├── inspector
-│   │   │   │   ├── BarGraphInspectorViewProvider.js
-│   │   │   │   ├── BarGraphOptions.vue
-│   │   │   │   ├── index.js
-│   │   │   │   └── SeriesOptions.vue
-│   │   │   ├── plugin.js
-│   │   │   └── pluginSpec.js
-│   │   ├── index.js
-│   │   └── scatter
-│   │       ├── index.js
-│   │       ├── inspector
-│   │       │   ├── index.js
-│   │       │   ├── PlotOptionsBrowse.vue
-│   │       │   ├── PlotOptionsEdit.vue
-│   │       │   ├── PlotOptions.vue
-│   │       │   └── ScatterPlotInspectorViewProvider.js
-│   │       ├── plugin.js
-│   │       ├── pluginSpec.js
-│   │       ├── ScatterPlotCompositionPolicy.js
-│   │       ├── scatterPlotConstants.js
-│   │       ├── ScatterPlotForm.vue
-│   │       ├── ScatterPlotViewProvider.js
-│   │       ├── ScatterPlotView.vue
-│   │       └── ScatterPlotWithUnderlay.vue
-│   ├── clearData
-│   │   ├── ClearDataAction.js
-│   │   ├── components
-│   │   │   ├── globalClearIndicator.vue
-│   │   │   └── index.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── clock
-│   │   ├── ClockViewProvider.js
-│   │   ├── components
-│   │   │   ├── ClockIndicator.vue
-│   │   │   ├── Clock.vue
-│   │   │   └── index.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── condition
-│   │   ├── components
-│   │   │   ├── conditionals.scss
-│   │   │   ├── ConditionCollection.vue
-│   │   │   ├── ConditionDescription.vue
-│   │   │   ├── ConditionError.vue
-│   │   │   ├── ConditionSet.vue
-│   │   │   ├── Condition.vue
-│   │   │   ├── Criterion.vue
-│   │   │   ├── CurrentOutput.vue
-│   │   │   ├── index.js
-│   │   │   ├── inspector
-│   │   │   │   ├── conditional-styles.scss
-│   │   │   │   ├── ConditionalStylesView.vue
-│   │   │   │   ├── index.js
-│   │   │   │   ├── StyleEditor.vue
-│   │   │   │   └── StylesView.vue
-│   │   │   └── TestData.vue
-│   │   ├── Condition.js
-│   │   ├── ConditionManager.js
-│   │   ├── ConditionManagerSpec.js
-│   │   ├── ConditionSetCompositionPolicy.js
-│   │   ├── ConditionSetCompositionPolicySpec.js
-│   │   ├── ConditionSetMetadataProvider.js
-│   │   ├── ConditionSetTelemetryProvider.js
-│   │   ├── ConditionSetViewProvider.js
-│   │   ├── ConditionSpec.js
-│   │   ├── criterion
-│   │   │   ├── AllTelemetryCriterion.js
-│   │   │   ├── index.js
-│   │   │   ├── TelemetryCriterion.js
-│   │   │   └── TelemetryCriterionSpec.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── StyleRuleManager.js
-│   │   └── utils
-│   │       ├── constants.js
-│   │       ├── evaluator.js
-│   │       ├── evaluatorSpec.js
-│   │       ├── index.js
-│   │       ├── operations.js
-│   │       ├── operationsSpec.js
-│   │       ├── styleUtils.js
-│   │       ├── time.js
-│   │       └── timeSpec.js
-│   ├── conditionWidget
-│   │   ├── components
-│   │   │   ├── condition-widget.scss
-│   │   │   ├── ConditionWidget.vue
-│   │   │   └── index.js
-│   │   ├── ConditionWidgetViewProvider.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── CouchDBSearchFolder
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── defaultRootName
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── DeviceClassifier
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── src
-│   │       ├── DeviceClassifier.js
-│   │       ├── DeviceClassifierSpec.js
-│   │       ├── DeviceMatchers.js
-│   │       ├── DeviceMatchersSpec.js
-│   │       └── index.js
-│   ├── displayLayout
-│   │   ├── actions
-│   │   │   ├── CopyToClipboardAction.js
-│   │   │   └── index.js
-│   │   ├── AlphanumericFormatViewProvider.js
-│   │   ├── components
-│   │   │   ├── AlphanumericFormat.vue
-│   │   │   ├── box-and-line-views.scss
-│   │   │   ├── BoxView.vue
-│   │   │   ├── DisplayLayoutGrid.vue
-│   │   │   ├── display-layout.scss
-│   │   │   ├── DisplayLayout.vue
-│   │   │   ├── edit-marquee.scss
-│   │   │   ├── EditMarquee.vue
-│   │   │   ├── EllipseView.vue
-│   │   │   ├── image-view.scss
-│   │   │   ├── ImageView.vue
-│   │   │   ├── index.js
-│   │   │   ├── layout-frame.scss
-│   │   │   ├── LayoutFrame.vue
-│   │   │   ├── LineView.vue
-│   │   │   ├── SubobjectView.vue
-│   │   │   ├── telemetry-view.scss
-│   │   │   ├── TelemetryView.vue
-│   │   │   ├── text-view.scss
-│   │   │   └── TextView.vue
-│   │   ├── CustomStringFormatter.js
-│   │   ├── CustomStringFormatterSpec.js
-│   │   ├── DisplayLayoutToolbar.js
-│   │   ├── DisplayLayoutType.js
-│   │   ├── DrawingObjectTypes.js
-│   │   ├── index.js
-│   │   ├── LayoutDrag.js
-│   │   ├── mixins
-│   │   │   ├── index.js
-│   │   │   └── objectStyles-mixin.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── duplicate
-│   │   ├── DuplicateAction.js
-│   │   ├── DuplicateTask.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── exportAsJSONAction
-│   │   ├── ExportAsJSONAction.js
-│   │   ├── ExportAsJSONActionSpec.js
-│   │   ├── index.js
-│   │   └── plugin.js
-│   ├── faultManagement
-│   │   ├── constants.js
-│   │   ├── FaultManagementInspectorViewProvider.js
-│   │   ├── FaultManagementInspector.vue
-│   │   ├── FaultManagementListHeader.vue
-│   │   ├── FaultManagementListItem.vue
-│   │   ├── FaultManagementListView.vue
-│   │   ├── FaultManagementObjectProvider.js
-│   │   ├── FaultManagementPlugin.js
-│   │   ├── FaultManagementSearch.vue
-│   │   ├── FaultManagementToolbar.vue
-│   │   ├── FaultManagementViewProvider.js
-│   │   ├── FaultManagementView.vue
-│   │   ├── fault-manager.scss
-│   │   ├── index.js
-│   │   └── pluginSpec.js
-│   ├── filters
-│   │   ├── components
-│   │   │   ├── FilterField.vue
-│   │   │   ├── FilterObject.vue
-│   │   │   ├── filters-view.scss
-│   │   │   ├── FiltersView.vue
-│   │   │   ├── global-filters.scss
-│   │   │   ├── GlobalFilters.vue
-│   │   │   └── index.js
-│   │   ├── FiltersInspectorViewProvider.js
-│   │   ├── index.js
-│   │   └── plugin.js
-│   ├── flexibleLayout
-│   │   ├── components
-│   │   │   ├── container.vue
-│   │   │   ├── dropHint.vue
-│   │   │   ├── flexible-layout.scss
-│   │   │   ├── flexibleLayout.vue
-│   │   │   ├── frame.vue
-│   │   │   ├── index.js
-│   │   │   └── resizeHandle.vue
-│   │   ├── flexibleLayoutViewProvider.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── toolbarProvider.js
-│   │   └── utils
-│   │       ├── container.js
-│   │       ├── frame.js
-│   │       └── index.js
-│   ├── folderView
-│   │   ├── components
-│   │   │   ├── composition-loader.js
-│   │   │   ├── GridItem.vue
-│   │   │   ├── grid-view.scss
-│   │   │   ├── GridView.vue
-│   │   │   ├── index.js
-│   │   │   ├── list-item.scss
-│   │   │   ├── ListItem.vue
-│   │   │   ├── ListView.vue
-│   │   │   └── status-listener.js
-│   │   ├── constants.js
-│   │   ├── FolderGridView.js
-│   │   ├── FolderListView.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── formActions
-│   │   ├── CreateAction.js
-│   │   ├── CreateActionSpec.js
-│   │   ├── CreateWizard.js
-│   │   ├── EditPropertiesAction.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   └── PropertiesAction.js
-│   ├── gauge
-│   │   ├── components
-│   │   │   ├── GaugeFormController.vue
-│   │   │   ├── Gauge.vue
-│   │   │   └── index.js
-│   │   ├── gauge-limit-util.js
-│   │   ├── GaugePlugin.js
-│   │   ├── GaugePluginSpec.js
-│   │   ├── gauge.scss
-│   │   ├── GaugeViewProvider.js
-│   │   └── index.js
-│   ├── goToOriginalAction
-│   │   ├── goToOriginalAction.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── hyperlink
-│   │   ├── HyperlinkLayout.vue
-│   │   ├── HyperlinkProvider.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── imagery
-│   │   ├── components
-│   │   │   ├── Compass
-│   │   │   │   ├── CompassHUD.vue
-│   │   │   │   ├── CompassRose.vue
-│   │   │   │   ├── compass.scss
-│   │   │   │   ├── Compass.vue
-│   │   │   │   ├── index.js
-│   │   │   │   ├── pluginSpec.js
-│   │   │   │   └── utils.js
-│   │   │   ├── FilterSettings.vue
-│   │   │   ├── ImageControls.vue
-│   │   │   ├── ImageryTimeView.vue
-│   │   │   ├── ImageryViewMenuSwitcher.vue
-│   │   │   ├── imagery-view.scss
-│   │   │   ├── ImageryView.vue
-│   │   │   ├── ImageThumbnail.vue
-│   │   │   ├── index.js
-│   │   │   ├── LayerSettings.vue
-│   │   │   ├── RelatedTelemetry
-│   │   │   │   ├── index.js
-│   │   │   │   └── RelatedTelemetry.js
-│   │   │   └── ZoomSettings.vue
-│   │   ├── ImageryTimestripViewProvider.js
-│   │   ├── ImageryView.js
-│   │   ├── ImageryViewProvider.js
-│   │   ├── index.js
-│   │   ├── layers
-│   │   │   ├── example-imagery-layer-16x9.png
-│   │   │   ├── example-imagery-layer-safe.png
-│   │   │   ├── example-imagery-layer-scale.png
-│   │   │   └── index.js
-│   │   ├── lib
-│   │   │   ├── eventHelpers.js
-│   │   │   └── index.js
-│   │   ├── mixins
-│   │   │   ├── imageryData.js
-│   │   │   └── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── importFromJSONAction
-│   │   ├── ImportFromJSONAction.js
-│   │   ├── ImportFromJSONActionSpec.js
-│   │   ├── index.js
-│   │   └── plugin.js
-│   ├── index.js
-│   ├── inspectorViews
-│   │   ├── annotations
-│   │   │   ├── AnnotationsInspectorView.vue
-│   │   │   ├── AnnotationsViewProvider.js
-│   │   │   ├── index.js
-│   │   │   └── tags
-│   │   │       ├── index.js
-│   │   │       ├── TagEditor.vue
-│   │   │       ├── TagSelection.vue
-│   │   │       └── tags.scss
-│   │   ├── elements
-│   │   │   ├── ElementItemGroup.vue
-│   │   │   ├── ElementItem.vue
-│   │   │   ├── ElementsPool.vue
-│   │   │   ├── elements.scss
-│   │   │   ├── ElementsViewProvider.js
-│   │   │   ├── index.js
-│   │   │   ├── PlotElementsPool.vue
-│   │   │   └── PlotElementsViewProvider.js
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── properties
-│   │   │   ├── DetailText.vue
-│   │   │   ├── index.js
-│   │   │   ├── location.scss
-│   │   │   ├── Location.vue
-│   │   │   ├── PropertiesViewProvider.js
-│   │   │   └── Properties.vue
-│   │   └── styles
-│   │       ├── constants.js
-│   │       ├── FontStyleEditor.vue
-│   │       ├── index.js
-│   │       ├── SavedStyleSelector.vue
-│   │       ├── SavedStylesInspectorView.vue
-│   │       ├── SavedStylesView.vue
-│   │       ├── StylesInspectorViewProvider.js
-│   │       ├── StylesInspectorView.vue
-│   │       └── StylesManager.js
-│   ├── interceptors
-│   │   ├── index.js
-│   │   ├── missingObjectInterceptor.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── ISOTimeFormat
-│   │   ├── index.js
-│   │   ├── ISOTimeFormat.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── LADTable
-│   │   ├── components
-│   │   │   ├── index.js
-│   │   │   ├── LADRow.vue
-│   │   │   ├── LADTableConfiguration.vue
-│   │   │   ├── LadTableSet.vue
-│   │   │   └── LADTable.vue
-│   │   ├── index.js
-│   │   ├── LADTableCompositionPolicy.js
-│   │   ├── LADTableConfiguration.js
-│   │   ├── LADTableConfigurationViewProvider.js
-│   │   ├── LadTableSetView.js
-│   │   ├── LADTableSetViewProvider.js
-│   │   ├── LADTableView.js
-│   │   ├── LADTableViewProvider.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   └── ViewActions.js
-│   ├── latestDataClock
-│   │   ├── index.js
-│   │   ├── LADClock.js
-│   │   └── plugin.js
-│   ├── licenses
-│   │   ├── index.js
-│   │   ├── Licenses.vue
-│   │   ├── plugin.js
-│   │   └── third-party-licenses.json
-│   ├── linkAction
-│   │   ├── index.js
-│   │   ├── LinkAction.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── localStorage
-│   │   ├── index.js
-│   │   ├── LocalStorageObjectProvider.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── localTimeSystem
-│   │   ├── index.js
-│   │   ├── LocalTimeFormat.js
-│   │   ├── LocalTimeSystem.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── move
-│   │   ├── index.js
-│   │   ├── MoveAction.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── myItems
-│   │   ├── createMyItemsIdentifier.js
-│   │   ├── index.js
-│   │   ├── myItemsInterceptor.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   └── README.md
-│   ├── newFolderAction
-│   │   ├── index.js
-│   │   ├── newFolderAction.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── notebook
-│   │   ├── actions
-│   │   │   ├── CopyToNotebookAction.js
-│   │   │   ├── ExportNotebookAsTextAction.js
-│   │   │   └── index.js
-│   │   ├── components
-│   │   │   ├── index.js
-│   │   │   ├── MenuItems.vue
-│   │   │   ├── NotebookEmbed.vue
-│   │   │   ├── NotebookEntry.vue
-│   │   │   ├── NotebookMenuSwitcher.vue
-│   │   │   ├── NotebookSnapshotContainer.vue
-│   │   │   ├── NotebookSnapshotIndicator.vue
-│   │   │   ├── Notebook.vue
-│   │   │   ├── PageCollection.vue
-│   │   │   ├── PageComponent.vue
-│   │   │   ├── PopupMenu.vue
-│   │   │   ├── SearchResults.vue
-│   │   │   ├── SectionCollection.vue
-│   │   │   ├── SectionComponent.vue
-│   │   │   ├── sidebar.scss
-│   │   │   ├── Sidebar.vue
-│   │   │   └── snapshot-template.html
-│   │   ├── index.js
-│   │   ├── monkeyPatchObjectAPIForNotebooks.js
-│   │   ├── notebook-constants.js
-│   │   ├── NotebookType.js
-│   │   ├── NotebookViewProvider.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── snapshot-container.js
-│   │   ├── snapshot.js
-│   │   └── utils
-│   │       ├── index.js
-│   │       ├── notebook-entries.js
-│   │       ├── notebook-entriesSpec.js
-│   │       ├── notebook-image.js
-│   │       ├── notebook-key-code.js
-│   │       ├── notebook-migration.js
-│   │       ├── notebook-snapshot-menu.js
-│   │       ├── notebook-storage.js
-│   │       ├── notebook-storageSpec.js
-│   │       ├── painterroInstance.js
-│   │       └── removeDialog.js
-│   ├── notificationIndicator
-│   │   ├── components
-│   │   │   ├── index.js
-│   │   │   ├── NotificationIndicator.vue
-│   │   │   ├── NotificationMessage.vue
-│   │   │   └── NotificationsList.vue
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── objectMigration
-│   │   ├── index.js
-│   │   ├── Migrations.js
-│   │   └── plugin.js
-│   ├── openInNewTabAction
-│   │   ├── index.js
-│   │   ├── openInNewTabAction.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── operatorStatus
-│   │   ├── AbstractStatusIndicator.js
-│   │   ├── index.js
-│   │   ├── operatorStatus
-│   │   │   ├── index.js
-│   │   │   ├── OperatorStatusIndicator.js
-│   │   │   └── OperatorStatus.vue
-│   │   ├── operator-status.scss
-│   │   ├── plugin.js
-│   │   └── pollQuestion
-│   │       ├── index.js
-│   │       ├── PollQuestionIndicator.js
-│   │       └── PollQuestion.vue
-│   ├── performanceIndicator
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   └── README.md
-│   ├── persistence
-│   │   ├── couch
-│   │   │   ├── CouchChangesFeed.js
-│   │   │   ├── couchdb-compose.yaml
-│   │   │   ├── CouchDocument.js
-│   │   │   ├── CouchObjectProvider.js
-│   │   │   ├── CouchObjectQueue.js
-│   │   │   ├── CouchSearchProvider.js
-│   │   │   ├── CouchStatusIndicator.js
-│   │   │   ├── index.js
-│   │   │   ├── plugin.js
-│   │   │   ├── pluginSpec.js
-│   │   │   ├── README.md
-│   │   │   ├── replace-localstorage-with-couchdb-indexhtml.sh
-│   │   │   └── setup-couchdb.sh
-│   │   └── index.js
-│   ├── plan
-│   │   ├── components
-│   │   │   ├── ActivityTimeline.vue
-│   │   │   ├── index.js
-│   │   │   └── Plan.vue
-│   │   ├── GanttChartCompositionPolicy.js
-│   │   ├── index.js
-│   │   ├── inspector
-│   │   │   ├── ActivityInspectorViewProvider.js
-│   │   │   ├── components
-│   │   │   │   ├── ActivityProperty.vue
-│   │   │   │   ├── index.js
-│   │   │   │   ├── PlanActivitiesView.vue
-│   │   │   │   ├── PlanActivityView.vue
-│   │   │   │   └── PlanViewConfiguration.vue
-│   │   │   ├── GanttChartInspectorViewProvider.js
-│   │   │   └── index.js
-│   │   ├── plan.scss
-│   │   ├── PlanViewConfiguration.js
-│   │   ├── PlanViewProvider.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── README.md
-│   │   └── util.js
-│   ├── plot
-│   │   ├── actions
-│   │   │   ├── index.js
-│   │   │   ├── utils.js
-│   │   │   └── ViewActions.js
-│   │   ├── axis
-│   │   │   ├── index.js
-│   │   │   ├── XAxis.vue
-│   │   │   └── YAxis.vue
-│   │   ├── chart
-│   │   │   ├── index.js
-│   │   │   ├── LimitLabel.vue
-│   │   │   ├── LimitLine.vue
-│   │   │   ├── limitUtil.js
-│   │   │   ├── MCTChartAlarmLineSet.js
-│   │   │   ├── MCTChartAlarmPointSet.js
-│   │   │   ├── MCTChartLineLinear.js
-│   │   │   ├── MCTChartLineStepAfter.js
-│   │   │   ├── MCTChartPointSet.js
-│   │   │   ├── MCTChartSeriesElement.js
-│   │   │   └── MctChart.vue
-│   │   ├── configuration
-│   │   │   ├── Collection.js
-│   │   │   ├── ConfigStore.js
-│   │   │   ├── index.js
-│   │   │   ├── LegendModel.js
-│   │   │   ├── Model.js
-│   │   │   ├── PlotConfigurationModel.js
-│   │   │   ├── PlotSeries.js
-│   │   │   ├── SeriesCollection.js
-│   │   │   ├── XAxisModel.js
-│   │   │   └── YAxisModel.js
-│   │   ├── draw
-│   │   │   ├── Draw2D.js
-│   │   │   ├── DrawLoader.js
-│   │   │   ├── DrawWebGL.js
-│   │   │   ├── index.js
-│   │   │   └── MarkerShapes.js
-│   │   ├── index.js
-│   │   ├── inspector
-│   │   │   ├── forms
-│   │   │   │   ├── formUtil.js
-│   │   │   │   ├── index.js
-│   │   │   │   ├── LegendForm.vue
-│   │   │   │   ├── SeriesForm.vue
-│   │   │   │   └── YAxisForm.vue
-│   │   │   ├── index.js
-│   │   │   ├── PlotOptionsBrowse.vue
-│   │   │   ├── PlotOptionsEdit.vue
-│   │   │   ├── PlotOptionsItem.vue
-│   │   │   ├── PlotOptions.vue
-│   │   │   ├── PlotsInspectorViewProvider.js
-│   │   │   └── StackedPlotsInspectorViewProvider.js
-│   │   ├── legend
-│   │   │   ├── index.js
-│   │   │   ├── PlotLegendItemCollapsed.vue
-│   │   │   ├── PlotLegendItemExpanded.vue
-│   │   │   └── PlotLegend.vue
-│   │   ├── lib
-│   │   │   ├── eventHelpers.js
-│   │   │   └── index.js
-│   │   ├── LinearScale.js
-│   │   ├── mathUtils.js
-│   │   ├── MctPlot.vue
-│   │   ├── MctTicks.vue
-│   │   ├── overlayPlot
-│   │   │   ├── index.js
-│   │   │   ├── OverlayPlotCompositionPolicy.js
-│   │   │   ├── OverlayPlotViewProvider.js
-│   │   │   └── pluginSpec.js
-│   │   ├── PlotViewProvider.js
-│   │   ├── Plot.vue
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── README.md
-│   │   ├── stackedPlot
-│   │   │   ├── index.js
-│   │   │   ├── mixins
-│   │   │   │   ├── index.js
-│   │   │   │   └── objectStyles-mixin.js
-│   │   │   ├── pluginSpec.js
-│   │   │   ├── StackedPlotCompositionPolicy.js
-│   │   │   ├── stackedPlotConfigurationInterceptor.js
-│   │   │   ├── StackedPlotItem.vue
-│   │   │   ├── StackedPlotViewProvider.js
-│   │   │   └── StackedPlot.vue
-│   │   └── tickUtils.js
-│   ├── plugins.js
-│   ├── remoteClock
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── RemoteClock.js
-│   │   ├── RemoteClockSpec.js
-│   │   └── requestInterceptor.js
-│   ├── remove
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   └── RemoveAction.js
-│   ├── staticRootPlugin
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── README.md
-│   │   ├── StaticModelProvider.js
-│   │   ├── StaticModelProviderSpec.js
-│   │   └── static-provider-test.json
-│   ├── summaryWidget
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── README.md
-│   │   ├── res
-│   │   │   ├── conditionTemplate.html
-│   │   │   ├── index.js
-│   │   │   ├── input
-│   │   │   │   ├── index.js
-│   │   │   │   ├── paletteTemplate.html
-│   │   │   │   └── selectTemplate.html
-│   │   │   ├── ruleImageTemplate.html
-│   │   │   ├── ruleTemplate.html
-│   │   │   ├── testDataItemTemplate.html
-│   │   │   ├── testDataTemplate.html
-│   │   │   └── widgetTemplate.html
-│   │   ├── src
-│   │   │   ├── ConditionEvaluator.js
-│   │   │   ├── Condition.js
-│   │   │   ├── ConditionManager.js
-│   │   │   ├── eventHelpers.js
-│   │   │   ├── index.js
-│   │   │   ├── input
-│   │   │   │   ├── ColorPalette.js
-│   │   │   │   ├── IconPalette.js
-│   │   │   │   ├── index.js
-│   │   │   │   ├── KeySelect.js
-│   │   │   │   ├── ObjectSelect.js
-│   │   │   │   ├── OperationSelect.js
-│   │   │   │   ├── Palette.js
-│   │   │   │   └── Select.js
-│   │   │   ├── Rule.js
-│   │   │   ├── SummaryWidget.js
-│   │   │   ├── telemetry
-│   │   │   │   ├── EvaluatorPool.js
-│   │   │   │   ├── EvaluatorPoolSpec.js
-│   │   │   │   ├── index.js
-│   │   │   │   ├── operations.js
-│   │   │   │   ├── SummaryWidgetCondition.js
-│   │   │   │   ├── SummaryWidgetConditionSpec.js
-│   │   │   │   ├── SummaryWidgetEvaluator.js
-│   │   │   │   ├── SummaryWidgetMetadataProvider.js
-│   │   │   │   ├── SummaryWidgetRule.js
-│   │   │   │   ├── SummaryWidgetRuleSpec.js
-│   │   │   │   ├── SummaryWidgetTelemetryProvider.js
-│   │   │   │   └── SummaryWidgetTelemetryProviderSpec.js
-│   │   │   ├── TestDataItem.js
-│   │   │   ├── TestDataManager.js
-│   │   │   ├── views
-│   │   │   │   ├── index.js
-│   │   │   │   ├── summary-widget.html
-│   │   │   │   ├── SummaryWidgetView.js
-│   │   │   │   └── SummaryWidgetViewProvider.js
-│   │   │   └── WidgetDnD.js
-│   │   ├── SummaryWidgetsCompositionPolicy.js
-│   │   ├── SummaryWidgetViewPolicy.js
-│   │   └── test
-│   │       ├── ConditionEvaluatorSpec.js
-│   │       ├── ConditionManagerSpec.js
-│   │       ├── ConditionSpec.js
-│   │       ├── index.js
-│   │       ├── input
-│   │       │   ├── ColorPaletteSpec.js
-│   │       │   ├── IconPaletteSpec.js
-│   │       │   ├── index.js
-│   │       │   ├── KeySelectSpec.js
-│   │       │   ├── ObjectSelectSpec.js
-│   │       │   ├── OperationSelectSpec.js
-│   │       │   ├── PaletteSpec.js
-│   │       │   └── SelectSpec.js
-│   │       ├── RuleSpec.js
-│   │       ├── SummaryWidgetSpec.js
-│   │       ├── SummaryWidgetViewPolicySpec.js
-│   │       ├── TestDataItemSpec.js
-│   │       ├── TestDataManagerSpec.js
-│   │       └── WidgetDnDSpec.js
-│   ├── tabs
-│   │   ├── components
-│   │   │   ├── index.js
-│   │   │   ├── tabs.scss
-│   │   │   └── tabs.vue
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   └── tabs.js
-│   ├── telemetryMean
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── src
-│   │       ├── index.js
-│   │       ├── MeanTelemetryProvider.js
-│   │       ├── MeanTelemetryProviderSpec.js
-│   │       ├── MockTelemetryApi.js
-│   │       └── TelemetryAverager.js
-│   ├── telemetryTable
-│   │   ├── collections
-│   │   │   ├── index.js
-│   │   │   └── TableRowCollection.js
-│   │   ├── components
-│   │   │   ├── index.js
-│   │   │   ├── sizing-row.vue
-│   │   │   ├── table-cell.vue
-│   │   │   ├── table-column-header.vue
-│   │   │   ├── table-configuration.vue
-│   │   │   ├── table-footer-indicator.scss
-│   │   │   ├── table-footer-indicator.vue
-│   │   │   ├── table-row.scss
-│   │   │   ├── table-row.vue
-│   │   │   ├── table.scss
-│   │   │   └── table.vue
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── TableConfigurationViewProvider.js
-│   │   ├── TelemetryTableColumn.js
-│   │   ├── TelemetryTableConfiguration.js
-│   │   ├── TelemetryTable.js
-│   │   ├── TelemetryTableNameColumn.js
-│   │   ├── TelemetryTableRow.js
-│   │   ├── TelemetryTableType.js
-│   │   ├── TelemetryTableUnitColumn.js
-│   │   ├── TelemetryTableView.js
-│   │   ├── TelemetryTableViewProvider.js
-│   │   └── ViewActions.js
-│   ├── themes
-│   │   ├── espresso.js
-│   │   ├── espresso-theme.scss
-│   │   ├── index.js
-│   │   ├── installTheme.js
-│   │   ├── snow.js
-│   │   └── snow-theme.scss
-│   ├── timeConductor
-│   │   ├── conductor-axis.scss
-│   │   ├── ConductorAxis.vue
-│   │   ├── ConductorHistory.vue
-│   │   ├── ConductorInputsFixed.vue
-│   │   ├── ConductorInputsRealtime.vue
-│   │   ├── conductor-mode-icon.scss
-│   │   ├── ConductorModeIcon.vue
-│   │   ├── conductor-mode.scss
-│   │   ├── ConductorMode.vue
-│   │   ├── conductor.scss
-│   │   ├── ConductorTimeSystem.vue
-│   │   ├── Conductor.vue
-│   │   ├── date-picker.scss
-│   │   ├── DatePicker.vue
-│   │   ├── independent
-│   │   │   ├── IndependentTimeConductor.vue
-│   │   │   ├── index.js
-│   │   │   └── Mode.vue
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── timePopup.vue
-│   │   └── utcMultiTimeFormat.js
-│   ├── timeline
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── TimelineCompositionPolicy.js
-│   │   ├── timelineInterceptor.js
-│   │   ├── TimelineObjectView.vue
-│   │   ├── timeline.scss
-│   │   ├── TimelineViewLayout.vue
-│   │   └── TimelineViewProvider.js
-│   ├── timelist
-│   │   ├── constants.js
-│   │   ├── index.js
-│   │   ├── inspector
-│   │   │   ├── EventProperties.vue
-│   │   │   ├── Filtering.vue
-│   │   │   ├── index.js
-│   │   │   ├── TimeListInspectorViewProvider.js
-│   │   │   └── TimelistPropertiesView.vue
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── TimelistCompositionPolicy.js
-│   │   ├── timelist.scss
-│   │   ├── TimelistViewProvider.js
-│   │   └── Timelist.vue
-│   ├── timer
-│   │   ├── actions
-│   │   │   ├── index.js
-│   │   │   ├── PauseTimerAction.js
-│   │   │   ├── RestartTimerAction.js
-│   │   │   ├── StartTimerAction.js
-│   │   │   └── StopTimerAction.js
-│   │   ├── components
-│   │   │   ├── index.js
-│   │   │   └── Timer.vue
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   └── TimerViewProvider.js
-│   ├── URLIndicatorPlugin
-│   │   ├── index.js
-│   │   ├── README.md
-│   │   ├── URLIndicator.js
-│   │   ├── URLIndicatorPlugin.js
-│   │   └── URLIndicatorSpec.js
-│   ├── URLTimeSettingsSynchronizer
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   └── URLTimeSettingsSynchronizer.js
-│   ├── userIndicator
-│   │   ├── components
-│   │   │   ├── index.js
-│   │   │   └── UserIndicator.vue
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── pluginSpec.js
-│   ├── utcTimeSystem
-│   │   ├── DurationFormat.js
-│   │   ├── index.js
-│   │   ├── LocalClock.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   ├── UTCTimeFormat.js
-│   │   └── UTCTimeSystem.js
-│   ├── viewDatumAction
-│   │   ├── components
-│   │   │   ├── index.js
-│   │   │   ├── metadata-list.scss
-│   │   │   └── MetadataList.vue
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── pluginSpec.js
-│   │   └── ViewDatumAction.js
-│   ├── viewLargeAction
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   └── viewLargeAction.js
-│   └── webPage
-│       ├── components
-│       │   ├── index.js
-│       │   └── WebPage.vue
-│       ├── index.js
-│       ├── plugin.js
-│       ├── pluginSpec.js
-│       └── WebPageViewProvider.js
-├── scrtree.txt
-├── selection
-│   ├── index.js
-│   └── Selection.js
-├── styles
-│   ├── _about.scss
-│   ├── _animations.scss
-│   ├── _constants-espresso.scss
-│   ├── _constants-maelstrom.scss
-│   ├── _constants-mobile.scss
-│   ├── _constants.scss
-│   ├── _constants-snow.scss
-│   ├── _controls.scss
-│   ├── fonts
-│   │   ├── index.js
-│   │   ├── Open MCT Symbols 12px.json
-│   │   ├── Open-MCT-Symbols-12px.ttf
-│   │   ├── Open-MCT-Symbols-12px.woff
-│   │   ├── Open MCT Symbols 16px.json
-│   │   ├── Open-MCT-Symbols-16px.svg
-│   │   ├── Open-MCT-Symbols-16px.ttf
-│   │   └── Open-MCT-Symbols-16px.woff
-│   ├── _forms.scss
-│   ├── _global.scss
-│   ├── _glyphs.scss
-│   ├── index.js
-│   ├── _legacy-messages.scss
-│   ├── _legacy-plots.scss
-│   ├── _legacy.scss
-│   ├── _limits.scss
-│   ├── _mixins.scss
-│   ├── notebook.scss
-│   ├── plotly.scss
-│   ├── _status.scss
-│   ├── _table.scss
-│   ├── vendor
-│   │   ├── index.js
-│   │   └── normalize-min.scss
-│   └── vue-styles.scss
-├── tools
-│   ├── index.js
-│   ├── url.js
-│   └── urlSpec.js
-├── ui
-│   ├── color
-│   │   ├── ColorHelper.js
-│   │   ├── Color.js
-│   │   ├── ColorPalette.js
-│   │   ├── ColorSwatch.vue
-│   │   └── index.js
-│   ├── components
-│   │   ├── components.js
-│   │   ├── COMPONENTS.md
-│   │   ├── componentsSpec.js
-│   │   ├── contextMenuDropDown.vue
-│   │   ├── index.js
-│   │   ├── List
-│   │   │   ├── index.js
-│   │   │   ├── ListHeader.vue
-│   │   │   ├── ListItem.vue
-│   │   │   ├── list-view.scss
-│   │   │   └── ListView.vue
-│   │   ├── object-frame.scss
-│   │   ├── ObjectFrame.vue
-│   │   ├── object-label.scss
-│   │   ├── ObjectLabel.vue
-│   │   ├── ObjectPath.vue
-│   │   ├── ObjectView.vue
-│   │   ├── progress-bar.scss
-│   │   ├── ProgressBar.vue
-│   │   ├── search.scss
-│   │   ├── search.vue
-│   │   ├── swim-lane
-│   │   │   ├── index.js
-│   │   │   ├── swimlane.scss
-│   │   │   └── SwimLane.vue
-│   │   ├── timesystem-axis.scss
-│   │   ├── TimeSystemAxis.vue
-│   │   ├── toggle-switch.scss
-│   │   ├── ToggleSwitch.vue
-│   │   └── viewControl.vue
-│   ├── index.js
-│   ├── inspector
-│   │   ├── index.js
-│   │   ├── InspectorDetailsSpec.js
-│   │   ├── inspector.scss
-│   │   ├── InspectorStylesSpec.js
-│   │   ├── InspectorStylesSpecMocks.js
-│   │   ├── InspectorTabs.vue
-│   │   ├── InspectorViews.vue
-│   │   ├── Inspector.vue
-│   │   └── ObjectName.vue
-│   ├── layout
-│   │   ├── AboutDialog.vue
-│   │   ├── app-logo.scss
-│   │   ├── AppLogo.vue
-│   │   ├── assets
-│   │   │   ├── images
-│   │   │   │   ├── bg-splash.jpg
-│   │   │   │   ├── index.js
-│   │   │   │   ├── logo-nasa.svg
-│   │   │   │   ├── logo-openmct-shdw.svg
-│   │   │   │   └── logo-openmct.svg
-│   │   │   └── index.js
-│   │   ├── BrowseBar.vue
-│   │   ├── create-button.scss
-│   │   ├── CreateButton.vue
-│   │   ├── index.js
-│   │   ├── layout.scss
-│   │   ├── LayoutSpec.js
-│   │   ├── Layout.vue
-│   │   ├── mct-tree.scss
-│   │   ├── mct-tree.vue
-│   │   ├── multipane.vue
-│   │   ├── pane.scss
-│   │   ├── pane.vue
-│   │   ├── RecentObjectsListItem.vue
-│   │   ├── RecentObjectsList.vue
-│   │   ├── recent-objects.scss
-│   │   ├── search
-│   │   │   ├── AnnotationSearchResult.vue
-│   │   │   ├── GrandSearchSpec.js
-│   │   │   ├── GrandSearch.vue
-│   │   │   ├── index.js
-│   │   │   ├── ObjectSearchResult.vue
-│   │   │   ├── SearchResultsDropDown.vue
-│   │   │   └── search.scss
-│   │   ├── status-bar
-│   │   │   ├── index.js
-│   │   │   ├── indicators.scss
-│   │   │   ├── Indicators.vue
-│   │   │   ├── notification-banner.scss
-│   │   │   └── NotificationBanner.vue
-│   │   ├── tree-item.vue
-│   │   └── ViewSwitcher.vue
-│   ├── mixins
-│   │   ├── context-menu-gesture.js
-│   │   ├── index.js
-│   │   ├── object-link.js
-│   │   ├── staleness-mixin.js
-│   │   └── toggle-mixin.js
-│   ├── preview
-│   │   ├── index.js
-│   │   ├── plugin.js
-│   │   ├── PreviewAction.js
-│   │   ├── preview-header.vue
-│   │   ├── preview.scss
-│   │   ├── Preview.vue
-│   │   └── ViewHistoricalDataAction.js
-│   ├── registries
-│   │   ├── index.js
-│   │   ├── InspectorViewRegistry.js
-│   │   ├── ToolbarRegistry.js
-│   │   └── ViewRegistry.js
-│   ├── router
-│   │   ├── ApplicationRouter.js
-│   │   ├── ApplicationRouterSpec.js
-│   │   ├── Browse.js
-│   │   └── index.js
-│   └── toolbar
-│       ├── components
-│       │   ├── index.js
-│       │   ├── toolbar-button.vue
-│       │   ├── toolbar-checkbox.scss
-│       │   ├── toolbar-checkbox.vue
-│       │   ├── toolbar-color-picker.vue
-│       │   ├── toolbar-input.vue
-│       │   ├── toolbar-menu.vue
-│       │   ├── toolbar-select-menu.vue
-│       │   ├── toolbar-separator.vue
-│       │   └── toolbar-toggle-button.vue
-│       ├── index.js
-│       └── Toolbar.vue
-└── utils
-    ├── agent
-    │   ├── Agent.js
-    │   ├── AgentSpec.js
-    │   └── index.js
-    ├── clipboard.js
-    ├── clock
-    │   ├── DefaultClock.js
-    │   ├── index.js
-    │   └── Ticker.js
-    ├── duration.js
-    ├── index.js
-    ├── raf.js
-    ├── rafSpec.js
-    ├── staleness.js
-    ├── template
-    │   ├── index.js
-    │   ├── templateHelpers.js
-    │   └── templateHelpersSpec.js
-    ├── testing
-    │   ├── index.js
-    │   └── mockLocalStorage.js
-    ├── testing.js
-    └── textHighlight
-        ├── index.js
-        └── TextHighlight.vue
-
-191 directories, 1071 files
+./MCT.js
+./images/favicons/favicon-16x16.png
+./images/favicons/favicon-96x96.png
+./images/favicons/favicon-32x32.png
+./images/favicons/index.js
+./images/index.js
+./selection/Selection.js
+./selection/index.js
+./api/api.js
+./api/priority/index.js
+./api/priority/PriorityAPI.js
+./api/types/Type.js
+./api/types/TypeRegistrySpec.js
+./api/types/TypeRegistry.js
+./api/types/index.js
+./api/status/StatusAPI.js
+./api/status/StatusAPISpec.js
+./api/status/index.js
+./api/EditorSpec.js
+./api/overlays/OverlayAPI.js
+./api/overlays/ProgressDialog.js
+./api/overlays/components/overlay-component.scss
+./api/overlays/components/DialogComponent.vue
+./api/overlays/components/ProgressDialogComponent.vue
+./api/overlays/components/OverlayComponent.vue
+./api/overlays/components/index.js
+./api/overlays/components/dialog-component.scss
+./api/overlays/Overlay.js
+./api/overlays/Dialog.js
+./api/overlays/index.js
+./api/user/UserAPI.js
+./api/user/StatusAPI.js
+./api/user/UserAPISpec.js
+./api/user/StatusUserProvider.js
+./api/user/UserProvider.js
+./api/user/index.js
+./api/user/User.js
+./api/user/constants.js
+./api/user/UserStatusAPISpec.js
+./api/forms/FormsAPI.js
+./api/forms/components/controls/CheckBoxField.vue
+./api/forms/components/controls/Composite.vue
+./api/forms/components/controls/FileInput.vue
+./api/forms/components/controls/TextAreaField.vue
+./api/forms/components/controls/ClockDisplayFormatField.vue
+./api/forms/components/controls/TextField.vue
+./api/forms/components/controls/CompositeItem.vue
+./api/forms/components/controls/ToggleSwitchField.vue
+./api/forms/components/controls/NumberField.vue
+./api/forms/components/controls/Locator.vue
+./api/forms/components/controls/Datetime.vue
+./api/forms/components/controls/AutoCompleteField.vue
+./api/forms/components/controls/index.js
+./api/forms/components/controls/SelectField.vue
+./api/forms/components/FormRow.vue
+./api/forms/components/index.js
+./api/forms/components/FormProperties.vue
+./api/forms/FormsAPISpec.js
+./api/forms/toggle-check-box-mixin.js
+./api/forms/FormController.js
+./api/forms/index.js
+./api/objects/InterceptorRegistry.js
+./api/objects/RootObjectProvider.js
+./api/objects/MutableDomainObject.js
+./api/objects/ObjectAPISearchSpec.js
+./api/objects/ConflictError.js
+./api/objects/ObjectAPISpec.js
+./api/objects/InMemorySearchProvider.js
+./api/objects/object-utils.js
+./api/objects/TransactionSpec.js
+./api/objects/Transaction.js
+./api/objects/RootRegistry.js
+./api/objects/index.js
+./api/objects/InterceptorRegistrySpec.js
+./api/objects/test/object-utilsSpec.js
+./api/objects/test/RootObjectProviderSpec.js
+./api/objects/test/RootRegistrySpec.js
+./api/objects/test/index.js
+./api/objects/InMemorySearchWorker.js
+./api/objects/ObjectAPI.js
+./api/telemetry/TelemetryAPISpec.js
+./api/telemetry/TelemetryRequestInterceptor.js
+./api/telemetry/TelemetryAPI.js
+./api/telemetry/TelemetryValueFormatter.js
+./api/telemetry/TelemetryCollectionSpec.js
+./api/telemetry/TelemetryCollection.js
+./api/telemetry/TelemetryMetadataManager.js
+./api/telemetry/DefaultMetadataProvider.js
+./api/telemetry/index.js
+./api/telemetry/constants.js
+./api/composition/CompositionProvider.js
+./api/composition/CompositionAPI.js
+./api/composition/CompositionCollection.js
+./api/composition/CompositionAPISpec.js
+./api/composition/DefaultCompositionProvider.js
+./api/composition/index.js
+./api/actions/ActionsAPI.js
+./api/actions/index.js
+./api/actions/ActionsAPISpec.js
+./api/actions/ActionCollection.js
+./api/actions/ActionCollectionSpec.js
+./api/indicators/IndicatorAPISpec.js
+./api/indicators/IndicatorAPI.js
+./api/indicators/res/indicator-template.html
+./api/indicators/res/index.js
+./api/indicators/index.js
+./api/indicators/SimpleIndicator.js
+./api/notifications/NotificationAPI.js
+./api/notifications/NotificationAPISpec.js
+./api/notifications/index.js
+./api/menu/MenuAPISpec.js
+./api/menu/components/SuperMenu.vue
+./api/menu/components/Menu.vue
+./api/menu/components/index.js
+./api/menu/menu.js
+./api/menu/index.js
+./api/menu/MenuAPI.js
+./api/faultmanagement/FaultManagementAPI.js
+./api/faultmanagement/FaultManagementAPISpec.js
+./api/faultmanagement/index.js
+./api/annotation/AnnotationAPISpec.js
+./api/annotation/AnnotationAPI.js
+./api/annotation/index.js
+./api/Branding.js
+./api/index.js
+./api/Editor.js
+./api/time/TimeAPISpec.js
+./api/time/GlobalTimeContext.js
+./api/time/IndependentTimeContext.js
+./api/time/TimeAPI.js
+./api/time/TimeContext.js
+./api/time/index.js
+./api/time/independentTimeAPISpec.js
+./MCTSpec.js
+./styles/_constants.scss
+./styles/_glyphs.scss
+./styles/plotly.scss
+./styles/_controls.scss
+./styles/_status.scss
+./styles/_about.scss
+./styles/_constants-espresso.scss
+./styles/_constants-snow.scss
+./styles/vue-styles.scss
+./styles/_mixins.scss
+./styles/vendor/normalize-min.scss
+./styles/vendor/index.js
+./styles/fonts/Open-MCT-Symbols-12px.woff
+./styles/fonts/Open-MCT-Symbols-12px.ttf
+./styles/fonts/Open MCT Symbols 12px.json
+./styles/fonts/Open-MCT-Symbols-16px.ttf
+./styles/fonts/Open-MCT-Symbols-16px.svg
+./styles/fonts/Open-MCT-Symbols-16px.woff
+./styles/fonts/Open MCT Symbols 16px.json
+./styles/fonts/index.js
+./styles/_global.scss
+./styles/_legacy-messages.scss
+./styles/_legacy.scss
+./styles/_limits.scss
+./styles/_animations.scss
+./styles/_legacy-plots.scss
+./styles/_constants-mobile.scss
+./styles/notebook.scss
+./styles/index.js
+./styles/_table.scss
+./styles/_constants-maelstrom.scss
+./styles/_forms.scss
+./utils/testing.js
+./utils/clipboard.js
+./utils/textHighlight/TextHighlight.vue
+./utils/textHighlight/index.js
+./utils/testing/mockLocalStorage.js
+./utils/testing/index.js
+./utils/staleness.js
+./utils/rafSpec.js
+./utils/template/templateHelpersSpec.js
+./utils/template/index.js
+./utils/template/templateHelpers.js
+./utils/clock/Ticker.js
+./utils/clock/DefaultClock.js
+./utils/clock/index.js
+./utils/duration.js
+./utils/index.js
+./utils/raf.js
+./utils/agent/AgentSpec.js
+./utils/agent/index.js
+./utils/agent/Agent.js
+./scrtree.txt
+./ui/layout/multipane.vue
+./ui/layout/app-logo.scss
+./ui/layout/mct-tree.vue
+./ui/layout/create-button.scss
+./ui/layout/recent-objects.scss
+./ui/layout/CreateButton.vue
+./ui/layout/pane.scss
+./ui/layout/LayoutSpec.js
+./ui/layout/search/SearchResultsDropDown.vue
+./ui/layout/search/AnnotationSearchResult.vue
+./ui/layout/search/search.scss
+./ui/layout/search/GrandSearchSpec.js
+./ui/layout/search/GrandSearch.vue
+./ui/layout/search/ObjectSearchResult.vue
+./ui/layout/search/index.js
+./ui/layout/AboutDialog.vue
+./ui/layout/RecentObjectsListItem.vue
+./ui/layout/ViewSwitcher.vue
+./ui/layout/Layout.vue
+./ui/layout/RecentObjectsList.vue
+./ui/layout/assets/images/bg-splash.jpg
+./ui/layout/assets/images/logo-openmct.svg
+./ui/layout/assets/images/logo-openmct-shdw.svg
+./ui/layout/assets/images/index.js
+./ui/layout/assets/images/logo-nasa.svg
+./ui/layout/assets/index.js
+./ui/layout/mct-tree.scss
+./ui/layout/layout.scss
+./ui/layout/tree-item.vue
+./ui/layout/pane.vue
+./ui/layout/AppLogo.vue
+./ui/layout/index.js
+./ui/layout/status-bar/indicators.scss
+./ui/layout/status-bar/notification-banner.scss
+./ui/layout/status-bar/Indicators.vue
+./ui/layout/status-bar/NotificationBanner.vue
+./ui/layout/status-bar/index.js
+./ui/layout/BrowseBar.vue
+./ui/registries/ViewRegistry.js
+./ui/registries/ToolbarRegistry.js
+./ui/registries/InspectorViewRegistry.js
+./ui/registries/index.js
+./ui/toolbar/Toolbar.vue
+./ui/toolbar/components/toolbar-menu.vue
+./ui/toolbar/components/toolbar-button.vue
+./ui/toolbar/components/toolbar-toggle-button.vue
+./ui/toolbar/components/toolbar-select-menu.vue
+./ui/toolbar/components/toolbar-checkbox.scss
+./ui/toolbar/components/toolbar-input.vue
+./ui/toolbar/components/toolbar-separator.vue
+./ui/toolbar/components/index.js
+./ui/toolbar/components/toolbar-checkbox.vue
+./ui/toolbar/components/toolbar-color-picker.vue
+./ui/toolbar/index.js
+./ui/preview/preview.scss
+./ui/preview/ViewHistoricalDataAction.js
+./ui/preview/PreviewAction.js
+./ui/preview/plugin.js
+./ui/preview/index.js
+./ui/preview/preview-header.vue
+./ui/preview/Preview.vue
+./ui/color/ColorPalette.js
+./ui/color/Color.js
+./ui/color/ColorHelper.js
+./ui/color/ColorSwatch.vue
+./ui/color/index.js
+./ui/components/search.vue
+./ui/components/ObjectLabel.vue
+./ui/components/ProgressBar.vue
+./ui/components/timesystem-axis.scss
+./ui/components/contextMenuDropDown.vue
+./ui/components/search.scss
+./ui/components/List/list-view.scss
+./ui/components/List/ListItem.vue
+./ui/components/List/ListHeader.vue
+./ui/components/List/ListView.vue
+./ui/components/List/index.js
+./ui/components/componentsSpec.js
+./ui/components/object-label.scss
+./ui/components/progress-bar.scss
+./ui/components/viewControl.vue
+./ui/components/ObjectFrame.vue
+./ui/components/swim-lane/SwimLane.vue
+./ui/components/swim-lane/index.js
+./ui/components/swim-lane/swimlane.scss
+./ui/components/object-frame.scss
+./ui/components/ObjectPath.vue
+./ui/components/ObjectView.vue
+./ui/components/index.js
+./ui/components/ToggleSwitch.vue
+./ui/components/COMPONENTS.md
+./ui/components/toggle-switch.scss
+./ui/components/components.js
+./ui/components/TimeSystemAxis.vue
+./ui/router/ApplicationRouterSpec.js
+./ui/router/ApplicationRouter.js
+./ui/router/Browse.js
+./ui/router/index.js
+./ui/inspector/inspector.scss
+./ui/inspector/Inspector.vue
+./ui/inspector/ObjectName.vue
+./ui/inspector/InspectorViews.vue
+./ui/inspector/InspectorDetailsSpec.js
+./ui/inspector/InspectorStylesSpecMocks.js
+./ui/inspector/InspectorStylesSpec.js
+./ui/inspector/index.js
+./ui/inspector/InspectorTabs.vue
+./ui/index.js
+./ui/mixins/object-link.js
+./ui/mixins/toggle-mixin.js
+./ui/mixins/staleness-mixin.js
+./ui/mixins/index.js
+./ui/mixins/context-menu-gesture.js
+./index.js
+./exporters/JSONExporter.js
+./exporters/CSVExporter.js
+./exporters/ImageExporterSpec.js
+./exporters/index.js
+./exporters/ImageExporter.js
+./plugins/inspectorViews/plugin.js
+./plugins/inspectorViews/styles/FontStyleEditor.vue
+./plugins/inspectorViews/styles/SavedStylesView.vue
+./plugins/inspectorViews/styles/StylesInspectorView.vue
+./plugins/inspectorViews/styles/StylesManager.js
+./plugins/inspectorViews/styles/SavedStyleSelector.vue
+./plugins/inspectorViews/styles/StylesInspectorViewProvider.js
+./plugins/inspectorViews/styles/SavedStylesInspectorView.vue
+./plugins/inspectorViews/styles/index.js
+./plugins/inspectorViews/styles/constants.js
+./plugins/inspectorViews/elements/PlotElementsViewProvider.js
+./plugins/inspectorViews/elements/elements.scss
+./plugins/inspectorViews/elements/ElementItem.vue
+./plugins/inspectorViews/elements/ElementsPool.vue
+./plugins/inspectorViews/elements/ElementItemGroup.vue
+./plugins/inspectorViews/elements/index.js
+./plugins/inspectorViews/elements/ElementsViewProvider.js
+./plugins/inspectorViews/elements/PlotElementsPool.vue
+./plugins/inspectorViews/properties/DetailText.vue
+./plugins/inspectorViews/properties/PropertiesViewProvider.js
+./plugins/inspectorViews/properties/Location.vue
+./plugins/inspectorViews/properties/Properties.vue
+./plugins/inspectorViews/properties/location.scss
+./plugins/inspectorViews/properties/index.js
+./plugins/inspectorViews/index.js
+./plugins/inspectorViews/annotations/AnnotationsInspectorView.vue
+./plugins/inspectorViews/annotations/AnnotationsViewProvider.js
+./plugins/inspectorViews/annotations/index.js
+./plugins/inspectorViews/annotations/tags/TagSelection.vue
+./plugins/inspectorViews/annotations/tags/tags.scss
+./plugins/inspectorViews/annotations/tags/index.js
+./plugins/inspectorViews/annotations/tags/TagEditor.vue
+./plugins/imagery/ImageryTimestripViewProvider.js
+./plugins/imagery/ImageryViewProvider.js
+./plugins/imagery/layers/example-imagery-layer-scale.png
+./plugins/imagery/layers/example-imagery-layer-16x9.png
+./plugins/imagery/layers/index.js
+./plugins/imagery/layers/example-imagery-layer-safe.png
+./plugins/imagery/plugin.js
+./plugins/imagery/components/ImageryView.vue
+./plugins/imagery/components/ImageryTimeView.vue
+./plugins/imagery/components/imagery-view.scss
+./plugins/imagery/components/ImageControls.vue
+./plugins/imagery/components/ImageryViewMenuSwitcher.vue
+./plugins/imagery/components/LayerSettings.vue
+./plugins/imagery/components/ZoomSettings.vue
+./plugins/imagery/components/Compass/compass.scss
+./plugins/imagery/components/Compass/pluginSpec.js
+./plugins/imagery/components/Compass/CompassRose.vue
+./plugins/imagery/components/Compass/Compass.vue
+./plugins/imagery/components/Compass/utils.js
+./plugins/imagery/components/Compass/index.js
+./plugins/imagery/components/Compass/CompassHUD.vue
+./plugins/imagery/components/FilterSettings.vue
+./plugins/imagery/components/index.js
+./plugins/imagery/components/ImageThumbnail.vue
+./plugins/imagery/components/RelatedTelemetry/RelatedTelemetry.js
+./plugins/imagery/components/RelatedTelemetry/index.js
+./plugins/imagery/pluginSpec.js
+./plugins/imagery/lib/eventHelpers.js
+./plugins/imagery/lib/index.js
+./plugins/imagery/index.js
+./plugins/imagery/mixins/imageryData.js
+./plugins/imagery/mixins/index.js
+./plugins/imagery/ImageryView.js
+./plugins/CouchDBSearchFolder/plugin.js
+./plugins/CouchDBSearchFolder/pluginSpec.js
+./plugins/CouchDBSearchFolder/index.js
+./plugins/clearData/ClearDataAction.js
+./plugins/clearData/plugin.js
+./plugins/clearData/components/globalClearIndicator.vue
+./plugins/clearData/components/index.js
+./plugins/clearData/pluginSpec.js
+./plugins/clearData/index.js
+./plugins/timer/plugin.js
+./plugins/timer/components/Timer.vue
+./plugins/timer/components/index.js
+./plugins/timer/pluginSpec.js
+./plugins/timer/TimerViewProvider.js
+./plugins/timer/actions/StopTimerAction.js
+./plugins/timer/actions/PauseTimerAction.js
+./plugins/timer/actions/RestartTimerAction.js
+./plugins/timer/actions/StartTimerAction.js
+./plugins/timer/actions/index.js
+./plugins/timer/index.js
+./plugins/localTimeSystem/LocalTimeSystem.js
+./plugins/localTimeSystem/plugin.js
+./plugins/localTimeSystem/LocalTimeFormat.js
+./plugins/localTimeSystem/pluginSpec.js
+./plugins/localTimeSystem/index.js
+./plugins/formActions/plugin.js
+./plugins/formActions/EditPropertiesAction.js
+./plugins/formActions/pluginSpec.js
+./plugins/formActions/PropertiesAction.js
+./plugins/formActions/CreateActionSpec.js
+./plugins/formActions/CreateWizard.js
+./plugins/formActions/index.js
+./plugins/formActions/CreateAction.js
+./plugins/hyperlink/plugin.js
+./plugins/hyperlink/pluginSpec.js
+./plugins/hyperlink/HyperlinkProvider.js
+./plugins/hyperlink/index.js
+./plugins/hyperlink/HyperlinkLayout.vue
+./plugins/condition/ConditionSetCompositionPolicySpec.js
+./plugins/condition/ConditionSpec.js
+./plugins/condition/ConditionSetMetadataProvider.js
+./plugins/condition/plugin.js
+./plugins/condition/components/CurrentOutput.vue
+./plugins/condition/components/TestData.vue
+./plugins/condition/components/Condition.vue
+./plugins/condition/components/conditionals.scss
+./plugins/condition/components/ConditionError.vue
+./plugins/condition/components/inspector/StyleEditor.vue
+./plugins/condition/components/inspector/conditional-styles.scss
+./plugins/condition/components/inspector/StylesView.vue
+./plugins/condition/components/inspector/index.js
+./plugins/condition/components/inspector/ConditionalStylesView.vue
+./plugins/condition/components/ConditionCollection.vue
+./plugins/condition/components/ConditionDescription.vue
+./plugins/condition/components/Criterion.vue
+./plugins/condition/components/index.js
+./plugins/condition/components/ConditionSet.vue
+./plugins/condition/ConditionManager.js
+./plugins/condition/StyleRuleManager.js
+./plugins/condition/pluginSpec.js
+./plugins/condition/ConditionManagerSpec.js
+./plugins/condition/ConditionSetViewProvider.js
+./plugins/condition/criterion/AllTelemetryCriterion.js
+./plugins/condition/criterion/TelemetryCriterionSpec.js
+./plugins/condition/criterion/index.js
+./plugins/condition/criterion/TelemetryCriterion.js
+./plugins/condition/utils/styleUtils.js
+./plugins/condition/utils/timeSpec.js
+./plugins/condition/utils/evaluatorSpec.js
+./plugins/condition/utils/evaluator.js
+./plugins/condition/utils/operations.js
+./plugins/condition/utils/time.js
+./plugins/condition/utils/index.js
+./plugins/condition/utils/constants.js
+./plugins/condition/utils/operationsSpec.js
+./plugins/condition/Condition.js
+./plugins/condition/ConditionSetCompositionPolicy.js
+./plugins/condition/index.js
+./plugins/condition/ConditionSetTelemetryProvider.js
+./plugins/staticRootPlugin/StaticModelProviderSpec.js
+./plugins/staticRootPlugin/StaticModelProvider.js
+./plugins/staticRootPlugin/static-provider-test.json
+./plugins/staticRootPlugin/plugin.js
+./plugins/staticRootPlugin/index.js
+./plugins/staticRootPlugin/README.md
+./plugins/notificationIndicator/plugin.js
+./plugins/notificationIndicator/components/NotificationIndicator.vue
+./plugins/notificationIndicator/components/NotificationMessage.vue
+./plugins/notificationIndicator/components/NotificationsList.vue
+./plugins/notificationIndicator/components/index.js
+./plugins/notificationIndicator/pluginSpec.js
+./plugins/notificationIndicator/index.js
+./plugins/remoteClock/RemoteClockSpec.js
+./plugins/remoteClock/plugin.js
+./plugins/remoteClock/RemoteClock.js
+./plugins/remoteClock/index.js
+./plugins/remoteClock/requestInterceptor.js
+./plugins/URLTimeSettingsSynchronizer/plugin.js
+./plugins/URLTimeSettingsSynchronizer/pluginSpec.js
+./plugins/URLTimeSettingsSynchronizer/index.js
+./plugins/URLTimeSettingsSynchronizer/URLTimeSettingsSynchronizer.js
+./plugins/newFolderAction/newFolderAction.js
+./plugins/newFolderAction/plugin.js
+./plugins/newFolderAction/pluginSpec.js
+./plugins/newFolderAction/index.js
+./plugins/importFromJSONAction/plugin.js
+./plugins/importFromJSONAction/ImportFromJSONAction.js
+./plugins/importFromJSONAction/ImportFromJSONActionSpec.js
+./plugins/importFromJSONAction/index.js
+./plugins/licenses/plugin.js
+./plugins/licenses/third-party-licenses.json
+./plugins/licenses/Licenses.vue
+./plugins/licenses/index.js
+./plugins/telemetryMean/plugin.js
+./plugins/telemetryMean/index.js
+./plugins/telemetryMean/src/MockTelemetryApi.js
+./plugins/telemetryMean/src/TelemetryAverager.js
+./plugins/telemetryMean/src/MeanTelemetryProvider.js
+./plugins/telemetryMean/src/MeanTelemetryProviderSpec.js
+./plugins/telemetryMean/src/index.js
+./plugins/localStorage/LocalStorageObjectProvider.js
+./plugins/localStorage/plugin.js
+./plugins/localStorage/pluginSpec.js
+./plugins/localStorage/index.js
+./plugins/tabs/plugin.js
+./plugins/tabs/components/tabs.vue
+./plugins/tabs/components/tabs.scss
+./plugins/tabs/components/index.js
+./plugins/tabs/pluginSpec.js
+./plugins/tabs/tabs.js
+./plugins/tabs/index.js
+./plugins/flexibleLayout/plugin.js
+./plugins/flexibleLayout/components/flexibleLayout.vue
+./plugins/flexibleLayout/components/flexible-layout.scss
+./plugins/flexibleLayout/components/container.vue
+./plugins/flexibleLayout/components/resizeHandle.vue
+./plugins/flexibleLayout/components/index.js
+./plugins/flexibleLayout/components/dropHint.vue
+./plugins/flexibleLayout/components/frame.vue
+./plugins/flexibleLayout/flexibleLayoutViewProvider.js
+./plugins/flexibleLayout/pluginSpec.js
+./plugins/flexibleLayout/toolbarProvider.js
+./plugins/flexibleLayout/utils/container.js
+./plugins/flexibleLayout/utils/frame.js
+./plugins/flexibleLayout/utils/index.js
+./plugins/flexibleLayout/index.js
+./plugins/duplicate/plugin.js
+./plugins/duplicate/DuplicateTask.js
+./plugins/duplicate/pluginSpec.js
+./plugins/duplicate/DuplicateAction.js
+./plugins/duplicate/index.js
+./plugins/telemetryTable/TelemetryTableColumn.js
+./plugins/telemetryTable/plugin.js
+./plugins/telemetryTable/components/table-footer-indicator.scss
+./plugins/telemetryTable/components/table-row.vue
+./plugins/telemetryTable/components/table-footer-indicator.vue
+./plugins/telemetryTable/components/table.vue
+./plugins/telemetryTable/components/table-configuration.vue
+./plugins/telemetryTable/components/table.scss
+./plugins/telemetryTable/components/table-column-header.vue
+./plugins/telemetryTable/components/table-cell.vue
+./plugins/telemetryTable/components/table-row.scss
+./plugins/telemetryTable/components/sizing-row.vue
+./plugins/telemetryTable/components/index.js
+./plugins/telemetryTable/TelemetryTableViewProvider.js
+./plugins/telemetryTable/TelemetryTableRow.js
+./plugins/telemetryTable/pluginSpec.js
+./plugins/telemetryTable/TelemetryTableNameColumn.js
+./plugins/telemetryTable/TelemetryTableView.js
+./plugins/telemetryTable/TelemetryTableType.js
+./plugins/telemetryTable/TelemetryTableConfiguration.js
+./plugins/telemetryTable/TableConfigurationViewProvider.js
+./plugins/telemetryTable/collections/TableRowCollection.js
+./plugins/telemetryTable/collections/index.js
+./plugins/telemetryTable/index.js
+./plugins/telemetryTable/ViewActions.js
+./plugins/telemetryTable/TelemetryTableUnitColumn.js
+./plugins/telemetryTable/TelemetryTable.js
+./plugins/displayLayout/AlphanumericFormatViewProvider.js
+./plugins/displayLayout/CustomStringFormatter.js
+./plugins/displayLayout/CustomStringFormatterSpec.js
+./plugins/displayLayout/LayoutDrag.js
+./plugins/displayLayout/plugin.js
+./plugins/displayLayout/components/ImageView.vue
+./plugins/displayLayout/components/telemetry-view.scss
+./plugins/displayLayout/components/TelemetryView.vue
+./plugins/displayLayout/components/EllipseView.vue
+./plugins/displayLayout/components/layout-frame.scss
+./plugins/displayLayout/components/display-layout.scss
+./plugins/displayLayout/components/image-view.scss
+./plugins/displayLayout/components/TextView.vue
+./plugins/displayLayout/components/DisplayLayout.vue
+./plugins/displayLayout/components/edit-marquee.scss
+./plugins/displayLayout/components/AlphanumericFormat.vue
+./plugins/displayLayout/components/text-view.scss
+./plugins/displayLayout/components/BoxView.vue
+./plugins/displayLayout/components/index.js
+./plugins/displayLayout/components/LayoutFrame.vue
+./plugins/displayLayout/components/SubobjectView.vue
+./plugins/displayLayout/components/box-and-line-views.scss
+./plugins/displayLayout/components/LineView.vue
+./plugins/displayLayout/components/EditMarquee.vue
+./plugins/displayLayout/components/DisplayLayoutGrid.vue
+./plugins/displayLayout/DisplayLayoutType.js
+./plugins/displayLayout/pluginSpec.js
+./plugins/displayLayout/actions/index.js
+./plugins/displayLayout/actions/CopyToClipboardAction.js
+./plugins/displayLayout/DisplayLayoutToolbar.js
+./plugins/displayLayout/index.js
+./plugins/displayLayout/mixins/objectStyles-mixin.js
+./plugins/displayLayout/mixins/index.js
+./plugins/displayLayout/DrawingObjectTypes.js
+./plugins/performanceIndicator/plugin.js
+./plugins/performanceIndicator/pluginSpec.js
+./plugins/performanceIndicator/index.js
+./plugins/performanceIndicator/README.md
+./plugins/viewDatumAction/plugin.js
+./plugins/viewDatumAction/components/metadata-list.scss
+./plugins/viewDatumAction/components/MetadataList.vue
+./plugins/viewDatumAction/components/index.js
+./plugins/viewDatumAction/pluginSpec.js
+./plugins/viewDatumAction/index.js
+./plugins/viewDatumAction/ViewDatumAction.js
+./plugins/gauge/GaugeViewProvider.js
+./plugins/gauge/gauge-limit-util.js
+./plugins/gauge/components/Gauge.vue
+./plugins/gauge/components/GaugeFormController.vue
+./plugins/gauge/components/index.js
+./plugins/gauge/GaugePluginSpec.js
+./plugins/gauge/GaugePlugin.js
+./plugins/gauge/gauge.scss
+./plugins/gauge/index.js
+./plugins/timelist/TimelistViewProvider.js
+./plugins/timelist/timelist.scss
+./plugins/timelist/plugin.js
+./plugins/timelist/inspector/EventProperties.vue
+./plugins/timelist/inspector/Filtering.vue
+./plugins/timelist/inspector/TimelistPropertiesView.vue
+./plugins/timelist/inspector/TimeListInspectorViewProvider.js
+./plugins/timelist/inspector/index.js
+./plugins/timelist/pluginSpec.js
+./plugins/timelist/Timelist.vue
+./plugins/timelist/index.js
+./plugins/timelist/constants.js
+./plugins/timelist/TimelistCompositionPolicy.js
+./plugins/utcTimeSystem/UTCTimeSystem.js
+./plugins/utcTimeSystem/plugin.js
+./plugins/utcTimeSystem/UTCTimeFormat.js
+./plugins/utcTimeSystem/pluginSpec.js
+./plugins/utcTimeSystem/DurationFormat.js
+./plugins/utcTimeSystem/index.js
+./plugins/utcTimeSystem/LocalClock.js
+./plugins/openInNewTabAction/plugin.js
+./plugins/openInNewTabAction/pluginSpec.js
+./plugins/openInNewTabAction/openInNewTabAction.js
+./plugins/openInNewTabAction/index.js
+./plugins/defaultRootName/plugin.js
+./plugins/defaultRootName/pluginSpec.js
+./plugins/defaultRootName/index.js
+./plugins/remove/plugin.js
+./plugins/remove/pluginSpec.js
+./plugins/remove/index.js
+./plugins/remove/RemoveAction.js
+./plugins/clock/plugin.js
+./plugins/clock/components/ClockIndicator.vue
+./plugins/clock/components/Clock.vue
+./plugins/clock/components/index.js
+./plugins/clock/pluginSpec.js
+./plugins/clock/index.js
+./plugins/clock/ClockViewProvider.js
+./plugins/autoflow/autoflow-tabular.html
+./plugins/autoflow/VueView.js
+./plugins/autoflow/AutoflowTabularController.js
+./plugins/autoflow/AutoflowTabularPluginSpec.js
+./plugins/autoflow/AutoflowTabularRowController.js
+./plugins/autoflow/AutoflowTabularView.js
+./plugins/autoflow/dom-observer.js
+./plugins/autoflow/AutoflowTabularConstants.js
+./plugins/autoflow/AutoflowTabularPlugin.js
+./plugins/autoflow/index.js
+./plugins/autoflow/README.md
+./plugins/timeConductor/DatePicker.vue
+./plugins/timeConductor/utcMultiTimeFormat.js
+./plugins/timeConductor/ConductorInputsRealtime.vue
+./plugins/timeConductor/ConductorTimeSystem.vue
+./plugins/timeConductor/ConductorHistory.vue
+./plugins/timeConductor/plugin.js
+./plugins/timeConductor/conductor-axis.scss
+./plugins/timeConductor/independent/IndependentTimeConductor.vue
+./plugins/timeConductor/independent/Mode.vue
+./plugins/timeConductor/independent/index.js
+./plugins/timeConductor/pluginSpec.js
+./plugins/timeConductor/conductor.scss
+./plugins/timeConductor/Conductor.vue
+./plugins/timeConductor/ConductorMode.vue
+./plugins/timeConductor/ConductorAxis.vue
+./plugins/timeConductor/ConductorModeIcon.vue
+./plugins/timeConductor/conductor-mode.scss
+./plugins/timeConductor/timePopup.vue
+./plugins/timeConductor/ConductorInputsFixed.vue
+./plugins/timeConductor/conductor-mode-icon.scss
+./plugins/timeConductor/date-picker.scss
+./plugins/timeConductor/index.js
+./plugins/folderView/FolderListView.js
+./plugins/folderView/FolderGridView.js
+./plugins/folderView/plugin.js
+./plugins/folderView/components/ListItem.vue
+./plugins/folderView/components/GridItem.vue
+./plugins/folderView/components/status-listener.js
+./plugins/folderView/components/GridView.vue
+./plugins/folderView/components/grid-view.scss
+./plugins/folderView/components/composition-loader.js
+./plugins/folderView/components/ListView.vue
+./plugins/folderView/components/index.js
+./plugins/folderView/components/list-item.scss
+./plugins/folderView/pluginSpec.js
+./plugins/folderView/index.js
+./plugins/folderView/constants.js
+./plugins/ISOTimeFormat/plugin.js
+./plugins/ISOTimeFormat/ISOTimeFormat.js
+./plugins/ISOTimeFormat/pluginSpec.js
+./plugins/ISOTimeFormat/index.js
+./plugins/operatorStatus/plugin.js
+./plugins/operatorStatus/operator-status.scss
+./plugins/operatorStatus/AbstractStatusIndicator.js
+./plugins/operatorStatus/operatorStatus/OperatorStatus.vue
+./plugins/operatorStatus/operatorStatus/OperatorStatusIndicator.js
+./plugins/operatorStatus/operatorStatus/index.js
+./plugins/operatorStatus/index.js
+./plugins/operatorStatus/pollQuestion/PollQuestionIndicator.js
+./plugins/operatorStatus/pollQuestion/PollQuestion.vue
+./plugins/operatorStatus/pollQuestion/index.js
+./plugins/filters/plugin.js
+./plugins/filters/components/FiltersView.vue
+./plugins/filters/components/FilterObject.vue
+./plugins/filters/components/global-filters.scss
+./plugins/filters/components/GlobalFilters.vue
+./plugins/filters/components/FilterField.vue
+./plugins/filters/components/index.js
+./plugins/filters/components/filters-view.scss
+./plugins/filters/FiltersInspectorViewProvider.js
+./plugins/filters/index.js
+./plugins/plot/tickUtils.js
+./plugins/plot/PlotViewProvider.js
+./plugins/plot/mathUtils.js
+./plugins/plot/axis/YAxis.vue
+./plugins/plot/axis/index.js
+./plugins/plot/axis/XAxis.vue
+./plugins/plot/chart/MCTChartAlarmPointSet.js
+./plugins/plot/chart/LimitLabel.vue
+./plugins/plot/chart/MCTChartAlarmLineSet.js
+./plugins/plot/chart/MCTChartPointSet.js
+./plugins/plot/chart/MCTChartLineStepAfter.js
+./plugins/plot/chart/MCTChartLineLinear.js
+./plugins/plot/chart/LimitLine.vue
+./plugins/plot/chart/MctChart.vue
+./plugins/plot/chart/index.js
+./plugins/plot/chart/MCTChartSeriesElement.js
+./plugins/plot/chart/limitUtil.js
+./plugins/plot/plugin.js
+./plugins/plot/inspector/forms/LegendForm.vue
+./plugins/plot/inspector/forms/SeriesForm.vue
+./plugins/plot/inspector/forms/formUtil.js
+./plugins/plot/inspector/forms/index.js
+./plugins/plot/inspector/forms/YAxisForm.vue
+./plugins/plot/inspector/PlotsInspectorViewProvider.js
+./plugins/plot/inspector/StackedPlotsInspectorViewProvider.js
+./plugins/plot/inspector/PlotOptions.vue
+./plugins/plot/inspector/PlotOptionsBrowse.vue
+./plugins/plot/inspector/PlotOptionsEdit.vue
+./plugins/plot/inspector/index.js
+./plugins/plot/inspector/PlotOptionsItem.vue
+./plugins/plot/pluginSpec.js
+./plugins/plot/lib/eventHelpers.js
+./plugins/plot/lib/index.js
+./plugins/plot/legend/PlotLegend.vue
+./plugins/plot/legend/PlotLegendItemExpanded.vue
+./plugins/plot/legend/PlotLegendItemCollapsed.vue
+./plugins/plot/legend/index.js
+./plugins/plot/actions/utils.js
+./plugins/plot/actions/index.js
+./plugins/plot/actions/ViewActions.js
+./plugins/plot/MctTicks.vue
+./plugins/plot/configuration/YAxisModel.js
+./plugins/plot/configuration/LegendModel.js
+./plugins/plot/configuration/Model.js
+./plugins/plot/configuration/XAxisModel.js
+./plugins/plot/configuration/Collection.js
+./plugins/plot/configuration/PlotSeries.js
+./plugins/plot/configuration/SeriesCollection.js
+./plugins/plot/configuration/ConfigStore.js
+./plugins/plot/configuration/PlotConfigurationModel.js
+./plugins/plot/configuration/index.js
+./plugins/plot/overlayPlot/pluginSpec.js
+./plugins/plot/overlayPlot/OverlayPlotCompositionPolicy.js
+./plugins/plot/overlayPlot/OverlayPlotViewProvider.js
+./plugins/plot/overlayPlot/index.js
+./plugins/plot/draw/DrawLoader.js
+./plugins/plot/draw/MarkerShapes.js
+./plugins/plot/draw/DrawWebGL.js
+./plugins/plot/draw/index.js
+./plugins/plot/draw/Draw2D.js
+./plugins/plot/Plot.vue
+./plugins/plot/index.js
+./plugins/plot/LinearScale.js
+./plugins/plot/MctPlot.vue
+./plugins/plot/stackedPlot/StackedPlotItem.vue
+./plugins/plot/stackedPlot/StackedPlot.vue
+./plugins/plot/stackedPlot/pluginSpec.js
+./plugins/plot/stackedPlot/stackedPlotConfigurationInterceptor.js
+./plugins/plot/stackedPlot/index.js
+./plugins/plot/stackedPlot/StackedPlotCompositionPolicy.js
+./plugins/plot/stackedPlot/mixins/objectStyles-mixin.js
+./plugins/plot/stackedPlot/mixins/index.js
+./plugins/plot/stackedPlot/StackedPlotViewProvider.js
+./plugins/plot/README.md
+./plugins/latestDataClock/plugin.js
+./plugins/latestDataClock/LADClock.js
+./plugins/latestDataClock/index.js
+./plugins/move/plugin.js
+./plugins/move/pluginSpec.js
+./plugins/move/index.js
+./plugins/move/MoveAction.js
+./plugins/charts/scatter/ScatterPlotView.vue
+./plugins/charts/scatter/plugin.js
+./plugins/charts/scatter/inspector/ScatterPlotInspectorViewProvider.js
+./plugins/charts/scatter/inspector/PlotOptions.vue
+./plugins/charts/scatter/inspector/PlotOptionsBrowse.vue
+./plugins/charts/scatter/inspector/PlotOptionsEdit.vue
+./plugins/charts/scatter/inspector/index.js
+./plugins/charts/scatter/pluginSpec.js
+./plugins/charts/scatter/ScatterPlotViewProvider.js
+./plugins/charts/scatter/ScatterPlotForm.vue
+./plugins/charts/scatter/scatterPlotConstants.js
+./plugins/charts/scatter/ScatterPlotWithUnderlay.vue
+./plugins/charts/scatter/ScatterPlotCompositionPolicy.js
+./plugins/charts/scatter/index.js
+./plugins/charts/index.js
+./plugins/charts/bar/BarGraphPlot.vue
+./plugins/charts/bar/BarGraphViewProvider.js
+./plugins/charts/bar/plugin.js
+./plugins/charts/bar/BarGraphView.vue
+./plugins/charts/bar/inspector/BarGraphOptions.vue
+./plugins/charts/bar/inspector/SeriesOptions.vue
+./plugins/charts/bar/inspector/BarGraphInspectorViewProvider.js
+./plugins/charts/bar/inspector/index.js
+./plugins/charts/bar/pluginSpec.js
+./plugins/charts/bar/BarGraphConstants.js
+./plugins/charts/bar/BarGraphCompositionPolicy.js
+./plugins/charts/bar/index.js
+./plugins/URLIndicatorPlugin/URLIndicator.js
+./plugins/URLIndicatorPlugin/index.js
+./plugins/URLIndicatorPlugin/URLIndicatorSpec.js
+./plugins/URLIndicatorPlugin/URLIndicatorPlugin.js
+./plugins/URLIndicatorPlugin/README.md
+./plugins/themes/espresso-theme.scss
+./plugins/themes/espresso.js
+./plugins/themes/installTheme.js
+./plugins/themes/snow.js
+./plugins/themes/snow-theme.scss
+./plugins/themes/index.js
+./plugins/userIndicator/plugin.js
+./plugins/userIndicator/components/index.js
+./plugins/userIndicator/components/UserIndicator.vue
+./plugins/userIndicator/pluginSpec.js
+./plugins/userIndicator/index.js
+./plugins/index.js
+./plugins/linkAction/plugin.js
+./plugins/linkAction/pluginSpec.js
+./plugins/linkAction/index.js
+./plugins/linkAction/LinkAction.js
+./plugins/interceptors/plugin.js
+./plugins/interceptors/pluginSpec.js
+./plugins/interceptors/missingObjectInterceptor.js
+./plugins/interceptors/index.js
+./plugins/DeviceClassifier/plugin.js
+./plugins/DeviceClassifier/index.js
+./plugins/DeviceClassifier/src/DeviceClassifierSpec.js
+./plugins/DeviceClassifier/src/DeviceClassifier.js
+./plugins/DeviceClassifier/src/DeviceMatchers.js
+./plugins/DeviceClassifier/src/index.js
+./plugins/DeviceClassifier/src/DeviceMatchersSpec.js
+./plugins/plugins.js
+./plugins/plan/PlanViewConfiguration.js
+./plugins/plan/plan.scss
+./plugins/plan/GanttChartCompositionPolicy.js
+./plugins/plan/plugin.js
+./plugins/plan/components/Plan.vue
+./plugins/plan/components/ActivityTimeline.vue
+./plugins/plan/components/index.js
+./plugins/plan/inspector/ActivityInspectorViewProvider.js
+./plugins/plan/inspector/components/PlanActivityView.vue
+./plugins/plan/inspector/components/PlanViewConfiguration.vue
+./plugins/plan/inspector/components/ActivityProperty.vue
+./plugins/plan/inspector/components/index.js
+./plugins/plan/inspector/components/PlanActivitiesView.vue
+./plugins/plan/inspector/GanttChartInspectorViewProvider.js
+./plugins/plan/inspector/index.js
+./plugins/plan/pluginSpec.js
+./plugins/plan/PlanViewProvider.js
+./plugins/plan/util.js
+./plugins/plan/index.js
+./plugins/plan/README.md
+./plugins/viewLargeAction/viewLargeAction.js
+./plugins/viewLargeAction/plugin.js
+./plugins/viewLargeAction/index.js
+./plugins/myItems/plugin.js
+./plugins/myItems/createMyItemsIdentifier.js
+./plugins/myItems/pluginSpec.js
+./plugins/myItems/index.js
+./plugins/myItems/myItemsInterceptor.js
+./plugins/myItems/README.md
+./plugins/faultManagement/FaultManagementListView.vue
+./plugins/faultManagement/FaultManagementView.vue
+./plugins/faultManagement/fault-manager.scss
+./plugins/faultManagement/FaultManagementInspector.vue
+./plugins/faultManagement/FaultManagementPlugin.js
+./plugins/faultManagement/pluginSpec.js
+./plugins/faultManagement/FaultManagementInspectorViewProvider.js
+./plugins/faultManagement/FaultManagementListItem.vue
+./plugins/faultManagement/FaultManagementSearch.vue
+./plugins/faultManagement/FaultManagementListHeader.vue
+./plugins/faultManagement/index.js
+./plugins/faultManagement/FaultManagementViewProvider.js
+./plugins/faultManagement/constants.js
+./plugins/faultManagement/FaultManagementObjectProvider.js
+./plugins/faultManagement/FaultManagementToolbar.vue
+./plugins/notebook/plugin.js
+./plugins/notebook/components/Sidebar.vue
+./plugins/notebook/components/NotebookMenuSwitcher.vue
+./plugins/notebook/components/snapshot-template.html
+./plugins/notebook/components/Notebook.vue
+./plugins/notebook/components/MenuItems.vue
+./plugins/notebook/components/SectionComponent.vue
+./plugins/notebook/components/SectionCollection.vue
+./plugins/notebook/components/PageComponent.vue
+./plugins/notebook/components/NotebookEmbed.vue
+./plugins/notebook/components/NotebookSnapshotContainer.vue
+./plugins/notebook/components/NotebookSnapshotIndicator.vue
+./plugins/notebook/components/PopupMenu.vue
+./plugins/notebook/components/PageCollection.vue
+./plugins/notebook/components/NotebookEntry.vue
+./plugins/notebook/components/sidebar.scss
+./plugins/notebook/components/index.js
+./plugins/notebook/components/SearchResults.vue
+./plugins/notebook/snapshot-container.js
+./plugins/notebook/pluginSpec.js
+./plugins/notebook/NotebookType.js
+./plugins/notebook/snapshot.js
+./plugins/notebook/actions/CopyToNotebookAction.js
+./plugins/notebook/actions/ExportNotebookAsTextAction.js
+./plugins/notebook/actions/index.js
+./plugins/notebook/NotebookViewProvider.js
+./plugins/notebook/monkeyPatchObjectAPIForNotebooks.js
+./plugins/notebook/utils/notebook-migration.js
+./plugins/notebook/utils/notebook-entries.js
+./plugins/notebook/utils/notebook-storageSpec.js
+./plugins/notebook/utils/removeDialog.js
+./plugins/notebook/utils/notebook-image.js
+./plugins/notebook/utils/painterroInstance.js
+./plugins/notebook/utils/notebook-key-code.js
+./plugins/notebook/utils/notebook-snapshot-menu.js
+./plugins/notebook/utils/index.js
+./plugins/notebook/utils/notebook-entriesSpec.js
+./plugins/notebook/utils/notebook-storage.js
+./plugins/notebook/index.js
+./plugins/notebook/notebook-constants.js
+./plugins/summaryWidget/plugin.js
+./plugins/summaryWidget/SummaryWidgetViewPolicy.js
+./plugins/summaryWidget/res/ruleImageTemplate.html
+./plugins/summaryWidget/res/ruleTemplate.html
+./plugins/summaryWidget/res/testDataTemplate.html
+./plugins/summaryWidget/res/testDataItemTemplate.html
+./plugins/summaryWidget/res/conditionTemplate.html
+./plugins/summaryWidget/res/input/selectTemplate.html
+./plugins/summaryWidget/res/input/paletteTemplate.html
+./plugins/summaryWidget/res/input/index.js
+./plugins/summaryWidget/res/index.js
+./plugins/summaryWidget/res/widgetTemplate.html
+./plugins/summaryWidget/SummaryWidgetsCompositionPolicy.js
+./plugins/summaryWidget/index.js
+./plugins/summaryWidget/test/ConditionSpec.js
+./plugins/summaryWidget/test/TestDataItemSpec.js
+./plugins/summaryWidget/test/SummaryWidgetViewPolicySpec.js
+./plugins/summaryWidget/test/RuleSpec.js
+./plugins/summaryWidget/test/ConditionManagerSpec.js
+./plugins/summaryWidget/test/TestDataManagerSpec.js
+./plugins/summaryWidget/test/SummaryWidgetSpec.js
+./plugins/summaryWidget/test/input/PaletteSpec.js
+./plugins/summaryWidget/test/input/SelectSpec.js
+./plugins/summaryWidget/test/input/ColorPaletteSpec.js
+./plugins/summaryWidget/test/input/ObjectSelectSpec.js
+./plugins/summaryWidget/test/input/OperationSelectSpec.js
+./plugins/summaryWidget/test/input/IconPaletteSpec.js
+./plugins/summaryWidget/test/input/index.js
+./plugins/summaryWidget/test/input/KeySelectSpec.js
+./plugins/summaryWidget/test/WidgetDnDSpec.js
+./plugins/summaryWidget/test/index.js
+./plugins/summaryWidget/test/ConditionEvaluatorSpec.js
+./plugins/summaryWidget/README.md
+./plugins/summaryWidget/src/Rule.js
+./plugins/summaryWidget/src/ConditionEvaluator.js
+./plugins/summaryWidget/src/TestDataManager.js
+./plugins/summaryWidget/src/eventHelpers.js
+./plugins/summaryWidget/src/WidgetDnD.js
+./plugins/summaryWidget/src/ConditionManager.js
+./plugins/summaryWidget/src/telemetry/SummaryWidgetRuleSpec.js
+./plugins/summaryWidget/src/telemetry/EvaluatorPoolSpec.js
+./plugins/summaryWidget/src/telemetry/SummaryWidgetTelemetryProviderSpec.js
+./plugins/summaryWidget/src/telemetry/operations.js
+./plugins/summaryWidget/src/telemetry/SummaryWidgetRule.js
+./plugins/summaryWidget/src/telemetry/SummaryWidgetConditionSpec.js
+./plugins/summaryWidget/src/telemetry/SummaryWidgetTelemetryProvider.js
+./plugins/summaryWidget/src/telemetry/SummaryWidgetMetadataProvider.js
+./plugins/summaryWidget/src/telemetry/EvaluatorPool.js
+./plugins/summaryWidget/src/telemetry/SummaryWidgetCondition.js
+./plugins/summaryWidget/src/telemetry/index.js
+./plugins/summaryWidget/src/telemetry/SummaryWidgetEvaluator.js
+./plugins/summaryWidget/src/SummaryWidget.js
+./plugins/summaryWidget/src/views/SummaryWidgetView.js
+./plugins/summaryWidget/src/views/SummaryWidgetViewProvider.js
+./plugins/summaryWidget/src/views/summary-widget.html
+./plugins/summaryWidget/src/views/index.js
+./plugins/summaryWidget/src/Condition.js
+./plugins/summaryWidget/src/input/IconPalette.js
+./plugins/summaryWidget/src/input/Palette.js
+./plugins/summaryWidget/src/input/ColorPalette.js
+./plugins/summaryWidget/src/input/ObjectSelect.js
+./plugins/summaryWidget/src/input/KeySelect.js
+./plugins/summaryWidget/src/input/OperationSelect.js
+./plugins/summaryWidget/src/input/Select.js
+./plugins/summaryWidget/src/input/index.js
+./plugins/summaryWidget/src/index.js
+./plugins/summaryWidget/src/TestDataItem.js
+./plugins/webPage/plugin.js
+./plugins/webPage/components/index.js
+./plugins/webPage/components/WebPage.vue
+./plugins/webPage/pluginSpec.js
+./plugins/webPage/WebPageViewProvider.js
+./plugins/webPage/index.js
+./plugins/LADTable/LADTableSetViewProvider.js
+./plugins/LADTable/plugin.js
+./plugins/LADTable/components/LADTableConfiguration.vue
+./plugins/LADTable/components/LADRow.vue
+./plugins/LADTable/components/LADTable.vue
+./plugins/LADTable/components/index.js
+./plugins/LADTable/components/LadTableSet.vue
+./plugins/LADTable/pluginSpec.js
+./plugins/LADTable/LadTableSetView.js
+./plugins/LADTable/LADTableView.js
+./plugins/LADTable/LADTableViewProvider.js
+./plugins/LADTable/LADTableCompositionPolicy.js
+./plugins/LADTable/LADTableConfiguration.js
+./plugins/LADTable/index.js
+./plugins/LADTable/ViewActions.js
+./plugins/LADTable/LADTableConfigurationViewProvider.js
+./plugins/timeline/plugin.js
+./plugins/timeline/TimelineObjectView.vue
+./plugins/timeline/timelineInterceptor.js
+./plugins/timeline/pluginSpec.js
+./plugins/timeline/TimelineViewLayout.vue
+./plugins/timeline/timeline.scss
+./plugins/timeline/index.js
+./plugins/timeline/TimelineViewProvider.js
+./plugins/timeline/TimelineCompositionPolicy.js
+./plugins/conditionWidget/plugin.js
+./plugins/conditionWidget/components/ConditionWidget.vue
+./plugins/conditionWidget/components/condition-widget.scss
+./plugins/conditionWidget/components/index.js
+./plugins/conditionWidget/ConditionWidgetViewProvider.js
+./plugins/conditionWidget/pluginSpec.js
+./plugins/conditionWidget/index.js
+./plugins/goToOriginalAction/plugin.js
+./plugins/goToOriginalAction/pluginSpec.js
+./plugins/goToOriginalAction/index.js
+./plugins/goToOriginalAction/goToOriginalAction.js
+./plugins/persistence/couch/CouchChangesFeed.js
+./plugins/persistence/couch/plugin.js
+./plugins/persistence/couch/pluginSpec.js
+./plugins/persistence/couch/CouchDocument.js
+./plugins/persistence/couch/setup-couchdb.sh
+./plugins/persistence/couch/CouchObjectQueue.js
+./plugins/persistence/couch/CouchObjectProvider.js
+./plugins/persistence/couch/.env.ci
+./plugins/persistence/couch/couchdb-compose.yaml
+./plugins/persistence/couch/CouchSearchProvider.js
+./plugins/persistence/couch/index.js
+./plugins/persistence/couch/replace-localstorage-with-couchdb-indexhtml.sh
+./plugins/persistence/couch/CouchStatusIndicator.js
+./plugins/persistence/couch/README.md
+./plugins/persistence/index.js
+./plugins/exportAsJSONAction/ExportAsJSONAction.js
+./plugins/exportAsJSONAction/plugin.js
+./plugins/exportAsJSONAction/ExportAsJSONActionSpec.js
+./plugins/exportAsJSONAction/index.js
+./plugins/objectMigration/plugin.js
+./plugins/objectMigration/Migrations.js
+./plugins/objectMigration/index.js
+./scrfind.txt
+./tools/url.js
+./tools/urlSpec.js
+./tools/index.js
 ```
